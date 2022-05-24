@@ -12,6 +12,8 @@ PATH="$HOME/.local/bin:$PATH"
 # Global aliases
 alias ssh="TERM=xterm ssh"
 alias sshpass="ssh -o PubkeyAuthentication=no"
+alias k="kubectl"
+alias t="tanzu"
 
 # Import local aliases from ~/.zshalias, if present
 if [ -f $HOME/.zshalias ]; then
