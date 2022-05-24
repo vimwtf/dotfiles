@@ -17,6 +17,6 @@ compinit
 alias ssh="TERM=xterm ssh"
 
 # Shell initializations
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jbowdre/config/main/vpotato.minimal.omp.json')"
+eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jbowdre/dotfiles/main/oh-my-posh/vpotato.minimal.omp.json')"
 enable_poshtransientprompt
 eval "$(mcfly init zsh)"
