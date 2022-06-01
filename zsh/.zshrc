@@ -14,6 +14,7 @@ alias ssh="TERM=xterm ssh"
 alias sshpass="ssh -o PubkeyAuthentication=no"
 alias k="kubectl"
 alias t="tanzu"
+alias ll="ls -la"
 
 # Import local aliases from ~/.zshalias, if present
 if [ -f $HOME/.zshalias ]; then
