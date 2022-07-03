@@ -22,6 +22,10 @@ if [ -f $HOME/.zshalias ]; then
 fi
 
 # Shell initializations
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jbowdre/dotfiles/main/oh-my-posh/vpotato.minimal.omp.json')"
-enable_poshtransientprompt
-eval "$(mcfly init zsh)"
+if [ $(which oh-my-posh) ]; then
+  eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jbowdre/dotfiles/main/oh-my-posh/vpotato.minimal.omp.json')"
+  enable_poshtransientprompt
+fi
+if [ $(which mcfly) ]; then
+  eval "$(mcfly init zsh)"
+fi
