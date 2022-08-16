@@ -23,3 +23,9 @@ else
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 endif
+
+" coding preferences
+syntax on
+set noautoindent smarttab ts=2 sw=2
+set showmatch
+set ruler
