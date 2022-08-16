@@ -26,6 +26,6 @@ endif
 
 " coding preferences
 syntax on
-set noautoindent smarttab ts=2 sw=2
+set noautoindent smarttab ts=2 sw=2 expandtab
 set showmatch
 set ruler
