@@ -17,9 +17,9 @@ alias k="kubectl"
 alias t="tanzu"
 alias ll="ls -la"
 
-# Import local aliases from ~/.zshalias, if present
-if [ -f $HOME/.zshalias ]; then
-  source $HOME/.zshalias
+# Import local prefs from ~/.zshlocal, if present
+if [ -f $HOME/.zshlocal ]; then
+  source $HOME/.zshlocal
 fi
 
 # Shell initializations
