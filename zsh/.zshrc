@@ -14,7 +14,6 @@ alias ssh="TERM=xterm ssh"
 alias sshpass="ssh -o PubkeyAuthentication=no"
 alias scppass="scp -o PubkeyAuthentication=no"
 alias k="kubectl"
-alias t="tanzu"
 alias ll="ls -la"
 
 # Import local prefs from ~/.zshlocal, if present
