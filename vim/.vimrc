@@ -1,3 +1,22 @@
+""" Plug-in management
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+" Load Plug-ins
+call plug#begin()
+Plug 'fatih/vim-go'
+call plug#end()
+"""
+
+
 " Tmux integration to switch panes with Ctrl+{hjkl}
 if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
@@ -25,7 +44,20 @@ else
 endif
 
 " coding preferences
+filetype off
+filetype plugin indent on
+
 syntax on
-set noautoindent smarttab ts=2 sw=2 expandtab
-set showmatch
+set backspace=indent,eol,start
+set noautoindent 
+set noswapfile
+set number
 set ruler
+set showmatch
+set smarttab 
+set ts=2 sw=2 sts=2 expandtab
+
+let mapleader=","
+if has("autocmd")
+  autocmd FileType go set ts=2 sw=2 sts=2 noet nolist autowrite
+endif
