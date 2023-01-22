@@ -13,6 +13,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 " Load Plug-ins
 call plug#begin()
 Plug 'fatih/vim-go'
+Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 """
 
