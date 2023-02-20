@@ -15,6 +15,7 @@ alias sshpass="ssh -o PubkeyAuthentication=no"
 alias scppass="scp -o PubkeyAuthentication=no"
 alias k="kubectl"
 alias ll="ls -la"
+alias ccat='egrep -v "^\s*(#|$)"'
 
 # Import local prefs from ~/.zshlocal, if present
 if [ -f $HOME/.zshlocal ]; then
@@ -29,3 +30,4 @@ fi
 if type mcfly > /dev/null; then
   eval "$(mcfly init zsh)"
 fi
+
