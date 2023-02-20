@@ -14,6 +14,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin()
 Plug 'fatih/vim-go'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 """
 
@@ -57,6 +58,7 @@ set ruler
 set showmatch
 set smarttab 
 set ts=2 sw=2 sts=2 expandtab
+let g:NERDSpaceDelims=1
 
 let mapleader=","
 if has("autocmd")
