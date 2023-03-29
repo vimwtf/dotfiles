@@ -5,6 +5,16 @@
       "alignment": "right",
       "segments": [
         {
+          "foreground": "#9f8e38",
+          "style": "plain",
+          "template": "[{{ .FormattedMs }}] ",
+          "type": "executiontime",
+          "properties": {
+            "threshold": 500,
+            "style": "round"
+          }
+        },
+        {
           "foreground": "#4fb6c3",
           "style": "plain",
           "template": "{{ .Context}}{{ if .Namespace }} :: {{ .Namespace }}{{ end }} <#757575,>|</> ",
