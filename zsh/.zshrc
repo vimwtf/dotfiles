@@ -30,4 +30,7 @@ fi
 if type mcfly > /dev/null; then
   eval "$(mcfly init zsh)"
 fi
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_ed25519
+
 
