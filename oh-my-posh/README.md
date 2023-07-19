@@ -9,6 +9,7 @@ Requires [oh-my-posh](https://ohmyposh.dev/), which lets you use the same prompt
 - **Git status**: Shows current branch as well as pending changes.
 - **Terraform workspace**: Name of the current Terraform workspace.
 - **Error indicator**: Alerts when the last command has a non-zero exit code.
+- **Execution timer**: Displays execution time for last command (when >500ms).
 - **`kubectl` context**: Current Kubernetes context.
 - **Current shell**: Also differentiates between major versions of PowerShell (5/6/7).
 - **Clock**: How else will you know what time it is?
