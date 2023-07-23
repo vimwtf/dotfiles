@@ -70,8 +70,6 @@
   programs.git = {
     enable = true;
     delta.enable = true;
-    userEmail = "john@bowdre.net";
-    userName = "John Bowdre";
     extraConfig = {
       init.defaultBranch = "main";
       pull.ff = "only";
