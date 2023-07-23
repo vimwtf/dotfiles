@@ -8,7 +8,6 @@
   home.homeDirectory = "/home/john";
   home.stateVersion = "23.05"; # Please read the comment before changing.
   programs.home-manager.enable = true;
-  nixpkgs.config.allowUnfree = true;
   targets.genericLinux.enable = true;
 
   # home files
@@ -17,7 +16,6 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-#    ".vimrc".source = .dotfiles/vim/.vimrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -39,6 +37,7 @@
     hugo
     libvirt
     packer
+    powershell
     terraform
     tldr
     vagrant
@@ -74,8 +73,8 @@
     userEmail = "john@bowdre.net";
     userName = "John Bowdre";
     extraConfig = {
-      pull.ff = "only";
       init.defaultBranch = "main";
+      pull.ff = "only";
     };
   };
 

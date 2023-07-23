@@ -3,10 +3,10 @@
     enable = true;
     baseIndex = 1;
     clock24 = true;
-    mouse = true;
+    escapeTime = 50;
     historyLimit = 100000;
     keyMode = "vi";
-    escapeTime = 50;
+    mouse = true;
     plugins = with pkgs.tmuxPlugins; [ ];
     extraConfig = ''
       # navigating panes with Ctrl+{hjkl}
