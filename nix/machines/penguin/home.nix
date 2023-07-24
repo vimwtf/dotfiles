@@ -10,4 +10,8 @@
     obsidian
     qFlipper
   ];
+    
+  # XDG settings
+  xdg.enable = true;
+  xdg.mime.enable = true;
 }

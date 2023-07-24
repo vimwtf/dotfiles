@@ -77,9 +77,4 @@
       pull.ff = "only";
     };
   };
-
-  # XDG settings
-  xdg.enable = true;
-  xdg.mime.enable = true;
-
 }
