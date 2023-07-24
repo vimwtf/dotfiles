@@ -74,7 +74,7 @@
     userName = "John Bowdre";
     extraConfig = {
       init.defaultBranch = "main";
-      pull.ff = "only";
+      pull.rebase = false;
     };
   };
 }
