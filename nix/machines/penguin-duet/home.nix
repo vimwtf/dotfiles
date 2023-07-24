@@ -1,7 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
     ../../common/home.nix
-    ../../lib/vscode.nix
   ];
 
   # packages
