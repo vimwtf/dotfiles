@@ -5,7 +5,6 @@
     enableUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
-      eamodio.gitlens
       github.copilot
       golang.go
       hashicorp.terraform
