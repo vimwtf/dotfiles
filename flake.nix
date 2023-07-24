@@ -51,12 +51,14 @@
 
       packages = forAllSystems
       ({ pkgs, system }: rec {
-        home-penguin = homeConfigurations."john@penguin".activationPackage;
+        home-penguin-fw = homeConfigurations."john@penguin-fw".activationPackage;
+        home-penguin-duet = homeConfigurations."john@penguin-duet".activationPackage;
         home-pixnix = homeConfigurations."john@pixnix".activationPackage;
         all = pkgs.symlinkJoin {
           name = "all";
           paths = [
-            home-penguin
+            home-penguin-fw
+            home-penguin-duet
             home-pixnix
           ];
         };
@@ -64,11 +66,18 @@
         });
       
       homeConfigurations = {
-        "john@penguin" = home-manager.lib.homeManagerConfiguration {
+        "john@penguin-fw" = home-manager.lib.homeManagerConfiguration {
           pkgs = importPkgs "x86_64-linux";
 
           modules = [
-            ./nix/machines/penguin/home.nix
+            ./nix/machines/penguin-fw/home.nix
+          ];
+        };
+        "john@penguin-duet" = home-manager.lib.homeManagerConfiguration {
+          pkgs = importPkgs "aarch64-linux";
+
+          modules = [
+            ./nix/machines/penguin-duet/home.nix
           ];
         };
         "john@pixnix" = home-manager.lib.homeManagerConfiguration {
