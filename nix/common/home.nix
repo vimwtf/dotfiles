@@ -35,12 +35,10 @@
     fish
     htop
     hugo
-    libvirt
     packer
     powershell
     terraform
     tldr
-    vagrant
     vault
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

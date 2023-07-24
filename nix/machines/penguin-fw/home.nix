@@ -7,8 +7,10 @@
   # packages
   home.packages = with pkgs; [
     firefox-esr
+    libvirt
     obsidian
     qFlipper
+    vagrant
   ];
     
   # XDG settings
