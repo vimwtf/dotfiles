@@ -47,7 +47,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./nix/machines/penguin-fw/home.nix
+            ./nix/home/penguin-fw.nix
             {
               home = {
                 username = "john";

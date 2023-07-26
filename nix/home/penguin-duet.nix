@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
-    ../../common/home.nix
+    ./home/common.nix
   ];
 
   nixpkgs.config = {

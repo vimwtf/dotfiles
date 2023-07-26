@@ -1,4 +1,4 @@
-{ pkgs, lib, ...}: {
+{ pkgs, lib, ... }: {
   programs.tmux = {
     enable = true;
     baseIndex = 1;
