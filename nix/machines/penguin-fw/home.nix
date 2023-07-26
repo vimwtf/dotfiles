@@ -4,6 +4,11 @@
     ../../lib/vscode.nix
   ];
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
+
   # packages
   home.packages = with pkgs; [
     firefox-esr
