@@ -35,11 +35,10 @@
   programs = {
     home-manager.enable = true;
 
-    # direnv = {
-    #   enable = lib.mkDefault true;
-    #   # enableFishIntegration = true;
-    #   nix-direnv.enable = true;
-    # };
+    direnv = {
+      enable = lib.mkDefault true;
+      nix-direnv.enable = true;
+    };
 
     fish = {
       enable = true;
