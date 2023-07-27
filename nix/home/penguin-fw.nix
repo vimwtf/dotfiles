@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }: {
   imports = [
     ./common.nix
-    ../lib/vscode.nix
+   ../lib/vscode.nix
   ];
 
   nixpkgs.config = {
