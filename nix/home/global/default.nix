@@ -1,31 +1,28 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ../lib/tmux.nix
-    ../lib/vim.nix
-  ];
+    ../features/cli
+  ] ++ (builtins.attrValues outputs.homeManagerModules);
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = (_: true);
+  nixpkgs = {
+    overlays = builtins.attrValues outputs.overlays;
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
+  nix = {
+    package = lib.mkDefault pkgs.nix;
+    settings = {
+      experimental-features = ["nix-command" "flakes" "repl-flake" ];
+      warn-dirty = false;
+    };
   };
 
   home = {
+    username = lib.mkDefault "john";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "23.05";
-
-    file = {
-
-    };
-
-    packages = with pkgs; [
-      babelfish
-      hugo
-      packer
-      powershell
-      terraform
-      tldr
-      vault
-    ];
 
     sessionVariables = {
       EDITOR = "vim";
@@ -59,9 +56,6 @@
       };
     };
 
-    htop.enable = lib.mkDefault true;
-
-    jq.enable = lib.mkDefault true;
 
   };
 

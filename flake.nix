@@ -1,8 +1,11 @@
 {
   description = "A Very Flakey Home Manager";
 
+  # Initial layout shamelessly stolen from:
+  # - https://github.com/Misterio77/nix-starter-configs/
+  # - https://github.com/Misterio77/nix-config/
+
   inputs = {
-    # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's a working example:
@@ -15,81 +18,49 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github.com/nixos/nixos-hardware";
+    # Hardware
+    hardware.url = "github:nixos/nixos-hardware";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "aarch64-linux"
-        "x86_64-linux"
-      ];
+      lib = nixpkgs.lib // home-manager.lib;
+      systems = [ "x86_64-linux" "aarch64-linux" ];
+      forEachSystem = f: lib.genAttrs systems (sys: f pkgsFor.${sys});
+      pkgsFor = nixpkgs.legacyPackages;
     in
-    rec {
-      # Your custom packages
-      # Accessible through 'nix build', 'nix shell', etc
-      packages = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-       in import ./nix/pkgs { inherit pkgs; }
-      );
-      # Devshell for bootstrapping
-      # Accessible through 'nix develop' or 'nix-shell' (legacy)
-      devShells = forAllSystems (system:
-        let pkgs = nixpkgs.legacyPackages.${system};
-        in import ./nix/shell.nix { inherit pkgs; }
-      );
-        
-      # Your custom packages and modifications, exported as overlays
-      overlays = import ./nix/overlays { inherit inputs; };
-      # Reusable nixos modules you might want to export
-      # These are usually stuff you would upstream into nixpkgs
+    {
+      inherit lib;
       nixosModules = import ./nix/modules/nixos;
-      # Reusable home-manager modules you might want to export
-      # These are usually stuff you would upstream into home-manager
       homeManagerModules = import ./nix/modules/home-manager;
 
-      # NixOS configuration entrypoint
-      # Available through 'nixos-rebuild --flake .#your-hostname'
+      overlays = import ./nix/overlays { inherit inputs outputs; };
+
+      packages = forEachSystem (pkgs: import ./nix/pkgs { inherit pkgs; });
+      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
+
       nixosConfigurations = {
-        pixnix = nixpkgs.lib.nixosSystem {
+        # Pixelbook converted to NixOS
+        pixnix = lib.nixosSystem {
+          modules = [ ./nix/hosts/pixnix ];
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main nixos configuration file <
-            ./nix/nixos/configuration.nix
-          ];
         };
       };
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        "john@penguin-fw" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        "john@penguin-fw" = lib.homeManagerConfiguration {
+          modules = [ ./nix/home/penguin-fw.nix ];
+          pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./nix/home/penguin-fw.nix
-            {
-              home = {
-                username = "john";
-                homeDirectory = "/home/john";
-              };
-            }
-          ];
         };
-        "john@penguin-duet" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-linux;
+        "john@penguin-duet" = lib.homeManagerConfiguration {
+          modules = [ ./nix/home/penguin-duet.nix ];
+          pkgs = pkgsFor.aarch64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./nix/home/penguin-duet.nix
-            {
-              home = {
-                username = "john";
-                homeDirectory = "/home/john";
-              };
-            }
-          ];
         };
       };
     };
