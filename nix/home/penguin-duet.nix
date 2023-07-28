@@ -2,6 +2,7 @@
   imports = [
     ./global
     ./lib/chromeos.nix
+    ./features/desktop/vscode.nix
   ];
 
   # packages
