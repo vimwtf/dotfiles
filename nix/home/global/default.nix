@@ -37,14 +37,6 @@
       nix-direnv.enable = true;
     };
 
-    fish = {
-      enable = true;
-      shellInit = "source ${config.home.homeDirectory}/.nix-profile/etc/profile.d/nix.fish";
-      functions = {
-        switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
-      };
-    };
-
     git = {
       enable = lib.mkDefault true;
       delta.enable = true;
@@ -55,7 +47,6 @@
         pull.rebase = false;
       };
     };
-
 
   };
 

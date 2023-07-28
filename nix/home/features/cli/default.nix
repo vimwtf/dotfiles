@@ -2,6 +2,7 @@
   # Common CLI apps
 
   imports = [
+    ./fish.nix
     ./tmux.nix
     ./vim.nix
   ];
