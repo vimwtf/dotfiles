@@ -41,6 +41,12 @@ in
         set fish_cursor_replace_one   underscore  blink
         set fish_cursor_visual        block
       '' +
+      # Restore ctrl+f to accept suggestions
+      ''
+        bind -M insert \cf forward-char
+        bind -M default \cf forward-char
+        bind -M visual \cf forward-char
+      '' +
       # Use terminal colors
       ''
         set -U fish_color_autosuggestion      brblack
