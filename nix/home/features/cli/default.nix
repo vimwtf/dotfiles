@@ -2,6 +2,7 @@
   # Common CLI apps
 
   imports = [
+    ./direnv.nix
     ./fish.nix
     ./tmux.nix
     ./vim.nix
