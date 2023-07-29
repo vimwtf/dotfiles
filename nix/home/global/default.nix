@@ -32,22 +32,6 @@
   programs = {
     home-manager.enable = true;
 
-    direnv = {
-      enable = lib.mkDefault true;
-      nix-direnv.enable = true;
-    };
-
-    git = {
-      enable = lib.mkDefault true;
-      delta.enable = true;
-      userEmail = lib.mkDefault "john@bowdre.net";
-      userName = lib.mkDefault "John Bowdre";
-      extraConfig = {
-        init.defaultBranch = "main";
-        pull.rebase = false;
-      };
-    };
-
   };
 
   targets.genericLinux.enable = true;

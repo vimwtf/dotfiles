@@ -3,6 +3,7 @@
 
   imports = [
     ./direnv.nix
+    ./git.nix
     ./fish.nix
     ./tmux.nix
     ./vim.nix
