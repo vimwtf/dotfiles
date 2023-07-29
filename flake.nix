@@ -68,6 +68,11 @@
           pkgs = pkgsFor.aarch64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
+        "john@pixnix" = lib.homeManagerConfiguration {
+          modules = [ ./nix/home/pixnix.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
       };
     };
 }
