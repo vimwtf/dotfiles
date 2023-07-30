@@ -26,8 +26,6 @@ in
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
     };
 
-    shellInit = "source ${config.home.homeDirectory}/.nix-profile/etc/profile.d/nix.fish";
-
     interactiveShellInit =
       # Open command buffer in vim when alt+e is pressed
       ''
