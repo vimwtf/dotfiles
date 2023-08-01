@@ -11,6 +11,8 @@ in
     shellAbbrs = rec {
       jqless = "jq -C | less -r";
       ls = mkIf hasExa "exa";
+      n = "nix";
+      t = "terraform";
       vi = "vim";
       v = "vim";
     };
