@@ -12,7 +12,8 @@ in
       jqless = "jq -C | less -r";
       ls = mkIf hasExa "exa";
       n = "nix";
-      t = "terraform";
+      tf = "terraform";
+      tfyolo = "terraform apply -auto-approve";
       vi = "vim";
       v = "vim";
     };
