@@ -7,9 +7,12 @@
     # username override
     username = "jbowdre";
     packages = with pkgs; [
+      packer
+      terraform
       vagrant
-      wslu
+      vault
       wsl-open
+      wslu
     ];
   };
 }
