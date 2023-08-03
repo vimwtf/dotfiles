@@ -73,6 +73,11 @@
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
+        "jbowdre@jammy-wsl" = lib.homeManagerConfiguration {
+          modules = [ ./nix/home/jammy-wsl.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
       };
     };
 }
