@@ -59,17 +59,17 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         "john@penguin-fw" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/john/penguin-fw.nix ];
+          modules = [ ./nix/home/penguin-fw.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@penguin-duet" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/john/penguin-duet.nix ];
+          modules = [ ./nix/home/penguin-duet.nix ];
           pkgs = pkgsFor.aarch64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@pixnix" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/john/pixnix.nix ];
+          modules = [ ./nix/home/pixnix.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
