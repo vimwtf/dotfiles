@@ -38,19 +38,19 @@
     in
     {
       inherit lib;
-      nixosModules = import ./nix/modules/nixos;
-      homeManagerModules = import ./nix/modules/home-manager;
+      nixosModules = import ./modules/nixos;
+      homeManagerModules = import ./modules/home-manager;
 
-      overlays = import ./nix/overlays { inherit inputs outputs; };
+      overlays = import ./overlays { inherit inputs outputs; };
 
-      packages = forEachSystem (pkgs: import ./nix/pkgs { inherit pkgs; });
+      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
       devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
         # Pixelbook converted to NixOS
         pixnix = lib.nixosSystem {
-          modules = [ ./nix/hosts/pixnix ];
+          modules = [ ./hosts/pixnix ];
           specialArgs = { inherit inputs outputs; };
         };
       };
@@ -59,17 +59,17 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         "john@penguin-fw" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/penguin-fw.nix ];
+          modules = [ ./home/penguin-fw.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@penguin-duet" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/penguin-duet.nix ];
+          modules = [ ./home/penguin-duet.nix ];
           pkgs = pkgsFor.aarch64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@pixnix" = lib.homeManagerConfiguration {
-          modules = [ ./nix/home/pixnix.nix ];
+          modules = [ ./home/pixnix.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
