@@ -6,7 +6,7 @@
       graph = "log --decorate --oneline --graph";
       fast-forward = "merge --ff-only";
     };
-    userEmail = lib.mkDefault "john@bowdre.net";
+    userEmail = lib.concatStringsSep "" ["john@bo" "wdre.net"];
     userName = lib.mkDefault "John Bowdre";
     extraConfig = {
       init.defaultBranch = "main";
