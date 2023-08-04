@@ -7,6 +7,7 @@
       jqless = "jq -C | less -r";
       k = "kubectl";
       n = "nix";
+      sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
       vi = "vim";
