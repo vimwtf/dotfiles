@@ -8,6 +8,8 @@
   ];
 
   home.packages = with pkgs; [
+    awscli # AWS CLI
+    google-cloud-sdk # GCP CLI
     hugo # Static site generator
     nil # Nix LSP
     # nix-inspect # See which pkgs are in your Path
