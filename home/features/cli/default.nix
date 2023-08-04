@@ -11,7 +11,7 @@
 
   home.packages = with pkgs; [
     babelfish # Lets fish speak bash
-    bottom # Better top
+    bottom # Prettier top
     httpie # Better curl
     jq # JSON pretty printer and manipulator
     powershell # Powershell
