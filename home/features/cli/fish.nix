@@ -7,8 +7,6 @@
       jqless = "jq -C | less -r";
       k = "kubectl";
       n = "nix";
-      scppass = "scp -o PubkeyAuthentication=no";
-      sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
       vi = "vim";
@@ -16,12 +14,12 @@
     };
 
     shellAliases = {
-      ssh = "TERM=xterm ssh";
     };
 
     functions = {
       # Disable greeting
       fish_greeting = "";
+      ssh = "TERM=xterm command ssh $argv";
       # Rebuild home-manager
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
     };
