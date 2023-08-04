@@ -15,6 +15,7 @@
     httpie # Better curl
     jq # JSON pretty printer and manipulator
     powershell # Powershell
+    python3 # Python 3
     tldr # TLDR pages
   ];
 }
