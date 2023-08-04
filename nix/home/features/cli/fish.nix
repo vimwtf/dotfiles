@@ -1,17 +1,14 @@
-{ pkgs, lib, config, ... }:
-let
-  inherit (lib) mkIf;
-  hasPackage = pname: lib.any (p: p ? pname && p.name == pname) config.home.packages;
-  hasExa = hasPackage "exa";
-in
-{
+{ pkgs, lib, config, ... }: {
   programs.fish = {
     enable = true;
 
     shellAbbrs = rec {
+      ccat = "egrep -v '^\s*(#|$)'";
       jqless = "jq -C | less -r";
-      ls = mkIf hasExa "exa";
+      k = "kubectl";
       n = "nix";
+      scppass = "scp -o PubkeyAuthentication=no";
+      sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
       vi = "vim";
@@ -19,7 +16,7 @@ in
     };
 
     shellAliases = {
-
+      ssh = "TERM=xterm ssh";
     };
 
     functions = {
