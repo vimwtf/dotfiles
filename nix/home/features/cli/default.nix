@@ -2,6 +2,7 @@
   # Core CLI apps
 
   imports = [
+    ./exa.nix
     ./git.nix
     ./fish.nix
     ./tmux.nix
