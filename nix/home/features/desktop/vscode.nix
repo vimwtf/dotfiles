@@ -1,4 +1,4 @@
-{ outputs, pkgs, lib, ... }: {
+{ config, outputs, pkgs, lib, ... }: {
 
   programs.vscode = {
     enable = true;
@@ -103,6 +103,10 @@
         "yaml" = true;
       };
       "powershell.codeFormatting.useCorrectCasing" = true;
+      "powershell.powerShellAdditionalExePaths" = {
+        "pwsh" = "${config.home.homeDirectory}/.nix-profile/bin/pwsh";
+      };
+      "powershell.promptToUpdatePowerShell" = false;
       "security.workspace.trust.untrustedFiles" = "open";
       "vim.statusBarColorControl" = true;
       "vim.useCtrlKeys" = false;
