@@ -10,6 +10,10 @@ in
 
     shellAbbrs = rec {
       ccat = "egrep -v '^\s*(#|$)'";
+      ga = "git add";
+      gc = "git commit -m";
+      gp = "git push";
+      gs = "git status";
       jqless = "jq -C | less -r";
       k = mkIf hasKubectl "kubectl";
       n = "nix";
