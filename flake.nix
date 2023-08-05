@@ -58,6 +58,11 @@
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
+        "john@deb01" = lib.homeManagerConfiguration {
+          modules = [ ./home/deb01.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
         "john@penguin-fw" = lib.homeManagerConfiguration {
           modules = [ ./home/penguin-fw.nix ];
           pkgs = pkgsFor.x86_64-linux;
