@@ -78,6 +78,11 @@
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
+        "john@volly" = lib.homeManagerConfiguration {
+          modules = [ ./home/volly.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
       };
     };
 }
