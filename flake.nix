@@ -63,14 +63,14 @@
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
-        "john@penguin-fw" = lib.homeManagerConfiguration {
-          modules = [ ./home/penguin-fw.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-        };
         "john@penguin-duet" = lib.homeManagerConfiguration {
           modules = [ ./home/penguin-duet.nix ];
           pkgs = pkgsFor.aarch64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
+        "john@penguin-fw" = lib.homeManagerConfiguration {
+          modules = [ ./home/penguin-fw.nix ];
+          pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@pixnix" = lib.homeManagerConfiguration {
