@@ -1,6 +1,6 @@
 # Work profile overlay
 
-_Inspired by [Published my Nix Dotfiles](https://www.chrisportela.com/posts/published-nix-dotfiles/)._
+_Inspired by the post [Published my Nix Dotfiles](https://www.chrisportela.com/posts/published-nix-dotfiles/) by [@chrisportela](https://github.com/chrisportela)._
 
 This repo demonstrates how I use a private repo to overlay my work-specific configurations on top of my personal ones. To use it, I just:
 1. Clone the private repo to my machine.
