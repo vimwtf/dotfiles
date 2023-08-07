@@ -9,5 +9,9 @@
       sshroot = "ssh -i ~/.ssh/id_ed25519-root -l root";
       vpnkit = "wsl.exe -d wsl-vpnkit --cd /app service wsl-vpnkit";
     };
+
+    functions = {
+      update-dotfiles = "nix flake lock --update-input dotfiles ${config.home.homeDirectory}/.dotfiles/ && switch-home";
+    };
   };
 }
