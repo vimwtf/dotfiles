@@ -11,7 +11,8 @@ in
     shellAbbrs = rec {
       ccat = "egrep -v '^\s*(#|$)'";
       ga = "git add";
-      gc = "git commit -m";
+      gc = "git commit";      # interactive commit
+      gcm = "git commit -m";  # quick commit
       gp = "git push";
       gs = "git status";
       jqless = "jq -C | less -r";
