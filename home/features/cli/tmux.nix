@@ -9,6 +9,10 @@
     mouse = true;
     plugins = with pkgs.tmuxPlugins; [ ];
     extraConfig = ''
+      # new panes inherit current working directory
+      bind '%' split-window -h -c '#{pane_current_path}'
+      bind '"' split-window -v -c '#{pane_current_path}'
+
       # navigating panes with Ctrl+{hjkl}
       bind -n C-h select-pane -L
       bind -n C-j select-pane -D
@@ -26,7 +30,7 @@
       unbind n
       unbind w
       bind n command-prompt "rename-window '%%'"
-      bind w new-window -c "#{pane_current_path}"
+      bind w new-window
       bind -n M-j previous-window   # alt+j
       bind -n M-k next-window       # alt+k
 
