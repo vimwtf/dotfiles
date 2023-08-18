@@ -4,6 +4,7 @@
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
+    package = pkgs.unstable.vscode;
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
       github.copilot
