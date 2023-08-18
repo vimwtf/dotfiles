@@ -125,6 +125,16 @@
       }
     ];
     userSettings = {
+      "autoalign.moveableItems" = [
+        "="
+        ":"
+        "+="
+        "-="
+      ];
+      "autoalign.nonMoveableItemsAdditional" = [
+        "ks="
+        "ds="
+      ];
       "diffEditor.ignoreTrimWhitespace" = false;
       "editor.acceptSuggestionOnCommitCharacter" = false;
       "editor.acceptSuggestionOnEnter" = "off";
@@ -136,6 +146,7 @@
       "editor.tabCompletion" = "off";
       "editor.tabSize" = 2;
       "explorer.confirmDragAndDrop" = false;
+      "extensions.autoCheckUpdates" = false;
       "files.hotExit" = "onExitAndWindowClose";
       "files.trimTrailingWhitespace" = true;
       "git.confirmSync" = false;
@@ -153,23 +164,23 @@
       };
       "powershell.promptToUpdatePowerShell" = false;
       "security.workspace.trust.untrustedFiles" = "open";
-      "vim.statusBarColorControl" = true;
-      "vim.useCtrlKeys" = false;
-      "window.restoreWindows" = "none";
-      "workbench.startupEditor" = "none";
-      "workbench.colorCustomizations" = {
-        "statusBar.background" = "#005f5f";
-        "statusBar.debuggingBackground" = "#005f5f";
-        "statusBar.noFolderBackground" = "#005f5f";
-      };
+      "update.mode" = "none";
       "vim.normalModeKeyBindings" = [
         {
           "after" = ["@q"];
           "before" = ["Q"];
         }
       ];
+      "vim.statusBarColorControl" = true;
+      "vim.useCtrlKeys" = false;
+      "window.restoreWindows" = "none";
+      "workbench.colorCustomizations" = {
+        "statusBar.background" = "#005f5f";
+        "statusBar.debuggingBackground" = "#005f5f";
+        "statusBar.noFolderBackground" = "#005f5f";
+      };
+      "workbench.startupEditor" = "none";
     };
   };
-
 }
 
