@@ -12,6 +12,7 @@ in
       ccat = "egrep -v '^\s*(#|$)'";
       ga = "git add";
       gc = "git commit";      # interactive commit
+      gg = "git graph";
       gcm = "git commit -m";  # quick commit
       gp = "git push";
       gs = "git status";
