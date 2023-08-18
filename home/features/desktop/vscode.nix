@@ -1,5 +1,9 @@
 { config, outputs, pkgs, lib, ... }: {
 
+  home.packages = with pkgs; [
+    hadolint
+  ];
+
   programs.vscode = {
     enable = true;
     enableExtensionUpdateCheck = false;
