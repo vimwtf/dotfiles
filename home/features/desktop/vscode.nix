@@ -19,6 +19,7 @@
       ms-vscode-remote.remote-ssh
       ms-vscode.powershell
       redhat.vscode-yaml
+      tamasfe.even-better-toml
       timonwong.shellcheck
       vscodevim.vim
       yzhang.markdown-all-in-one
