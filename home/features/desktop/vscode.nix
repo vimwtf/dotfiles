@@ -141,7 +141,7 @@
       "editor.acceptSuggestionOnEnter" = "off";
       "editor.detectIndentation" = false;
       "editor.inlineSuggest.enabled" = true;
-      "editor.lineNumbers" = "relative";
+      "editor.lineNumbers" = "on";
       "editor.renderControlCharacters" = true;
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "off";
@@ -159,6 +159,7 @@
         "scminput" = false;
         "yaml" = true;
       };
+      "go.toolsManagement.checkForUpdates" = "local";
       "powershell.codeFormatting.useCorrectCasing" = true;
       "powershell.powerShellAdditionalExePaths" = {
         "pwsh" = "${config.home.homeDirectory}/.nix-profile/bin/pwsh";
