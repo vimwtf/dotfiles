@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
     babelfish # Lets fish speak bash
     bottom # Prettier top
+    dig # DNS lookup
     gh # Github CLI
     httpie # Better curl
     jq # JSON pretty printer and manipulator
