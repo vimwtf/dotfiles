@@ -10,10 +10,11 @@ in
 
     shellAbbrs = rec {
       ccat = "egrep -v '^\s*(#|$)'";
+      g = "git";
       ga = "git add";
       gc = "git commit";      # interactive commit
-      gg = "git graph";
       gcm = "git commit -m";  # quick commit
+      gg = "git graph";
       gs = "git status";
       jqless = "jq -C | less -r";
       k = mkIf hasKubectl "kubectl";
@@ -21,8 +22,8 @@ in
       sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
-      vi = "vim";
       v = "vim";
+      vi = "vim";
     };
 
     shellAliases = {
