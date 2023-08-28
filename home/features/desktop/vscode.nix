@@ -155,7 +155,7 @@
       "github.copilot.enable" = {
         "*" = true;
         "plaintext" = true;
-        "markdown" = true;
+        "markdown" = false;
         "scminput" = false;
         "yaml" = true;
       };
