@@ -160,6 +160,7 @@
         "yaml" = true;
       };
       "go.toolsManagement.checkForUpdates" = "local";
+      "html.autoClosingTags" = false;
       "powershell.codeFormatting.useCorrectCasing" = true;
       "powershell.powerShellAdditionalExePaths" = {
         "pwsh" = "${config.home.homeDirectory}/.nix-profile/bin/pwsh";
