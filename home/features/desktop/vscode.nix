@@ -174,14 +174,9 @@
           "before" = ["Q"];
         }
       ];
-      "vim.statusBarColorControl" = true;
+      "vim.statusBarColorControl" = false;
       "vim.useCtrlKeys" = false;
       "window.restoreWindows" = "none";
-      "workbench.colorCustomizations" = {
-        "statusBar.background" = "#005f5f";
-        "statusBar.debuggingBackground" = "#005f5f";
-        "statusBar.noFolderBackground" = "#005f5f";
-      };
       "workbench.startupEditor" = "none";
     };
   };
