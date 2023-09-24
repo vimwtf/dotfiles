@@ -36,6 +36,7 @@ in
       ssh = "TERM=xterm command ssh $argv";
       # Rebuild home-manager
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
+      switch-nix = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.dotfiles";
     };
 
     interactiveShellInit =
