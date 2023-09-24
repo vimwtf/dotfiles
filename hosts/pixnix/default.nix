@@ -21,7 +21,6 @@
 
   networking = {
     hostName = "pixnix";
-    # wireless.enable = true;
     networkmanager.enable = true;
   };
 

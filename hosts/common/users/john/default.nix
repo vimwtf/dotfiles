@@ -6,17 +6,17 @@ in
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [
-      "wheel"
-      "video"
       "audio"
+      "video"
+      "wheel"
     ] ++ ifTheyExist [
-      "network"
-      "wireshark"
-      "mysql"
       "docker"
-      "podman"
       "libvirtd"
+      "mysql"
+      "network"
       "networkmanager"
+      "podman"
+      "wireshark"
     ];
 
     packages = [ pkgs.home-manager ];
