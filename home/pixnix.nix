@@ -7,7 +7,6 @@
 
   # packages
   home.packages = with pkgs; [
-    libvirt
     vagrant
   ];
 }

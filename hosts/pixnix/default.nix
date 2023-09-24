@@ -10,6 +10,7 @@
     ../common/users/john
 
     ../common/optional/docker.nix
+    ../common/optional/libvirtd.nix
     ../common/optional/sshd.nix
   ];
 
