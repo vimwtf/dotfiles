@@ -4,14 +4,15 @@
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
-    ./services
 
     ../common/global
     ../common/users/john
 
     ../common/optional/docker.nix
+    ../common/optional/gnome.nix
     ../common/optional/libvirtd.nix
     ../common/optional/pipewire.nix
+    ../common/optional/printing.nix
     ../common/optional/sshd.nix
   ];
 
