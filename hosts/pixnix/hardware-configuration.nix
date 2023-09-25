@@ -22,7 +22,7 @@
   };
 
 
-  filesystems = {
+  fileSystems = {
     "/" = {
       device = "/dev/disk/by-uuid/b2c7656b-2292-4dc9-94f2-a66690a14969";
       fsType = "ext4";
