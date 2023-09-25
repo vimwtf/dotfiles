@@ -16,13 +16,6 @@
     ../common/optional/sshd.nix
   ];
 
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-  };
-
   networking = {
     hostName = "pixnix";
     networkmanager.enable = true;

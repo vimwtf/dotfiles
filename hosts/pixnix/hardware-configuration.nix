@@ -12,6 +12,13 @@
     };
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
+    loader = {
+      systemd-boot = {
+        enable = true;
+        consoleMode = "max";
+      };
+      efi.canTouchEfiVariables = true;
+    };
   };
 
 
