@@ -3,6 +3,7 @@
     inputs.home-manager.nixosModules.home-manager
     ./fish.nix
     ./locale.nix
+    ./nix.nix
     ./tailscale.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
