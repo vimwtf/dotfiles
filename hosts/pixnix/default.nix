@@ -11,6 +11,7 @@
 
     ../common/optional/docker.nix
     ../common/optional/libvirtd.nix
+    ../common/optional/pipewire.nix
     ../common/optional/sshd.nix
   ];
 
@@ -25,8 +26,6 @@
     hostName = "pixnix";
     networkmanager.enable = true;
   };
-
-  time.timeZone = "America/Chicago";
 
   system.stateVersion = "23.05";
 
