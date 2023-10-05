@@ -19,6 +19,7 @@
     mtr # Better traceroute
     nmap # Network scanner
     powershell # Powershell
+    pssh # Parallel SSH
     python3 # Python 3
     tldr # TLDR pages
   ];
