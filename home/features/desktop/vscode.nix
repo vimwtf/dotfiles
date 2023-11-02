@@ -31,13 +31,12 @@
         version = "0.0.13";
         sha256 = "sha256-N5XMHW6UadKjE29p2vevtjgqLA4QysYu2xT3njmyHLk=";
       }
-      # copilot chat requires vscode 1.82
-      # {
-      #   name = "copilot-chat";
-      #   publisher = "github";
-      #   version = "0.7.2023081801";
-      #   sha256 = "sha256-4n28k0pqHEluL7mbsTfMMkePfRK5U5MzMNhLTRogoVY=";
-      # }
+      {
+        name = "copilot-chat";
+        publisher = "github";
+        version = "0.11.2023110202";
+        sha256 = "sha256-q+WWhb5hDv1J/v996gLPozC9Yc7hvAnRvvzYQxBNeVQ=";
+      }
       {
         name = "hadolint";
         publisher = "exiasr";
