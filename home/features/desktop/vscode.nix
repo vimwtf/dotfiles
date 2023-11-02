@@ -61,6 +61,12 @@
         version = "3.6.0";
         sha256 = "sha256-FZTiNGSY+8xk3DJsTKQu4AHy1UFvg0gbrzPpjqRlECI=";
       }
+      {
+        name = "vscode-tailscale";
+        publisher = "tailscale";
+        version = "1.0.0";
+        sha256 = "sha256-MKiCZ4Vu+0HS2Kl5+60cWnOtb3udyEriwc+qb/7qgUg=";
+      }
     ];
     keybindings = [
       {
