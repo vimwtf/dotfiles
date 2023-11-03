@@ -18,6 +18,7 @@
     jq # JSON pretty printer and manipulator
     mtr # Better traceroute
     nmap # Network scanner
+    nodePackages.npm # Node package manager
     powershell # Powershell
     pssh # Parallel SSH
     python3 # Python 3
