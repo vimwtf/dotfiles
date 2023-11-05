@@ -3,6 +3,7 @@
     ./global
     ./features/cli/extras
     ./features/desktop
+    ./features/desktop/chrome.nix
   ];
 
   # packages
