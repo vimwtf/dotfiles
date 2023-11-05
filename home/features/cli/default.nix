@@ -18,6 +18,7 @@
     jq # JSON pretty printer and manipulator
     mtr # Better traceroute
     nmap # Network scanner
+    nodejs # Node js
     nodePackages.npm # Node package manager
     powershell # Powershell
     pssh # Parallel SSH
