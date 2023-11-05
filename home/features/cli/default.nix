@@ -5,6 +5,7 @@
     ./exa.nix
     ./git.nix
     ./fish.nix
+    ./nix-index.nix
     ./tmux.nix
     ./vim.nix
   ];
