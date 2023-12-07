@@ -7,4 +7,4 @@ This repo demonstrates how I use a private repo to overlay my work-specific conf
 2. `cd` into the private repo.
 3. Run `home-manager switch --flake .#<username>@<hostname>` to activate the work profile (and then use the `switch-home` function to (re)activate it in the future).
 
-When the public `dotfiles` repo gets updated, I run `nix flake lock --update-input dotfiles` to pull in the changes before doing `switch-home` to reapply the config.
+When the public `dotfiles` repo gets updated, I use the `update-dotfiles` function to pull in the changes (`nix flake lock --update-input dotfiles ${config.home.homeDirectory}/.dotfiles/`) and reapply the config (`switch-home`).
