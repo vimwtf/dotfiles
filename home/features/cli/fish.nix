@@ -9,7 +9,7 @@ in
     enable = true;
 
     shellAbbrs = rec {
-      ccat = "egrep -v '^\s*(#|$)'";
+      ccat = "egrep -v '^\s*(#|\\$)'";
       g = "git";
       ga = "git add";
       gc = "git commit";      # interactive commit
