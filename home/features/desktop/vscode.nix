@@ -8,7 +8,7 @@
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    package = pkgs.unstable.vscode;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       # extensions available as nix packages
       bbenoist.nix
