@@ -8,7 +8,7 @@
     enable = true;
     enableExtensionUpdateCheck = false;
     enableUpdateCheck = false;
-    package = pkgs.unstable.vscode;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       # extensions available as nix packages
       bbenoist.nix
@@ -146,7 +146,7 @@
       "editor.acceptSuggestionOnEnter" = "off";
       "editor.detectIndentation" = false;
       "editor.inlineSuggest.enabled" = true;
-      "editor.lineNumbers" = "on";
+      "editor.lineNumbers" = "relative";
       "editor.renderControlCharacters" = true;
       "editor.renderWhitespace" = "all";
       "editor.tabCompletion" = "off";
