@@ -9,4 +9,6 @@ in
     enable = true;
     enableFishIntegration = mkIf hasFish true;
   };
+
+  programs.command-not-found.enable = false;
 }
