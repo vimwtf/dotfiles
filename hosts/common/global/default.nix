@@ -4,6 +4,7 @@
     ./fish.nix
     ./locale.nix
     ./nix.nix
+    ./network-manager.nix
     ./tailscale.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
