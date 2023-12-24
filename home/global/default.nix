@@ -8,6 +8,8 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
+      # until Obsidian gets a newer version of Electron...
+      permittedInsecurePackages = lib.optional (pkgs.obsidian.version == "1.4.16") "electron-25.9.0";
     };
   };
 
