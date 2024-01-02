@@ -159,8 +159,9 @@
       "git.ignoreLegacyWarning" = true;
       "github.copilot.enable" = {
         "*" = true;
-        "plaintext" = true;
         "markdown" = false;
+        "plaintext" = true;
+        "properties" = false;
         "scminput" = false;
         "yaml" = true;
       };
