@@ -6,6 +6,7 @@
         gdm = {
           enable = true;
           autoSuspend = false;
+          wayland = true;
         };
       };
       desktopManager = {
