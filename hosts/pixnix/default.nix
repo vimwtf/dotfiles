@@ -13,6 +13,7 @@
     ../common/optional/libvirtd.nix
     ../common/optional/pipewire.nix
     ../common/optional/printing.nix
+    ../common/optional/remote-desktop.nix
     ../common/optional/sshd.nix
   ];
 
