@@ -25,6 +25,7 @@
     pssh # Parallel SSH
     python3 # Python 3
     tldr # TLDR pages
-    unzip # zip-unzip it
+    unzip # unzip it
+    zip # zip it
   ];
 }
