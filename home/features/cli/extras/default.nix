@@ -8,12 +8,13 @@
   ];
 
   home.packages = with pkgs; [
+    android-tools # Android SDK
     awscli # AWS CLI
+    envsubst # Envvar substitution for Go
     google-cloud-sdk # GCP CLI
     hugo # Static site generator
     kubectl # Container wrangler
     nil # Nix LSP
-    # nix-inspect # See which pkgs are in your Path
     nixfmt # Nix formatter
     packer # Hashicorp packer
     terraform # Hashicorp terraform
