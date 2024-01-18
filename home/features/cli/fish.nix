@@ -40,6 +40,12 @@ in
     };
 
     interactiveShellInit =
+      # Launch tmux
+      ''
+        if not set -q TMUX
+          tmux attach-session -t home || tmux new-session -s home
+        end
+      '' +
       # Open command buffer in vim when alt+e is pressed
       ''
         bind \ee edit_command_buffer
