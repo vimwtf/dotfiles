@@ -68,6 +68,13 @@
         sha256 = "sha256-MKiCZ4Vu+0HS2Kl5+60cWnOtb3udyEriwc+qb/7qgUg=";
       }
     ];
+    globalSnippets = {
+      "Insert timestamp" = {
+        prefix = ["datetime"];
+        body = ["\"\${CURRENT_YEAR}-\${CURRENT_MONTH}-\${CURRENT_DATE}T\${CURRENT_HOUR}:\${CURRENT_MINUTE}:\${CURRENT_SECOND}Z\""];
+        description = "Insert date and time";
+      };
+    };
     keybindings = [
       {
         key = "backspace";
