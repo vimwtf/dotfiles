@@ -34,6 +34,9 @@
       bind -n M-j previous-window   # alt+j
       bind -n M-k next-window       # alt+k
 
+      # display up to 20 chars of session name
+      set-option -g status-left-length 20
+
       # default statusbar colors
       set-option -g status-style fg=yellow,bg=black
 
