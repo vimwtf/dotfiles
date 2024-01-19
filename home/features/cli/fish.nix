@@ -1,9 +1,4 @@
 { pkgs, lib, config, ... }:
-let
-  inherit (lib) mkIf;
-  hasPackage = pname: lib.any (p: p ? pname && p.name == pname) config.home.packages;
-  hasKubectl = hasPackage "kubectl";
-in
 {
   programs.fish = {
     enable = true;
@@ -17,7 +12,6 @@ in
       gg = "git graph";
       gs = "git status";
       jqless = "jq -C | less -r";
-      k = mkIf hasKubectl "kubectl";
       n = "nix";
       sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";

@@ -21,4 +21,14 @@
     trekscii # Cute startrek cli printer
     vault # Hashicorp vault
   ];
+
+  programs.fish = {
+    shellAbbrs = rec {
+      k = "kubectl";
+    };
+
+    functions = {
+      nugo = "hugo new content/posts/$argv/index.md";
+    };
+  };
 }
