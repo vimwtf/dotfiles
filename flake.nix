@@ -83,6 +83,11 @@
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
+        "john@doc" = lib.homeManagerConfiguration {
+          modules = [ ./home/doc.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
       };
     };
 }
