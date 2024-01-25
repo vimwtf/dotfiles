@@ -14,6 +14,7 @@
     babelfish # Lets fish speak bash
     bottom # Prettier top
     dig # DNS lookup
+    dos2unix # Convert DOS line endings to UNIX
     gh # Github CLI
     httpie # Better curl
     jq # JSON pretty printer and manipulator
