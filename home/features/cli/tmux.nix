@@ -64,6 +64,9 @@
 
       # bell
       set-window-option -g window-status-bell-style fg=black,bg=red
+
+      # clipboard
+      set-option -s set-clipboard on
     '';
   };
 }
