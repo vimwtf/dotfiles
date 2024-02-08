@@ -137,6 +137,19 @@
         when = "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/";
       }
     ];
+    languageSnippets = {
+      jinja-yaml = {
+        "Insert SLS header" = {
+          prefix = ["sls"];
+          body = [
+            "# -*- coding: utf-8 -*-"
+            "# vim: ft=yaml"
+            "---"
+            "\$0"
+          ];
+        };
+      };
+    };
     userSettings = {
       "autoalign.moveableItems" = [
         "="
