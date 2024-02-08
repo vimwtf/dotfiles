@@ -140,6 +140,7 @@
     languageSnippets = {
       jinja-yaml = {
         "Insert SLS header" = {
+          isFileTemplate = true;
           prefix = ["sls"];
           body = [
             "# -*- coding: utf-8 -*-"
