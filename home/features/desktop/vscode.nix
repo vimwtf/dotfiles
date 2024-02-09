@@ -13,12 +13,15 @@
       # extensions available as nix packages
       bbenoist.nix
       github.copilot
+      github.copilot-chat
+      github.vscode-github-actions
       golang.go
       hashicorp.terraform
       ms-kubernetes-tools.vscode-kubernetes-tools
       ms-vscode-remote.remote-ssh
       ms-vscode.powershell
       redhat.vscode-yaml
+      tailscale.vscode-tailscale
       tamasfe.even-better-toml
       timonwong.shellcheck
       vscodevim.vim
@@ -30,12 +33,6 @@
         publisher = "bladnman";
         version = "0.0.13";
         sha256 = "sha256-N5XMHW6UadKjE29p2vevtjgqLA4QysYu2xT3njmyHLk=";
-      }
-      {
-        name = "copilot-chat";
-        publisher = "github";
-        version = "0.11.2023110202";
-        sha256 = "sha256-q+WWhb5hDv1J/v996gLPozC9Yc7hvAnRvvzYQxBNeVQ=";
       }
       {
         name = "hadolint";
@@ -60,12 +57,6 @@
         publisher = "darkriszty";
         version = "3.6.0";
         sha256 = "sha256-FZTiNGSY+8xk3DJsTKQu4AHy1UFvg0gbrzPpjqRlECI=";
-      }
-      {
-        name = "vscode-tailscale";
-        publisher = "tailscale";
-        version = "1.0.0";
-        sha256 = "sha256-MKiCZ4Vu+0HS2Kl5+60cWnOtb3udyEriwc+qb/7qgUg=";
       }
     ];
     globalSnippets = {
