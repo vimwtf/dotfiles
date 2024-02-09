@@ -150,6 +150,17 @@
           ];
         };
       };
+      jinja-html = {
+        "Insert jinja header" = {
+          isFileTemplate = true;
+          prefix = ["jinja"];
+          body = [
+            "# -*- coding: utf-8 -*-"
+            "# vim: ft=jinja"
+            "\$0"
+          ];
+        };
+      };
     };
     userSettings = {
       "autoalign.moveableItems" = [
