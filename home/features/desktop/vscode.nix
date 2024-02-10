@@ -17,6 +17,7 @@
       github.vscode-github-actions
       golang.go
       hashicorp.terraform
+      ms-azuretools.vscode-docker
       ms-kubernetes-tools.vscode-kubernetes-tools
       ms-vscode-remote.remote-ssh
       ms-vscode.powershell
