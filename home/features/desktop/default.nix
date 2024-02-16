@@ -6,6 +6,7 @@
   ];
 
   home.packages = with pkgs; [
+    gimp-with-plugins
     obsidian
     qFlipper
     remmina
