@@ -24,7 +24,6 @@
     nodePackages.npm # Node package manager
     powershell # Powershell
     pssh # Parallel SSH
-    python3 # Python 3
     rsync # Remote sync
     tldr # TLDR pages
     unzip # unzip it
