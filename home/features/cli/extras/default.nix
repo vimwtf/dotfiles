@@ -12,6 +12,7 @@
     awscli # AWS CLI
     envsubst # Envvar substitution for Go
     google-cloud-sdk # GCP CLI
+    hugo # Static site generator
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt # Nix formatter
