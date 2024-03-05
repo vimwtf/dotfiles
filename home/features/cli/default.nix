@@ -28,6 +28,7 @@
     rsync # Remote sync
     tldr # TLDR pages
     unzip # unzip it
+    yq # YAML pretty printer and manipulator
     zip # zip it
   ];
 }
