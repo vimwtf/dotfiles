@@ -59,6 +59,12 @@
         version = "3.6.0";
         sha256 = "sha256-FZTiNGSY+8xk3DJsTKQu4AHy1UFvg0gbrzPpjqRlECI=";
       }
+      {
+        name = "snippet";
+        publisher = "vscode-snippet";
+        version = "1.2.0";
+        sha256 = "sha256-eka7JRzSN7VWkLu2kITb5mSYZHpw7Hx8mZboQsFhpms=";
+      }
     ];
     globalSnippets = {
       "Insert timestamp" = {
