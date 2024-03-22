@@ -25,6 +25,8 @@
     };
 
     functions = {
+      # cht.sh integration
+      cht = "curl cheat.sh/$argv";
       # Disable greeting
       fish_greeting = "";
       fish_prompt = ''
@@ -124,6 +126,10 @@
         set -U fish_pager_color_description   yellow
         set -U fish_pager_color_prefix        'white' '--bold' '--underline'
         set -U fish_pager_color_progress      'brwhite' '--background=cyan'
+      '' +
+      # load cht.sh completions
+      ''
+        complete -c cht -xa '(curl -s cheat.sh/:list)'
       '';
   };
 }
