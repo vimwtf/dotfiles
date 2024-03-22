@@ -72,6 +72,11 @@
         body = ["\"\${CURRENT_YEAR}-\${CURRENT_MONTH}-\${CURRENT_DATE}T\${CURRENT_HOUR}:\${CURRENT_MINUTE}:\${CURRENT_SECOND}Z\""];
         description = "Insert date and time";
       };
+      "Torchlight line number markup" = {
+        prefix = ["torchlight"];
+        body = ["torchlight! {\"lineNumbers\":true}"];
+        description = "Enable Torchlight line numbers";
+      };
     };
     keybindings = [
       {
