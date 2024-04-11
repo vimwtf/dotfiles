@@ -36,6 +36,12 @@
         sha256 = "sha256-N5XMHW6UadKjE29p2vevtjgqLA4QysYu2xT3njmyHLk=";
       }
       {
+        name = "gemini-improved";
+        publisher = "printfn";
+        version = "1.0.6";
+        sha256 = "sha256-PqDBxCT+7wApSwESJRgEes4+sItIF7T3KsIlVaNj2Fg=";
+      }
+      {
         name = "hadolint";
         publisher = "exiasr";
         version = "1.1.2";
