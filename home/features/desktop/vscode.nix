@@ -200,6 +200,7 @@
       "git.ignoreLegacyWarning" = true;
       "github.copilot.enable" = {
         "*" = true;
+        "gemini" = false;
         "markdown" = false;
         "plaintext" = false;
         "properties" = false;
