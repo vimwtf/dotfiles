@@ -187,6 +187,7 @@
       "editor.acceptSuggestionOnEnter" = "off";
       "editor.detectIndentation" = false;
       "editor.fontFamily" = "'Berkeley Mono', 'Droid Sans Mono', 'monospace', monospace";
+      "editor.fontLigatures" = true;
       "editor.inlineSuggest.enabled" = true;
       "editor.lineNumbers" = "relative";
       "editor.renderControlCharacters" = true;
