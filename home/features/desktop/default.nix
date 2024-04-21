@@ -6,7 +6,7 @@
   ];
 
   home.packages = with pkgs; [
-    # gimp-with-plugins
+    gimp-with-plugins
     lagrange
     obsidian
     qFlipper
