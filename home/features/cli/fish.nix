@@ -77,7 +77,7 @@
       # Launch tmux
       ''
         if not set -q TMUX
-          tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s)
+          tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s) -c $HOME
         end
       '' +
       # Open command buffer in vim when alt+e is pressed
