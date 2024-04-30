@@ -190,8 +190,14 @@
       "editor.fontLigatures" = true;
       "editor.inlineSuggest.enabled" = true;
       "editor.lineNumbers" = "relative";
+      "editor.quickSuggestions" = {
+        "other" = true;
+        "comments" = false;
+        "strings" = true;
+      };
       "editor.renderControlCharacters" = true;
       "editor.renderWhitespace" = "all";
+      "editor.snippetSuggestions" = "top";
       "editor.tabCompletion" = "off";
       "editor.tabSize" = 2;
       "explorer.confirmDragAndDrop" = false;
@@ -228,6 +234,14 @@
       "vim.useCtrlKeys" = false;
       "window.restoreWindows" = "none";
       "workbench.startupEditor" = "none";
+      "[markdown]" = {
+        "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+        "editor.quickSuggestions" = {
+          "other" = true;
+          "comments" = false;
+          "strings" = true;
+        };
+      };
     };
   };
 }
