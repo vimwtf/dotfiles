@@ -8,7 +8,7 @@
   home.packages = with pkgs; [
     gimp-with-plugins
     lagrange
-    (unstable.obsidian)
+    obsidian
     qFlipper
     remmina
   ];
