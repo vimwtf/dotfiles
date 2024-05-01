@@ -11,6 +11,7 @@
   ];
 
   home.packages = with pkgs; [
+    apg # Automatic password generator
     babelfish # Lets fish speak bash
     bottom # Prettier top
     dig # DNS lookup
