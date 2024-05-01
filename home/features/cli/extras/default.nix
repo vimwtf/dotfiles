@@ -16,7 +16,7 @@
     nil # Nix LSP
     nixfmt # Nix formatter
     trekscii # Cute startrek cli printer
-    (unstable.vault) # Hashicorp vault from unstable
+    vault # Hashicorp vault
   ];
 
   programs.fish = {
