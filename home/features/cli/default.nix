@@ -13,7 +13,7 @@
   home.packages = with pkgs; [
     apg # Automatic password generator
     babelfish # Lets fish speak bash
-    bottom # Prettier top
+    btop # Prettier top
     dig # DNS lookup
     dos2unix # Convert DOS line endings to UNIX
     gh # Github CLI
