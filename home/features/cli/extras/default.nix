@@ -15,7 +15,6 @@
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt # Nix formatter
-    trekscii # Cute startrek cli printer
     vault # Hashicorp vault
   ];
 

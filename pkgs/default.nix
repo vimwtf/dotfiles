@@ -3,5 +3,4 @@
 
 { pkgs ? (import ../nixpkgs.nix) { } }: {
   # example = pkgs.callPackage ./example { };
-  trekscii = pkgs.callPackage ./trekscii { };
 }
