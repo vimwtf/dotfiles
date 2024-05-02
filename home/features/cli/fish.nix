@@ -21,7 +21,7 @@
     };
 
     shellAliases = {
-      htop = "btm";   # because I always forget the name
+      top = "btop";
     };
 
     functions = {
