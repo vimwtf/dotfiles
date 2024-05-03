@@ -79,12 +79,17 @@
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@volly" = lib.homeManagerConfiguration {
-          modules = [ ./home/volly.nix ];
+          modules = [ ./home/generic.nix ];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
+        "john@immich" = lib.homeManagerConfiguration {
+          modules = [ ./home/generic.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@doc" = lib.homeManagerConfiguration {
-          modules = [ ./home/doc.nix ];
+          modules = [ ./home/generic.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
