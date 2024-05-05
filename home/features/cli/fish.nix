@@ -67,6 +67,8 @@
 
         echo -n -s (prompt_login)' ' (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal " "$nix_shell_info $prompt_status $suffix " "
       '';
+      get-local-ip = "ip addr show $(ip route | grep default | awk '{print $5}') | grep 'inet ' | awk '{print $2}' | cut -d/ -f1";
+
       ssh = "TERM=xterm command ssh $argv";
       # Rebuild home-manager
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
