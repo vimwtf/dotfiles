@@ -14,7 +14,7 @@
     google-cloud-sdk # GCP CLI
     kubectl # Container wrangler
     nil # Nix LSP
-    nixfmt # Nix formatter
+    nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
     vault # Hashicorp vault
   ];
 
