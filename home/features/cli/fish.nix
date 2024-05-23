@@ -135,7 +135,7 @@
       '' +
       # print a happy tree
       ''
-        cbonsai -p -m "$(fortune)"
+        cbonsai -p -m "$(fortune -s -n 300)"
       '';
   };
 }
