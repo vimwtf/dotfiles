@@ -14,6 +14,7 @@
     apg # Automatic password generator
     babelfish # Lets fish speak bash
     btop # Prettier top
+    cbonsai # Happy little trees
     dig # DNS lookup
     dos2unix # Convert DOS line endings to UNIX
     gh # Github CLI
