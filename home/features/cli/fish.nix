@@ -16,6 +16,7 @@
       sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
+      tt = "cbonsai -S";
       v = "vim";
       vi = "vim";
     };
