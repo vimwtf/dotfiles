@@ -132,6 +132,10 @@
       # load cht.sh completions
       ''
         complete -c cht -xa '(curl -s cheat.sh/:list)'
+      '' +
+      # print a happy tree
+      ''
+        cbonsai -p
       '';
   };
 }
