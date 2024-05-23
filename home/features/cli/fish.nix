@@ -135,7 +135,7 @@
       '' +
       # print a happy tree
       ''
-        cbonsai -p
+        cbonsai -p -m "$(fortune)"
       '';
   };
 }

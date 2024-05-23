@@ -17,6 +17,7 @@
     cbonsai # Happy little trees
     dig # DNS lookup
     dos2unix # Convert DOS line endings to UNIX
+    fortune # Fortune cookies
     gh # Github CLI
     httpie # Better curl
     jq # JSON pretty printer and manipulator
