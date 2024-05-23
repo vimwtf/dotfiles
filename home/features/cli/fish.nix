@@ -16,7 +16,7 @@
       sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
-      tt = "cbonsai -S";
+      tt = "cbonsai -S -c $(string join '' (for i in (seq 50); echo \"&,\"; end)),🌸";
       v = "vim";
       vi = "vim";
     };
