@@ -73,6 +73,11 @@
       }
     ];
     globalSnippets = {
+      "Insert datestamp" = {
+        prefix = ["date"];
+        body = ["\"\${CURRENT_YEAR}-\${CURRENT_MONTH}-\${CURRENT_DATE}\""];
+        description = "Insert date";
+      };
       "Insert timestamp" = {
         prefix = ["datetime"];
         body = ["\"\${CURRENT_YEAR}-\${CURRENT_MONTH}-\${CURRENT_DATE}T\${CURRENT_HOUR}:\${CURRENT_MINUTE}:\${CURRENT_SECOND}Z\""];
