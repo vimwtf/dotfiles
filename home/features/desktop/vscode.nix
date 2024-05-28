@@ -186,7 +186,7 @@
       "editor.acceptSuggestionOnCommitCharacter" = false;
       "editor.acceptSuggestionOnEnter" = "off";
       "editor.detectIndentation" = false;
-      "editor.fontFamily" = "'Berkeley Mono', 'Droid Sans Mono', 'monospace', monospace";
+      "editor.fontFamily" = "'Berkeley Mono', 'Droid Sans Mono', 'monospace'";
       "editor.fontLigatures" = true;
       "editor.inlineSuggest.enabled" = true;
       "editor.lineNumbers" = "relative";
@@ -206,6 +206,7 @@
       "files.trimTrailingWhitespace" = true;
       "git.confirmSync" = false;
       "git.ignoreLegacyWarning" = true;
+      "github.copilot.editor.enableAutoCompletions" = true;
       "github.copilot.enable" = {
         "*" = true;
         "gemini" = false;
