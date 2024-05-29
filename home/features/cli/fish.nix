@@ -16,7 +16,6 @@
       sshpass = "ssh -o PubkeyAuthentication=no";
       tf = "terraform";
       tfyolo = "terraform apply -auto-approve";
-      tt = "cbonsai -S -c $(string join '' (for i in (seq 50); echo \"&,\"; end)),🌸";
       v = "vim";
       vi = "vim";
     };
@@ -74,6 +73,9 @@
       # Rebuild home-manager
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
       switch-nix = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.dotfiles";
+
+      # Trees
+      tt = "cbonsai -S -c \"&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮\"";
     };
 
     interactiveShellInit =
@@ -136,7 +138,7 @@
       '' +
       # print a happy tree
       ''
-        cbonsai -p -m "$(fortune -s -n 300)"
+        cbonsai -p -m "$(fortune -s -n 300)" -c "&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮"
       '';
   };
 }
