@@ -21,6 +21,7 @@
     };
 
     shellAliases = {
+      cat = "bat";
       top = "btop";
     };
 
