@@ -12,8 +12,8 @@
       desktopManager = {
         gnome.enable = true;
       };
-      layout = "us";
-      xkbVariant = "";
+      xkb.layout = "us";
+      xkb.variant = "";
     };
     logind.lidSwitch = "ignore";
   };
