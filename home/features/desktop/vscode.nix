@@ -12,8 +12,6 @@
     extensions = with pkgs.vscode-extensions; [
       # extensions available as nix packages
       bbenoist.nix
-      github.copilot
-      github.copilot-chat
       github.vscode-github-actions
       golang.go
       hashicorp.terraform
@@ -211,16 +209,6 @@
       "files.trimTrailingWhitespace" = true;
       "git.confirmSync" = false;
       "git.ignoreLegacyWarning" = true;
-      "github.copilot.editor.enableAutoCompletions" = true;
-      "github.copilot.enable" = {
-        "*" = true;
-        "gemini" = false;
-        "markdown" = false;
-        "plaintext" = false;
-        "properties" = false;
-        "scminput" = false;
-        "yaml" = true;
-      };
       "go.toolsManagement.checkForUpdates" = "local";
       "html.autoClosingTags" = false;
       "powershell.codeFormatting.useCorrectCasing" = true;
