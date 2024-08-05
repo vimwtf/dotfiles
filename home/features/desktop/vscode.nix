@@ -209,6 +209,7 @@
       "files.trimTrailingWhitespace" = true;
       "git.confirmSync" = false;
       "git.ignoreLegacyWarning" = true;
+      "go.toolsManagement.autoUpdate" = true;
       "go.toolsManagement.checkForUpdates" = "local";
       "html.autoClosingTags" = false;
       "powershell.codeFormatting.useCorrectCasing" = true;
