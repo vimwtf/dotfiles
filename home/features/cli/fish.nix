@@ -7,8 +7,8 @@
       ccat = "egrep -v '^\s*(#|\\$)'";
       g = "git";
       ga = "git add";
-      gc = "git commit";      # interactive commit
-      gcm = "git commit -m";  # quick commit
+      gc = "git commit -S";      # interactive commit
+      gcm = "git commit -S -m";  # quick commit
       gg = "git graph";
       gs = "git status";
       jqless = "jq -C | less -r";
