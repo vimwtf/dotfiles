@@ -13,8 +13,10 @@
       userEmail = lib.mkDefault email;
       userName = lib.mkDefault "John Bowdre";
       extraConfig = {
+        gpg.format = "ssh";
         init.defaultBranch = "main";
         pull.rebase = false;
+        user.signingKey = "~/.ssh/id_ed25519.pub";
       };
     };
   }
