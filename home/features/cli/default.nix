@@ -27,6 +27,7 @@
     nmap # Network scanner
     nodejs # Node js
     nodePackages.npm # Node package manager
+    pass # Standard unix password manager
     pigz # Multithreaded gzip
     powershell # Powershell
     pssh # Parallel SSH
