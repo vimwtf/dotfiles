@@ -7,8 +7,8 @@
   ];
 
   # packages
-  home.packages = with pkgs; [
-    libvirt
-    vagrant
-  ];
+  # home.packages = with pkgs; [
+  #   libvirt
+  #   vagrant
+  # ];
 }
