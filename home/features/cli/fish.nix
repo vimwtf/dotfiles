@@ -5,6 +5,8 @@
 
     shellAbbrs = rec {
       ccat = "egrep -v '^\s*(#|\\$)'";
+      dnsplan = "dnscontrol preview";
+      dnspush = "dnscontrol push";
       g = "git";
       ga = "git add";
       gc = "git commit -S";      # interactive commit
