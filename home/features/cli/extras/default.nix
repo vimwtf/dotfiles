@@ -13,6 +13,7 @@
     dnscontrol # Control your DNS
     envsubst # Envvar substitution for Go
     google-cloud-sdk # GCP CLI
+    gh # Github CLI
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
