@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     android-tools # Android SDK
     awscli # AWS CLI
+    dnscontrol # Control your DNS
     envsubst # Envvar substitution for Go
     google-cloud-sdk # GCP CLI
     kubectl # Container wrangler

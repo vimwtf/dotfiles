@@ -7,7 +7,6 @@
   ];
 
   # packages
-  home.packages = with pkgs; [
-    dnscontrol
-  ];
+  # home.packages = with pkgs; [
+  # ];
 }
