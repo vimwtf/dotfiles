@@ -229,6 +229,9 @@
       "vim.useCtrlKeys" = false;
       "window.restoreWindows" = "none";
       "workbench.startupEditor" = "none";
+      "yaml.customTags" = [
+        "!reference sequence"
+      ];
       "[markdown]" = {
         "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
         "editor.quickSuggestions" = {
