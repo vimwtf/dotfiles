@@ -6,7 +6,8 @@
     ./lib/chromeos.nix
   ];
 
-  # packages
-  # home.packages = with pkgs; [
-  # ];
+  # extra packages
+  home.packages = with pkgs; [
+    dive # Explore docker images
+  ];
 }
