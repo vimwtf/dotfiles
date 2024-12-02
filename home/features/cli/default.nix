@@ -22,7 +22,6 @@
     fortune # Fortune cookies
     httpie # Better curl
     jq # JSON pretty printer and manipulator
-    lunarvim # An IDE layer for Neovim
     mtr # Better traceroute
     nmap # Network scanner
     nodejs # Node js
