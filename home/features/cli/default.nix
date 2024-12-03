@@ -6,6 +6,7 @@
     ./git.nix
     ./fish.nix
     ./nix-index.nix
+    ./neovim
     ./tmux.nix
     ./vim.nix
   ];
