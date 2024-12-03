@@ -109,6 +109,7 @@
       # Rebuild home-manager
       switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
       switch-nix = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.dotfiles";
+      upgrade-nix = "nix-channel --update; nix-env --install --attr nixpkgs.nix nixpkgs.cacert";
 
       # Trees
       tt = "cbonsai -S -t 0.25 -c \"&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮\"";
