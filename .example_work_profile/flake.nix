@@ -7,7 +7,7 @@
 
   outputs = { self, dotfiles, nixpkgs } @inputs:
   let
-    inherit (dotfiles) homeConfigurations homeManagerModules lib overlays packages;
+    inherit (dotfiles) homeConfigurations homeManagerModules inputs lib overlays packages;
     inherit (self) outputs;
   in
   {
