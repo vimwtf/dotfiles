@@ -4,7 +4,7 @@
   imports = [
     ./eza.nix
     ./git.nix
-    ./fish.nix
+    ./fish
     ./nix-index.nix
     ./neovim
     ./tmux.nix
