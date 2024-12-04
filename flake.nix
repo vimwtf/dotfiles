@@ -65,32 +65,32 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
         "john@penguin-duet" = lib.homeManagerConfiguration {
-          modules = [ ./home/penguin-duet.nix ];
+          modules = [ ./home/hosts/penguin-duet.nix ];
           pkgs = pkgsFor.aarch64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@penguin-fw" = lib.homeManagerConfiguration {
-          modules = [ ./home/penguin-fw.nix ];
+          modules = [ ./home/hosts/penguin-fw.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@pixnix" = lib.homeManagerConfiguration {
-          modules = [ ./home/pixnix.nix ];
+          modules = [ ./home/hosts/pixnix.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@volly" = lib.homeManagerConfiguration {
-          modules = [ ./home/generic.nix ];
+          modules = [ ./home/hosts/generic.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@immich" = lib.homeManagerConfiguration {
-          modules = [ ./home/generic.nix ];
+          modules = [ ./home/hosts/generic.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
         "john@doc" = lib.homeManagerConfiguration {
-          modules = [ ./home/generic.nix ];
+          modules = [ ./home/hosts/generic.nix ];
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };

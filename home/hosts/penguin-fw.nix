@@ -1,9 +1,9 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ./global
-    ./features/cli/extras
-    ./features/desktop
-    ./lib/chromeos.nix
+    ../global
+    ../features/cli/extras
+    ../features/desktop
+    ../lib/chromeos.nix
   ];
 
   # extra packages

@@ -1,13 +1,10 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ./global
-    ./features/cli/extras
-    ./features/desktop
-    ./features/desktop/chrome.nix
+    ../global
   ];
 
   # packages
   home.packages = with pkgs; [
-    vagrant
+
   ];
 }

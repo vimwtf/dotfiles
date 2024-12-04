@@ -1,9 +1,9 @@
 { pkgs, lib, config, ... }: {
   imports = [
-    ./global
-    ./features/cli/extras
-    ./features/desktop/vscode.nix
-    ./lib/chromeos.nix
+    ../global
+    ../features/cli/extras
+    ../features/desktop/vscode.nix
+    ../lib/chromeos.nix
   ];
 
   # packages
