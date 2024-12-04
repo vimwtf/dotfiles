@@ -1,6 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
-    ../features/cli
+    ../modules/tui
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {

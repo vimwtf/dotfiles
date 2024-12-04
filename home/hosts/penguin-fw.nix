@@ -1,8 +1,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../global
-    ../features/cli/extras
-    ../features/desktop
+    ../modules/tui/extras
+    ../modules/gui
     ../lib/chromeos.nix
   ];
 

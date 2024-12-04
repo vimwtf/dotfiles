@@ -1,9 +1,9 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../global
-    ../features/cli/extras
-    ../features/desktop
-    ../features/desktop/chrome.nix
+    ../modules/tui/extras
+    ../modules/gui
+    ../modules/gui/chrome.nix
   ];
 
   # packages
