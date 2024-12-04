@@ -8,6 +8,5 @@
 
   # packages
   home.packages = with pkgs; [
-    obsidian
   ];
 }
