@@ -56,7 +56,7 @@
       nixosConfigurations = {
         # Pixelbook converted to NixOS
         pixnix = lib.nixosSystem {
-          modules = [ ./hosts/pixnix ];
+          modules = [ ./nixos/pixnix ];
           specialArgs = { inherit inputs outputs; };
         };
       };
