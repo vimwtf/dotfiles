@@ -20,5 +20,12 @@
     };
 
     fzf.enable = true;
+
+    bat = {
+      enable = true;
+      config = {
+        theme = "gruvbox-dark";
+      };
+    };
   };
 }
