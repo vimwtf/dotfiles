@@ -66,10 +66,20 @@
           # sort
           "<leader>s" = ":sort<CR>";
         };
+      insert =
+        lib.mapAttrsToList
+        (key: action: {
+          mode = "i";
+          inherit action key;
+        })
+        {
+          # Save by Ctrl+s
+          "<C-s>" = "<Esc>:w<CR>";
+        };
     in
       config.lib.nixvim.keymaps.mkKeymaps
       {options.silent = true;}
-      (normal ++ visual);
+      (normal ++ visual ++ insert);
   };
 }
 
