@@ -3,7 +3,6 @@
 
   imports = [
     ../default.nix
-    ./direnv.nix
     ./go.nix
   ];
 

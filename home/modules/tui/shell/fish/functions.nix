@@ -69,7 +69,7 @@
       # nix-shell
       set -l nix (
         if test -n "$IN_NIX_SHELL"
-          echo -n "[nix]"
+          echo -n "❄"
         end
       )
 
