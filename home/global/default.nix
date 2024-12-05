@@ -25,7 +25,7 @@
     stateVersion = lib.mkDefault "23.05";
 
     sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "nvim";
     };
   };
 

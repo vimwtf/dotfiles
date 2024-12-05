@@ -12,6 +12,7 @@
 
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
 
     performance = {
       combinePlugins = {
@@ -23,6 +24,9 @@
       };
       byteCompileLua.enable = true;
     };
+
+    viAlias = true;
+    vimAlias = true;
 
     luaLoader.enable = true;
   };

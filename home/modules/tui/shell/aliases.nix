@@ -10,6 +10,6 @@
   tf = "terraform";
   tfyolo = "terraform apply -auto-approve";
   top = "btop";
-  v = "vim";
-  vi = "vim";
+  v = "nvim";
 }
+

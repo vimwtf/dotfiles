@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
   programs.vim = {
     enable = true;
-    defaultEditor = true;
+    # defaultEditor = true;
     settings = {
       background = "dark";
       expandtab = true;
