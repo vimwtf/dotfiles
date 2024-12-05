@@ -21,5 +21,15 @@
       ];
       command = "setlocal spell spelllang=en";
     }
+
+    # Enable wrap for some filetypes
+    {
+      event = "FileType";
+      pattern = [
+        "markdown"
+      ];
+      command = "setlocal wrap linebreak";
+    }
   ];
 }
+
