@@ -33,8 +33,6 @@
         userDefaultOptions.names = false;
       };
 
-      oil.enable = true;
-
       trim = {
         enable = true;
         settings = {
