@@ -39,9 +39,8 @@
       bind -n M-j previous-window   # alt+j
       bind -n M-k next-window       # alt+k
 
-      # auto window rename
-      set-option -g automatic-rename
-      set-option -g automatic-rename-format '#{pane_current_command}'
+      # shorter status update interval
+      set-option -g status-interval 1
 
       # display up to 20 chars of session name
       set-option -g status-left-length 20
