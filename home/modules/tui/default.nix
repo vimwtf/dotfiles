@@ -12,15 +12,12 @@
 
   home.packages = with pkgs; [
     apg # Automatic password generator
-    babelfish # Lets fish speak bash
-    btop # Prettier top
     cbonsai # Happy little trees
     dig # DNS lookup
     dos2unix # Convert DOS line endings to UNIX
     fast-cli # Netflix speed test
     fortune # Fortune cookies
     httpie # Better curl
-    jq # JSON pretty printer and manipulator
     mtr # Better traceroute
     nmap # Network scanner
     nodejs # Node js
@@ -36,4 +33,12 @@
     yq # YAML pretty printer and manipulator
     zip # zip it
   ];
+
+  programs = {
+    btop.enable = true; # prettier top
+    fd.enable = true; # faster find
+    home-manager.enable = true; # managerier home
+    jq.enable = true; # json parser
+    ripgrep.enable = true; # better grep
+  };
 }
