@@ -21,5 +21,17 @@
       ];
     };
 
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
+      enableTransience = true;
+      settings = {
+        container.disabled = true;
+        nix_shell = {
+          format = "via [$symbol]($style) ";
+        };
+      };
+    };
   };
 }
+
