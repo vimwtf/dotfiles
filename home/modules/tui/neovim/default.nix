@@ -1,4 +1,5 @@
 { inputs, ... }: {
+  # neovim config largely lifted from https://github.com/GaetanLepage/nix-config/tree/master/home/modules/tui/neovim
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
