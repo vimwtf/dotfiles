@@ -2,9 +2,27 @@
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./autocmds.nix
+    ./completion.nix
+    ./keymaps.nix
+    ./options.nix
+    ./plugins
   ];
 
   programs.nixvim = {
     enable = true;
+
+    performance = {
+      combinePlugins = {
+        enable = true;
+        standalonePlugins = [
+          "hmts.nvim"
+          "nvim-treesitter"
+        ];
+      };
+      byteCompileLua.enable = true;
+    };
+
+    luaLoader.enable = true;
   };
 }
