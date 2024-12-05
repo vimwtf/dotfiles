@@ -12,7 +12,7 @@
   ];
 
   programs.nixvim = {
-    colorschemes.catppuccin.enable = true;
+    colorschemes.cyberdream.enable = true;
 
     plugins = {
       web-devicons.enable = true;
@@ -22,6 +22,7 @@
         settings.signs = {
           add.text = "+";
           change.text = "~";
+          delete.text = "-";
         };
       };
 
@@ -37,7 +38,8 @@
       trim = {
         enable = true;
         settings = {
-          highlight = true;
+          highlight = false;
+          trim_last_line = false;
           ft_blocklist = [
             "checkhealth"
             "floaterm"
@@ -50,3 +52,4 @@
     };
   };
 }
+
