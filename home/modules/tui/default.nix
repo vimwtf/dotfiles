@@ -17,6 +17,7 @@
     dos2unix # Convert DOS line endings to UNIX
     fast-cli # Netflix speed test
     fortune # Fortune cookies
+    gping # Better ping
     httpie # Better curl
     mtr # Better traceroute
     nmap # Network scanner
