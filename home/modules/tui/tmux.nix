@@ -75,6 +75,10 @@
 
       # clipboard
       set-option -s set-clipboard on
+
+      # terminal colors
+      set-option -g default-terminal "tmux-256color"
+      set-option -a terminal-features "xterm-256color:RGB"
     '';
   };
 
