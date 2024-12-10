@@ -24,7 +24,7 @@
       filesystem.filteredItems.forceVisibleInEmptyFolder = true;
       window = {
         width = 30;
-        autoExpandWidth = true;
+        autoExpandWidth = false;
       };
     };
   };
