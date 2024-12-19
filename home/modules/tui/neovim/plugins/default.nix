@@ -14,7 +14,7 @@
   ];
 
   programs.nixvim = {
-    colorschemes.cyberdream.enable = true;
+    colorschemes.tokyonight.enable = true;
 
     plugins = {
       web-devicons.enable = true;
