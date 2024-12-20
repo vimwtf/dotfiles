@@ -21,4 +21,6 @@
       config.allowUnfree = true;
     };
   };
+
+  alacritty-theme = inputs.alacritty-theme.overlays.default;
 }
