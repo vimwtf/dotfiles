@@ -11,7 +11,7 @@
     keyMode = "vi";
     mouse = true;
     plugins = with pkgs.tmuxPlugins; [
-      gruvbox
+      tokyo-night-tmux
     ];
     extraConfig = ''
       # new panes inherit current working directory
