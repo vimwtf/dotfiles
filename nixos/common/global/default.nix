@@ -1,4 +1,4 @@
-{ inputs, outputs,... }: {
+{ inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./fish.nix
@@ -12,9 +12,7 @@
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
-    config = {
-      allowUnfree = true;
-    };
+    config = { allowUnfree = true; };
   };
 
   environment.enableAllTerminfo = true;

@@ -1,10 +1,7 @@
 { pkgs, ... }: {
   # Extra CLI apps
 
-  imports = [
-    ../default.nix
-    ./go.nix
-  ];
+  imports = [ ../default.nix ./go.nix ];
 
   home.packages = with pkgs; [
     android-tools # Android SDK
@@ -20,12 +17,8 @@
   ];
 
   programs.fish = {
-    shellAbbrs = rec {
-      k = "kubectl";
-    };
+    shellAbbrs = rec { k = "kubectl"; };
 
-    functions = {
-      nugo = "hugo new content/posts/$argv/index.md";
-    };
+    functions = { nugo = "hugo new content/posts/$argv/index.md"; };
   };
 }

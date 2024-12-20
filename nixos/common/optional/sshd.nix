@@ -1,3 +1,1 @@
-{
-  services.sshd.enable = true;
-}
+{ services.sshd.enable = true; }

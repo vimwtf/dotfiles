@@ -2,9 +2,7 @@
   programs.eza = {
     enable = true;
     enableFishIntegration = false;
-    extraOptions = [
-      "--group-directories-first"
-    ];
+    extraOptions = [ "--group-directories-first" ];
     git = true;
   };
 

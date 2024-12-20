@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ ... }: {
   imports = [
     ../global
     ../modules/tui/extras
@@ -7,6 +7,5 @@
   ];
 
   # packages
-  home.packages = with pkgs; [
-  ];
+  # home.packages = with pkgs; [ ];
 }

@@ -1,15 +1,12 @@
 { pkgs, config, ... }:
-let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
-in
-{
+let
+  ifTheyExist = groups:
+    builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+in {
   users.users.john = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [
-      "audio"
-      "video"
-      "wheel"
-    ] ++ ifTheyExist [
+    extraGroups = [ "audio" "video" "wheel" ] ++ ifTheyExist [
       "docker"
       "libvirtd"
       "mysql"
@@ -22,6 +19,7 @@ in
     packages = [ pkgs.home-manager ];
   };
 
-  home-manager.users.john = import ../../../../home/${config.networking.hostName}.nix;
+  home-manager.users.john =
+    import ../../../../home/${config.networking.hostName}.nix;
 
 }

@@ -1,17 +1,12 @@
 {
-  imports = [
-    ./eza.nix
-    ./fish
-  ];
+  imports = [ ./eza.nix ./fish ];
 
-  home = {
-    shellAliases = import ./aliases.nix;
-  };
+  home = { shellAliases = import ./aliases.nix; };
 
   programs = {
     zoxide = {
       enable = true;
-      options = ["--cmd" "j"];
+      options = [ "--cmd" "j" ];
     };
 
     direnv = {
@@ -23,9 +18,7 @@
 
     bat = {
       enable = true;
-      config = {
-        theme = "gruvbox-dark";
-      };
+      config = { theme = "gruvbox-dark"; };
     };
   };
 }

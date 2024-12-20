@@ -1,9 +1,5 @@
 { pkgs, ... }: {
-  imports = [
-    ./abbrs.nix
-    ./functions.nix
-    ./shell-init.nix
-  ];
+  imports = [ ./abbrs.nix ./functions.nix ./shell-init.nix ];
 
   programs = {
     fish = {
@@ -27,9 +23,7 @@
       enableTransience = true;
       settings = {
         container.disabled = true;
-        nix_shell = {
-          format = "via [$symbol]($style) ";
-        };
+        nix_shell = { format = "via [$symbol]($style) "; };
       };
     };
   };

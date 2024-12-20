@@ -4,13 +4,8 @@
     settings = {
       highlight = false;
       trim_last_line = false;
-      ft_blocklist = [
-        "checkhealth"
-        "floaterm"
-        "lsipinfo"
-        "neo-tree"
-        "TelescopePrompt"
-      ];
+      ft_blocklist =
+        [ "checkhealth" "floaterm" "lsipinfo" "neo-tree" "TelescopePrompt" ];
     };
   };
 }

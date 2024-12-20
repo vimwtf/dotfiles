@@ -1,6 +1,6 @@
 {
   cat = "bat";
-  ccat = "egrep -v '^\s*(#|\\$)'";
+  ccat = "egrep -v '^s*(#|\\$)'";
   g = "git";
   gg = "git graph";
   gs = "git status";

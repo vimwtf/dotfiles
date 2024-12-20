@@ -1,8 +1,6 @@
 { lib, stdenv, fetchFromGitHub }:
-let
-  pname = "trekscii";
-in
-stdenv.mkDerivation {
+let pname = "trekscii";
+in stdenv.mkDerivation {
   inherit pname;
   version = "unstable-2022-06-27";
 
@@ -17,7 +15,5 @@ stdenv.mkDerivation {
     install -Dm 0755 bin/trekscii $out/bin/trekscii
   '';
 
-  meta = with lib; {
-    platforms = platforms.all;
-  };
+  meta = with lib; { platforms = platforms.all; };
 }

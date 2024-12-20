@@ -17,10 +17,7 @@
     performance = {
       combinePlugins = {
         enable = true;
-        standalonePlugins = [
-          "hmts.nvim"
-          "nvim-treesitter"
-        ];
+        standalonePlugins = [ "hmts.nvim" "nvim-treesitter" ];
       };
       byteCompileLua.enable = true;
     };

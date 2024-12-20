@@ -1,10 +1,6 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
-  imports = [
-    ../global
-  ];
+{ ... }: {
+  imports = [ ../global ];
 
   # packages
-  home.packages = with pkgs; [
-
-  ];
+  # home.packages = with pkgs; [ ];
 }

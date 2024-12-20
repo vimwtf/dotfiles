@@ -10,9 +10,7 @@
     historyLimit = 100000;
     keyMode = "vi";
     mouse = true;
-    plugins = with pkgs.tmuxPlugins; [
-      tokyo-night-tmux
-    ];
+    plugins = with pkgs.tmuxPlugins; [ tokyo-night-tmux ];
     extraConfig = ''
       # new panes inherit current working directory
       bind '%' split-window -h -c '#{pane_current_path}'

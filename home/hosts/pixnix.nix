@@ -1,4 +1,4 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{ pkgs, ... }: {
   imports = [
     ../global
     ../modules/tui/extras
@@ -7,7 +7,5 @@
   ];
 
   # packages
-  home.packages = with pkgs; [
-    vagrant
-  ];
+  home.packages = with pkgs; [ vagrant ];
 }

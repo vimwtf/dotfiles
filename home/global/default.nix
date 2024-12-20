@@ -1,7 +1,6 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
-  imports = [
-    ../modules/tui
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+{ outputs, lib, config, pkgs, ... }: {
+  imports = [ ../modules/tui ]
+    ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
@@ -14,7 +13,7 @@
   nix = {
     package = lib.mkDefault pkgs.nix;
     settings = {
-      experimental-features = ["nix-command" "flakes" ];
+      experimental-features = [ "nix-command" "flakes" ];
       warn-dirty = false;
     };
   };
@@ -24,9 +23,7 @@
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "24.11";
 
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    sessionVariables = { EDITOR = "nvim"; };
   };
 
   programs = {
