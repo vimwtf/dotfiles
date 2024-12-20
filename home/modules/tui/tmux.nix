@@ -10,6 +10,7 @@
     historyLimit = 100000;
     keyMode = "vi";
     mouse = true;
+    shell = "${pkgs.fish}/bin/fish";
     plugins = with pkgs.tmuxPlugins; [ tokyo-night-tmux ];
     extraConfig = ''
       # new panes inherit current working directory
