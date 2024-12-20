@@ -22,7 +22,7 @@
   home = {
     username = lib.mkDefault "john";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
-    stateVersion = lib.mkDefault "23.05";
+    stateVersion = lib.mkDefault "24.11";
 
     sessionVariables = {
       EDITOR = "nvim";
