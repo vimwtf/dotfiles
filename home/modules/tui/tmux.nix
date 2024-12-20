@@ -6,7 +6,7 @@
     clock24 = true;
     customPaneNavigationAndResize = true;
     escapeTime = 50;
-    focusEvents = true;
+    # focusEvents = true;
     historyLimit = 100000;
     keyMode = "vi";
     mouse = true;
