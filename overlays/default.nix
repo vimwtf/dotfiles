@@ -21,4 +21,5 @@
       config.allowUnfree = true;
     };
   };
+  nixgl = inputs.nixgl.overlay;
 }
