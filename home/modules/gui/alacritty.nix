@@ -6,12 +6,18 @@
     enable = true;
     package = (config.lib.nixGL.wrap pkgs.alacritty);
     settings = {
-      font = {
-        normal = {
-          family = "BerkeleyMono Nerd Font Mono";
-          style = "Bold Italic";
+      bell = {
+        animation = "EaseOutCirc";
+        duration = 200;
+        color = "#c2985b";
+      };
+      cursor = {
+        style = {
+          shape = "Beam";
+          blinking = "On";
         };
       };
+      font = { normal = { family = "BerkeleyMono Nerd Font Mono"; }; };
       general.import = [ pkgs.alacritty-theme.tokyo_night_enhanced ];
       terminal = { shell.program = "${pkgs.fish}/bin/fish"; };
       window = {
