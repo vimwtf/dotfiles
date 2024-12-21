@@ -12,4 +12,8 @@
   # activate NixGL wrapper for Crostini
   nixGL.packages = inputs.nixgl.packages;
   nixGL.defaultWrapper = "mesa";
+  # to use:
+  # programs.example.package = (config.lib.nixGL.wrap pkgs.example);
+  # or:
+  # home.packages = with pkgs; [ (config.libnixGL.wrap example); ];
 }
