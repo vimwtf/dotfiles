@@ -16,6 +16,7 @@
     extraConfig = ''
       # catppuccin theme options
       set -g @catppuccin_flavour "mocha"
+      set -g @catppuccin_status_modules_left "host"
       set -g @catppuccin_status_modules_right "application cpu weather session"
       set -g @tmux-weather-units "u"
       run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
