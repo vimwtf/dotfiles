@@ -1,7 +1,5 @@
 { pkgs, ... }: {
 
-  home.packages = with pkgs; [ gitmux ];
-
   programs.tmux = {
     enable = true;
     aggressiveResize = true;
@@ -18,7 +16,7 @@
     extraConfig = ''
       # catppuccin theme options
       set -g @catppuccin_flavour "mocha"
-      set -g @catppuccin_status_modules_right "application gitmux cpu weather session"
+      set -g @catppuccin_status_modules_right "application cpu weather session"
       set -g @tmux-weather-units "u"
       run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
       run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
