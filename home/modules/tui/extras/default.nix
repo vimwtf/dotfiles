@@ -17,7 +17,7 @@
   ];
 
   programs.fish = {
-    shellAbbrs = rec { k = "kubectl"; };
+    shellAbbrs = { k = "kubectl"; };
 
     functions = { nugo = "hugo new content/posts/$argv/index.md"; };
   };
