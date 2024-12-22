@@ -14,12 +14,15 @@
     keyMode = "vi";
     mouse = true;
     shell = "${pkgs.fish}/bin/fish";
-    plugins = with pkgs.tmuxPlugins; [ catppuccin ];
+    plugins = with pkgs.tmuxPlugins; [ catppuccin cpu weather ];
     extraConfig = ''
       # catppuccin theme options
       set -g @catppuccin_flavour "mocha"
-      set -g @catppuccin_status_modules_right "application gitmux session"
+      set -g @catppuccin_status_modules_right "application gitmux cpu weather session"
+      set -g @tmux-weather-units "u"
       run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
+      run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
+      run-shell ${pkgs.tmuxPlugins.weather}/share/tmux-plugins/weather/tmux-weather.tmux
 
       # new panes inherit current working directory
       bind '%' split-window -h -c '#{pane_current_path}'
