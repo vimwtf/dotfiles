@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   # Core CLI apps
 
-  imports = [ ./git.nix ./shell ./nix-index.nix ./neovim ./tmux.nix ./vim.nix ];
+  imports = [ ./git.nix ./shell ./nix-index.nix ./neovim ./tmux.nix ];
 
   home.packages = with pkgs; [
     apg # Automatic password generator
