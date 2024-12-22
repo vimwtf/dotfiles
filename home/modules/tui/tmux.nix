@@ -1,4 +1,7 @@
 { pkgs, ... }: {
+
+  home.packages = with pkgs; [ gitmux ];
+
   programs.tmux = {
     enable = true;
     aggressiveResize = true;
@@ -11,8 +14,13 @@
     keyMode = "vi";
     mouse = true;
     shell = "${pkgs.fish}/bin/fish";
-    plugins = with pkgs.tmuxPlugins; [ tokyo-night-tmux ];
+    plugins = with pkgs.tmuxPlugins; [ catppuccin ];
     extraConfig = ''
+      # catppuccin theme options
+      set -g @catppuccin_flavour "mocha"
+      set -g @catppuccin_status_modules_right "application gitmux session"
+      run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
+
       # new panes inherit current working directory
       bind '%' split-window -h -c '#{pane_current_path}'
       bind '"' split-window -v -c '#{pane_current_path}'
