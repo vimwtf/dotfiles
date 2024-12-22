@@ -16,7 +16,7 @@
       visual_bell_duration = "1.0 ease-in-out";
     };
     shellIntegration.enableFishIntegration = true;
-    themeFile = "tokyo_night_night";
+    themeFile = "Catppuccin-Mocha";
   };
 }
 
