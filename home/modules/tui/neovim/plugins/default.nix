@@ -14,7 +14,19 @@
   ];
 
   programs.nixvim = {
-    colorschemes.tokyonight.enable = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      settings = {
+        flavour = "mocha";
+        integrations = {
+          barbar = true;
+          gitsigns = true;
+          neotree = true;
+          telescope = true;
+          treesitter = true;
+        };
+      };
+    };
 
     plugins = {
       web-devicons.enable = true;
