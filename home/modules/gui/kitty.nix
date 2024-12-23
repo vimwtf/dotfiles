@@ -16,7 +16,6 @@
       visual_bell_duration = "1.0 ease-in-out";
     };
     shellIntegration.enableFishIntegration = true;
-    themeFile = "Catppuccin-Mocha";
   };
 }
 

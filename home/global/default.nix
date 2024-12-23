@@ -1,5 +1,5 @@
-{ outputs, lib, config, pkgs, ... }: {
-  imports = [ ../modules/tui ]
+{ inputs, outputs, lib, config, pkgs, ... }: {
+  imports = [ ../modules/tui inputs.catppuccin.homeManagerModules.catppuccin ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
@@ -29,6 +29,11 @@
   programs = {
     home-manager.enable = true;
 
+  };
+
+  catppuccin = {
+    flavor = "mocha";
+    enable = true;
   };
 
   targets.genericLinux.enable = true;
