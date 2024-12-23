@@ -9,9 +9,7 @@
 
       lsp = {
         enable = true;
-
         inlayHints = true;
-
         keymaps = {
           silent = true;
           diagnostic = {
@@ -19,7 +17,6 @@
             "<leader>k" = "goto_prev";
             "<leader>j" = "goto_next";
           };
-
           lspBuf = {
             gd = "definition";
             gD = "references";
