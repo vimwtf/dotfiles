@@ -2,12 +2,10 @@
 
   catppuccin.tmux.extraConfig = ''
     # catppuccin theme options
-    set -g @catppuccin_status_modules_left "host"
-    set -g @catppuccin_status_modules_right "application cpu weather session"
-    set -g @tmux-weather-units "u"
+    set -g @catppuccin_status_modules_left ""
+    set -g @catppuccin_status_modules_right "application cpu user host"
     run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
     run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
-    run-shell ${pkgs.tmuxPlugins.weather}/share/tmux-plugins/weather/tmux-weather.tmux
   '';
 
   programs.tmux = {
@@ -22,7 +20,7 @@
     keyMode = "vi";
     mouse = true;
     shell = "${pkgs.fish}/bin/fish";
-    plugins = with pkgs.tmuxPlugins; [ cpu weather ];
+    plugins = with pkgs.tmuxPlugins; [ cpu ];
     extraConfig = ''
       # new panes inherit current working directory
       bind '%' split-window -h -c '#{pane_current_path}'
