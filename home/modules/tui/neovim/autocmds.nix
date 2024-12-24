@@ -13,19 +13,13 @@
       command = "wincmd L";
     }
 
-    # Enable spellcheck for some filetypes
+    # Markdown overrides
     {
       event = "FileType";
       pattern = [ "markdown" ];
-      command = "setlocal spell spelllang=en";
+      command = "setlocal spell spelllang=en wrap linebreak ts=2 sw=2 sts=2";
     }
 
-    # Enable wrap for some filetypes
-    {
-      event = "FileType";
-      pattern = [ "markdown" ];
-      command = "setlocal wrap linebreak";
-    }
   ];
 }
 
