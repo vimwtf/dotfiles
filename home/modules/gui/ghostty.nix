@@ -1,6 +1,7 @@
-{ inputs, ... }: {
+{ config, inputs, ... }: {
 
-  home.packages = [ inputs.ghostty.packages.x86_64-linux.default ];
+  home.packages =
+    [ (config.lib.nixGL.wrap inputs.ghostty.packages.x86_64-linux.default) ];
 
 }
 
