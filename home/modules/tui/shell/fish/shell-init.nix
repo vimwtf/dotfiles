@@ -1,11 +1,11 @@
 {
   programs.fish.interactiveShellInit =
     # Launch tmux
-    ''
-      if not set -q TMUX
-        tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s) -c $HOME
-      end
-    '' +
+    # ''
+    #   if not set -q TMUX
+    #     tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s) -c $HOME
+    #   end
+    # '' +
     # Open command buffer in vim when alt+e is pressed
     ''
       bind \ee edit_command_buffer
