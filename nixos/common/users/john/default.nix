@@ -20,6 +20,6 @@ in {
   };
 
   home-manager.users.john =
-    import ../../../../home/${config.networking.hostName}.nix;
+    import ../../../../home/hosts/${config.networking.hostName}.nix;
 
 }
