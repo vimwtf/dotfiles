@@ -20,5 +20,9 @@
     # Trees
     tt = ''
       cbonsai -S -t 0.25 -c "&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮"'';
+
+    # tmux quickstart
+    tmm =
+      "tmux attach-session -t (hostname -s) || tmux new-session -s (hostname -s) -c $HOME";
   };
 }
