@@ -9,6 +9,7 @@
     font-family = BerkeleyMono Nerd Font Mono
     shell-integration = fish
     theme = catppuccin-mocha
+    title = " "
     window-height = 50
     window-width = 170
   '';
