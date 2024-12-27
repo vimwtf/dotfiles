@@ -1,7 +1,7 @@
 { config, inputs, pkgs, ... }: {
 
   home.packages =
-    [ (config.lib.nixGL.wrap inputs.ghostty.packages.x86_64-linux.default) ];
+    [ (config.lib.nixGL.wrap inputs.ghostty.packages.${pkgs.system}.default) ];
 
   xdg.configFile."ghostty/config".text = ''
     auto-update = off
