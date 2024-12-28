@@ -44,6 +44,10 @@
           };
           gopls.enable = true;
           html.enable = true;
+          jinja_lsp = {
+            enable = true;
+            package = "${pkgs.vimPlugins.vim-jinja}";
+          };
           jsonls.enable = true;
           nixd.enable = true;
           pylsp.enable = true;
