@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./barbar.nix
     ./comment.nix
@@ -38,6 +38,8 @@
         userDefaultOptions.names = false;
       };
     };
+
+    extraPlugins = with pkgs.vimPlugins; [ salt-vim ];
   };
 }
 
