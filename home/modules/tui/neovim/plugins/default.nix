@@ -37,6 +37,8 @@
         enable = true;
         userDefaultOptions.names = false;
       };
+
+      better-escape.enable = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [ salt-vim ];
