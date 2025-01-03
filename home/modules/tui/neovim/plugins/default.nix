@@ -30,15 +30,11 @@
 
     plugins = {
       web-devicons.enable = true;
-
       nvim-autopairs.enable = true;
-
       nvim-colorizer = {
         enable = true;
         userDefaultOptions.names = false;
       };
-
-      better-escape.enable = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [ salt-vim ];
