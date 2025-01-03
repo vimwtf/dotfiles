@@ -3,6 +3,7 @@
     opts.completeopt = [ "menu" "menuone" "noselect" ];
 
     plugins = {
+      cmp-git.enable = true;
       luasnip.enable = true;
 
       lspkind = {
@@ -17,6 +18,7 @@
             luasnip = "[snip]";
             buffer = "[buffer]";
             nixpkgs_maintainers = "[nixpkgs]";
+            git = "[git]";
           };
         };
       };
@@ -44,6 +46,7 @@
             { name = "nvim_lsp"; }
             { name = "luasnip"; }
             { name = "nixpkgs_maintainers"; }
+            { name = "git"; }
             {
               name = "buffer";
               # words from other open buffers can also be suggested
