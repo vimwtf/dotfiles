@@ -52,10 +52,7 @@
           nixd.enable = true;
           pylsp.enable = true;
           terraformls.enable = true;
-          yamlls = {
-            enable = true;
-            settings = { customTags = [ "!reference sequence" ]; };
-          };
+          yamlls.enable = true;
         };
       };
     };
