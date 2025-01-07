@@ -1,8 +1,8 @@
 { config, lib, ... }: {
   programs.nixvim = {
     globals = {
-      mapleader = " ";
-      maplocalleader = " ";
+      mapleader = ",";
+      maplocalleader = ",";
     };
 
     keymaps = let
@@ -10,7 +10,7 @@
         mode = "n";
         inherit action key;
       }) {
-        "<Space>" = "<NOP>";
+        "," = "<NOP>";
 
         # Esc to clear search results
         "<esc>" = ":noh<CR>";
