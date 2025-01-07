@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./barbar.nix
+    ./better-escape.nix
     ./comment.nix
     ./floaterm.nix
     ./gitsigns.nix
