@@ -42,9 +42,6 @@
     # Catppuccin theme
     catppuccin.url = "github:catppuccin/nix";
 
-    # Ghostty
-    ghostty = { url = "github:ghostty-org/ghostty"; };
-
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

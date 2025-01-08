@@ -1,7 +1,6 @@
-{ config, inputs, pkgs, ... }: {
+{ config, pkgs, ... }: {
 
-  home.packages =
-    [ (config.lib.nixGL.wrap inputs.ghostty.packages.${pkgs.system}.default) ];
+  home.packages = with pkgs.unstable; [ (config.lib.nixGL.wrap ghostty) ];
 
   xdg.configFile."ghostty/config".text = ''
     auto-update = off
