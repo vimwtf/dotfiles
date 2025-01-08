@@ -15,16 +15,12 @@
     httpie # Better curl
     mtr # Better traceroute
     nmap # Network scanner
-    nodejs # Node js
-    nodePackages.npm # Node package manager
     pass # Standard unix password manager
     pigz # Multithreaded gzip
     powershell # Powershell
-    pssh # Parallel SSH
     python3 # Python 3
     rsync # Remote sync
     sops # Atomic, declarative, and reproducible secret provisioning
-    tldr # TLDR pages
     unzip # unzip it
     yq # YAML pretty printer and manipulator
     zip # zip it
@@ -32,9 +28,7 @@
 
   programs = {
     btop.enable = true; # prettier top
-    fd.enable = true; # faster find
     home-manager.enable = true; # managerier home
     jq.enable = true; # json parser
-    ripgrep.enable = true; # better grep
   };
 }
