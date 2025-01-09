@@ -20,6 +20,7 @@
     powershell # Powershell
     python3 # Python 3
     rsync # Remote sync
+    ssh-to-age # Convert ssh keys to age
     sops # Atomic, declarative, and reproducible secret provisioning
     unzip # unzip it
     yq # YAML pretty printer and manipulator
