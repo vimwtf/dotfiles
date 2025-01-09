@@ -1,10 +1,17 @@
-{
+{ config, ... }: {
   programs.fish.interactiveShellInit =
     # Launch tmux
     ''
       if not set -q TMUX
         tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s) -c $HOME
       end
+    '' +
+    # set XDG directories
+    ''
+      set -U XDG_CACHE_HOME "${config.home.homeDirectory}/.cache"
+      set -U XDG_CONFIG_HOME "${config.home.homeDirectory}/.config"
+      set -U XDG_DATA_HOME "${config.home.homeDirectory}/.local/share"
+      set -U XDG_STATE_HOME "${config.home.homeDirectory}/.local/state"
     '' +
     # Open command buffer in vim when alt+e is pressed
     ''
