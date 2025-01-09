@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
   # neovim config largely lifted from https://github.com/GaetanLepage/nix-config/tree/master/home/modules/tui/neovim
 
   imports = [
@@ -27,4 +27,6 @@
 
     luaLoader.enable = true;
   };
+
+  home.packages = with pkgs; [ fd ripgrep ];
 }
