@@ -1,8 +1,5 @@
 { inputs, ... }: {
 
-  xdg.enable = true;
-  xdg.mime.enable = true;
-
   # make linux gui apps appear in chromeos launcher
   xdg.configFile."systemd/user/cros-garcon.service.d/override.conf".text = ''
     [Service]
