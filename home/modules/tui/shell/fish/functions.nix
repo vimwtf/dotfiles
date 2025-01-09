@@ -6,9 +6,9 @@
     # Display weather from tempest station
     fish_greeting = ''
       if test -f "${config.sops.secrets.tempest-station.path}"
-        set station (cat ${config.sops.secrets.tempest-station.path})
-        set token (cat ${config.sops.secrets.tempest-token.path})
-        set wxjson (curl --max-time 2 --compressed -sL "https://swd.weatherflow.com/swd/rest/better_forecast?station_id=$station&token=$token&units_temp=f")
+        set -l station (cat ${config.sops.secrets.tempest-station.path})
+        set -l token (cat ${config.sops.secrets.tempest-token.path})
+        set -l wxjson (curl --max-time 2 --compressed -sL "https://swd.weatherflow.com/swd/rest/better_forecast?station_id=$station&token=$token&units_temp=f")
         if test $status -eq 0; and echo $wxjson | jq empty >/dev/null 2>&1
           set -l wxdata (echo $wxjson | jq -r '[
             (.current_conditions.conditions | ascii_downcase),
