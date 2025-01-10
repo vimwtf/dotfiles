@@ -57,6 +57,27 @@
       systems = [ "x86_64-linux" "aarch64-linux" ];
       forEachSystem = f: lib.genAttrs systems (sys: f pkgsFor.${sys});
       pkgsFor = nixpkgs.legacyPackages;
+
+      getHostModule = hostname:
+        let
+          hostPath = ./home/hosts + "/${hostname}.nix";
+          genericPath = ./home/hosts/pixnix.nix;
+        in if builtins.pathExists hostPath then hostPath else genericPath;
+
+      mkHomeConfiguration = { system, hostname, isWork ? false }:
+        lib.homeManagerConfiguration {
+          modules = [
+            (getHostModule hostname)
+            {
+              _module.args = {
+                inherit isWork;
+                inherit hostname;
+              };
+            }
+          ];
+          pkgs = pkgsFor.${system};
+          extraSpecialArgs = { inherit inputs outputs; };
+        };
     in {
       inherit lib;
       nixosModules = import ./modules/nixos;
@@ -79,35 +100,34 @@
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        "john@penguin-duet" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/penguin-duet.nix ];
-          pkgs = pkgsFor.aarch64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@penguin-duet" = mkHomeConfiguration {
+          hostname = "penguin-duet";
+          system = "aarch64-linux";
         };
-        "john@penguin-fw" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/penguin-fw.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@penguin-fw" = mkHomeConfiguration {
+          hostname = "penguin-fw";
+          system = "x86_64-linux";
         };
-        "john@pixnix" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/pixnix.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@pixnix" = mkHomeConfiguration {
+          hostname = "pixnix";
+          system = "x86_64-linux";
         };
-        "john@volly" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/generic.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@volly" = mkHomeConfiguration {
+          hostname = "volly";
+          system = "x86_64-linux";
         };
-        "john@immich" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/generic.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@immich" = mkHomeConfiguration {
+          hostname = "immich";
+          system = "x86_64-linux";
         };
-        "john@doc" = lib.homeManagerConfiguration {
-          modules = [ ./home/hosts/generic.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+        "john@doc" = mkHomeConfiguration {
+          hostname = "doc";
+          system = "x86_64-linux";
+        };
+        "john@wsl" = mkHomeConfiguration {
+          hostname = "doc";
+          isWork = true;
+          system = "x86_64-linux";
         };
       };
     };
