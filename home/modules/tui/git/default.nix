@@ -1,8 +1,7 @@
 { config, isWork, lib, ... }: {
 
-  sops.secrets.git-email = {
-    sopsFile = if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
-  };
+  sops.secrets.git-email.sopsFile =
+    if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   programs.git = {
     enable = lib.mkDefault true;
