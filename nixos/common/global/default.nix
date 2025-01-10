@@ -1,4 +1,4 @@
-{ inputs, outputs, ... }: {
+{ inputs, outputs, pkgs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./fish.nix
@@ -16,6 +16,8 @@
   };
 
   environment.enableAllTerminfo = true;
+
+  environment.systemPackages = with pkgs; [ wget ];
 
   hardware.enableRedistributableFirmware = true;
   networking.domain = "vim.wtf";
