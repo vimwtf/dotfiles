@@ -32,8 +32,10 @@
 
   sops = {
     age.sshKeyPaths = [ "${config.home.homeDirectory}/.ssh/id_ed25519" ];
-    secrets.tempest-station = { sopsFile = ./secrets.yaml; };
-    secrets.tempest-token = { sopsFile = ./secrets.yaml; };
+    secrets = {
+      tempest-station = { sopsFile = ./secrets.yaml; };
+      tempest-token = { sopsFile = ./secrets.yaml; };
+    };
   };
 
   catppuccin = {
