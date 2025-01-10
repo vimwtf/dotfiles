@@ -1,10 +1,12 @@
 keys:
   - &users
-    - &john
-      - age1uspm4tsmv5tehenn23pahcahj49dzege7zqfeg9y36awmjsa5exqldhykt
-      - age1l7e29a95nat4qm4yraxhg6n2lzefp6ppt9hrap0zf0pm08vnquws8amdmm
+    - &john age1uspm4tsmv5tehenn23pahcahj49dzege7zqfeg9y36awmjsa5exqldhykt
+    - &john-work age1l7e29a95nat4qm4yraxhg6n2lzefp6ppt9hrap0zf0pm08vnquws8amdmm
 
 creation_rules:
   - path_regex: home/global/secrets.ya?ml$
     key_groups:
-      - age: *john
+      - age: *users
+  - path_regex: home/modules/tui/git/secrets.ya?ml$
+    key_groups:
+      - age: *users

@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   # Core CLI apps
 
-  imports = [ ./git.nix ./shell ./nix-index.nix ./neovim ./tmux.nix ];
+  imports = [ ./git ./shell ./nix-index.nix ./neovim ./tmux.nix ];
 
   home.packages = with pkgs; [
     age # Simple, modern and secure file encryption tool

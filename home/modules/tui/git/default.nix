@@ -1,6 +1,7 @@
-{ lib, ... }:
-let email = lib.concatStringsSep "" [ "john@bo" "wdre.net" ];
-in {
+{ config, lib, ... }: {
+
+  sops = { secrets = { git-email = { sopsFile = ./secrets.yaml; }; }; };
+
   programs.git = {
     enable = lib.mkDefault true;
     delta.enable = true;
@@ -8,7 +9,6 @@ in {
       graph = "log --decorate --oneline --graph";
       fast-forward = "merge --ff-only";
     };
-    userEmail = lib.mkDefault email;
     userName = lib.mkDefault "John Bowdre";
     extraConfig = {
       gpg.format = "ssh";
@@ -17,4 +17,9 @@ in {
       user.signingKey = "~/.ssh/id_ed25519.pub";
     };
   };
+
+  programs.fish.shellInit = ''
+    set -x GIT_COMMITTER_EMAIL "$(cat ${config.sops.secrets.git-email.path})"
+  '';
+
 }
