@@ -1,7 +1,10 @@
-{ pkgs, ... }: {
+{ config, isWork, pkgs, ... }: {
   # Extra CLI apps
 
   imports = [ ../default.nix ./go.nix ];
+
+  sops.secrets.vault-address.sopsFile =
+    if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = with pkgs; [
     android-tools # Android SDK
@@ -18,6 +21,10 @@
 
   programs.fish = {
     shellAbbrs = { k = "kubectl"; };
+
+    shellInit = ''
+      set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
+    '';
 
     functions = { nugo = "hugo new content/posts/$argv/index.md"; };
   };
