@@ -1,10 +1,5 @@
 { ... }: {
-  imports = [
-    ../global
-    ../modules/tui/extras
-    ../modules/gui/vscode.nix
-    ../lib/chromeos.nix
-  ];
+  imports = [ ../global ../modules/tui/extras ../lib/chromeos.nix ];
 
   # packages
   # home.packages = with pkgs; [ ];
