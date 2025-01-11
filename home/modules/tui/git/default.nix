@@ -17,10 +17,7 @@
       pull.rebase = false;
       user.signingKey = "~/.ssh/id_ed25519.pub";
     };
+    includes = [{ path = "${config.sops.secrets.git-email.path}"; }];
   };
-
-  programs.fish.shellInit = ''
-    set -x GIT_COMMITTER_EMAIL "$(cat ${config.sops.secrets.git-email.path})"
-  '';
 
 }
