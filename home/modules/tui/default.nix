@@ -7,7 +7,6 @@
     if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = with pkgs; [
-    age # Simple, modern and secure file encryption tool
     apg # Automatic password generator
     cbonsai # Happy little trees
     dig # DNS lookup
@@ -23,8 +22,6 @@
     powershell # Powershell
     python3 # Python 3
     rsync # Remote sync
-    ssh-to-age # Convert ssh keys to age
-    sops # Atomic, declarative, and reproducible secret provisioning
     unzip # unzip it
     yq # YAML pretty printer and manipulator
     zip # zip it
