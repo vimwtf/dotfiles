@@ -1,7 +1,7 @@
 { config, isWork, pkgs, ... }: {
   # Extra CLI apps
 
-  imports = [ ../default.nix ./go.nix ];
+  imports = [ ./go.nix ];
 
   sops.secrets.vault-address.sopsFile =
     if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
