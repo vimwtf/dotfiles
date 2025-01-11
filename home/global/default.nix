@@ -1,6 +1,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../modules/tui
+    ../lib/chromeos.nix
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.sops-nix.homeManagerModules.sops
   ] ++ (builtins.attrValues outputs.homeManagerModules);

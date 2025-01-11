@@ -1,6 +1,5 @@
 { pkgs, ... }: {
-  imports =
-    [ ../global ../modules/tui/extras ../modules/gui ../lib/chromeos.nix ];
+  imports = [ ../global ../modules/tui/extras ../modules/gui ];
 
   # extra packages
   home.packages = with pkgs;

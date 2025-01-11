@@ -64,15 +64,14 @@
           genericPath = ./home/hosts/pixnix.nix;
         in if builtins.pathExists hostPath then hostPath else genericPath;
 
-      mkHomeConfiguration = { system, hostname, isWork ? false }:
+      mkHomeConfiguration =
+        { system, hostname, isWork ? false, isChromebook ? false }:
         lib.homeManagerConfiguration {
           modules = [
             (getHostModule hostname)
             {
-              _module.args = {
-                inherit isWork;
-                inherit hostname;
-              };
+              chromeos.enable = isChromebook;
+              _module.args = { inherit hostname isWork; };
             }
           ];
           pkgs = pkgsFor.${system};
@@ -102,10 +101,12 @@
       homeConfigurations = {
         "john@penguin-duet" = mkHomeConfiguration {
           hostname = "penguin-duet";
+          isChromebook = true;
           system = "aarch64-linux";
         };
         "john@penguin-fw" = mkHomeConfiguration {
           hostname = "penguin-fw";
+          isChromebook = true;
           system = "x86_64-linux";
         };
         "john@pixnix" = mkHomeConfiguration {
