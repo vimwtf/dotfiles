@@ -26,6 +26,5 @@
       set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
     '';
 
-    functions = { nugo = "hugo new content/posts/$argv/index.md"; };
   };
 }
