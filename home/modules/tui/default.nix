@@ -14,6 +14,7 @@
     fast-cli # Netflix speed test
     fortune # Fortune cookies
     gping # Better ping
+    gnupg1
     httpie # Better curl
     mtr # Better traceroute
     nmap # Network scanner
