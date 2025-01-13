@@ -127,7 +127,7 @@
           system = "x86_64-linux";
         };
         "john@wsl" = mkHomeConfiguration {
-          hostname = "doc";
+          hostname = "wsl";
           isWork = true;
           system = "x86_64-linux";
         };
