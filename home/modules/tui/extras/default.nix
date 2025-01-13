@@ -9,10 +9,12 @@
   home.packages = with pkgs; [
     android-tools # Android SDK
     awscli # AWS CLI
+    dive
     dnscontrol # Control your DNS
     envsubst # Envvar substitution for Go
     google-cloud-sdk # GCP CLI
     gh # Github CLI
+    hadolint
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
