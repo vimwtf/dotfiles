@@ -23,4 +23,9 @@
     includes = [{ path = "${config.sops.secrets.git-email.path}"; }];
   };
 
+  programs.fish = lib.mkIf isWork {
+    shellInit = ''
+      set -x GPG_TTY "$(tty)"
+    '';
+  };
 }
