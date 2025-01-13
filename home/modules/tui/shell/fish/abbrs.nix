@@ -1,5 +1,5 @@
 {
-  programs.fish.shellAbbrs = rec {
+  programs.fish.shellAbbrs = {
     "-" = "prevd";
     ":q" = "exit";
     dnsplan = "dnscontrol preview";
