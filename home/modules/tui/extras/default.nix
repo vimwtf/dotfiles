@@ -18,6 +18,7 @@
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
+    terraform # Hashicorp terraform
     vault # Hashicorp vault
   ];
 
