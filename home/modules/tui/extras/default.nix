@@ -19,6 +19,8 @@
     nil
     nixfmt-classic
     opentofu
+    ssh-to-age
+    sops
     vault
   ];
 
