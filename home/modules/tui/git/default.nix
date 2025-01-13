@@ -1,7 +1,9 @@
-{ config, isWork, lib, ... }: {
+{ config, isWork, lib, pkgs, ... }: {
 
   sops.secrets.git-email.sopsFile =
     if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
+
+  home.packages = lib.mkIf isWork [ pkgs.git-credential-manager ];
 
   programs.git = {
     enable = lib.mkDefault true;

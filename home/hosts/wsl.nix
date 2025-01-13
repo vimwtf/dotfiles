@@ -2,5 +2,5 @@
   imports = [ ../global ../modules/tui/extras ];
 
   # extra packages
-  home.packages = with pkgs; [ git-credential-manager wsl-open wslu ];
+  home.packages = with pkgs; [ wsl-open wslu ];
 }
