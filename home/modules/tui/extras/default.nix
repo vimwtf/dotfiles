@@ -23,7 +23,11 @@
   ];
 
   programs.fish = {
-    shellAbbrs = { k = "kubectl"; };
+    shellAbbrs = {
+      k = "kubectl";
+      tf = "terraform";
+      tfyolo = "terraform apply -auto-approve";
+    };
 
     shellInit = ''
       set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
