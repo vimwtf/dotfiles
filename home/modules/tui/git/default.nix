@@ -11,12 +11,15 @@
       fast-forward = "merge --ff-only";
     };
     userName = lib.mkDefault "John Bowdre";
-    extraConfig = {
-      gpg.format = "ssh";
-      init.defaultBranch = "main";
-      pull.rebase = false;
-      user.signingKey = "~/.ssh/id_ed25519.pub";
-    };
+    extraConfig = lib.mkMerge [
+      {
+        gpg.format = "ssh";
+        init.defaultBranch = "main";
+        pull.rebase = false;
+        user.signingKey = "~/.ssh/id_ed25519.pub";
+      }
+      (lib.mkIf isWork { credential.credentialStore = "gpg"; })
+    ];
     includes = [{ path = "${config.sops.secrets.git-email.path}"; }];
   };
 
