@@ -7,25 +7,25 @@
     if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = with pkgs; [
-    apg # Automatic password generator
-    cbonsai # Happy little trees
-    dig # DNS lookup
-    dos2unix # Convert DOS line endings to UNIX
-    fast-cli # Netflix speed test
-    fortune # Fortune cookies
-    gping # Better ping
+    apg
+    cbonsai
+    dig
+    dos2unix
+    fast-cli
+    fortune
+    gping
     gnupg1
-    httpie # Better curl
-    mtr # Better traceroute
-    nmap # Network scanner
-    pass # Standard unix password manager
-    pigz # Multithreaded gzip
-    powershell # Powershell
-    python3 # Python 3
-    rsync # Remote sync
-    unzip # unzip it
-    yq # YAML pretty printer and manipulator
-    zip # zip it
+    httpie
+    mtr
+    nmap
+    pass
+    pigz
+    powershell
+    python3
+    rsync
+    unzip
+    yq
+    zip
   ];
 
   programs = {

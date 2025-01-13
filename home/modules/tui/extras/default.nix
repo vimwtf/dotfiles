@@ -7,19 +7,19 @@
     if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = with pkgs; [
-    android-tools # Android SDK
-    awscli # AWS CLI
+    android-tools
+    awscli
     dive
-    dnscontrol # Control your DNS
-    envsubst # Envvar substitution for Go
-    google-cloud-sdk # GCP CLI
-    gh # Github CLI
+    dnscontrol
+    envsubst
+    google-cloud-sdk
+    gh
     hadolint
-    kubectl # Container wrangler
-    nil # Nix LSP
-    nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
+    kubectl
+    nil
+    nixfmt-classic
     opentofu
-    vault # Hashicorp vault
+    vault
   ];
 
   programs.fish = {
