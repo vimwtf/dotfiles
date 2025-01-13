@@ -18,15 +18,16 @@
     kubectl # Container wrangler
     nil # Nix LSP
     nixfmt-classic # Nix formatter (old, stable one until the new one is stableish)
-    terraform # Hashicorp terraform
+    opentofu
     vault # Hashicorp vault
   ];
 
   programs.fish = {
     shellAbbrs = {
       k = "kubectl";
-      tf = "terraform";
-      tfyolo = "terraform apply -auto-approve";
+      terraform = "tofu";
+      tf = "tofu";
+      tfyolo = "tofu apply -auto-approve";
     };
 
     shellInit = ''
