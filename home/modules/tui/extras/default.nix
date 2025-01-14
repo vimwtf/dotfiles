@@ -10,7 +10,6 @@
     android-tools
     awscli
     dive
-    dnscontrol
     envsubst
     google-cloud-sdk
     gh
