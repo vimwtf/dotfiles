@@ -28,5 +28,8 @@ in {
     # programs.example.package = (config.lib.nixGL.wrap pkgs.example);
     # or:
     # home.packages = with pkgs; [ (config.libnixGL.wrap example); ];
+
+    # disable starship's container indicator on crostini
+    programs.starship.settings.container.disabled = true;
   };
 }
