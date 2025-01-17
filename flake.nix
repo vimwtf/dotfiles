@@ -61,7 +61,7 @@
       getHostModule = hostname:
         let
           hostPath = ./home/hosts + "/${hostname}.nix";
-          genericPath = ./home/hosts/pixnix.nix;
+          genericPath = ./home/hosts/generic.nix;
         in if builtins.pathExists hostPath then hostPath else genericPath;
 
       mkHomeConfiguration =
