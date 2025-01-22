@@ -5,7 +5,7 @@
   xdg.configFile."ghostty/config".text = ''
     auto-update = off
     command = ${pkgs.fish}/bin/fish
-    font-family = BerkeleyMono Nerd Font Mono
+    font-family = VictorMono NFM
     shell-integration = fish
     theme = catppuccin-mocha
     title = " "
