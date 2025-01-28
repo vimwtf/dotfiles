@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     android-tools
     awscli
+    cosign
     dive
     envsubst
     google-cloud-sdk
