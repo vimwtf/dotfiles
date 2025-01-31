@@ -24,6 +24,7 @@
     python3
     rsync
     unzip
+    util-linux
     yq
     zip
   ];
