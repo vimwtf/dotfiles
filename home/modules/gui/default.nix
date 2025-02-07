@@ -6,6 +6,7 @@
     (nerdfonts.override { fonts = [ "VictorMono" ]; })
     qFlipper
     remmina
+    tor-browser
   ];
 
 }
