@@ -12,16 +12,16 @@
     cosign
     dive
     envsubst
-    google-cloud-sdk
     gh
+    google-cloud-sdk
     hadolint
     kubectl
     nil
     nixfmt-classic
     opentofu
     pkgs.unstable.astroterm
-    ssh-to-age
     sops
+    ssh-to-age
     vault
   ];
 
