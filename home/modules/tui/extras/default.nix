@@ -19,6 +19,7 @@
     nil
     nixfmt-classic
     opentofu
+    pkgs.unstable.astroterm
     ssh-to-age
     sops
     vault
@@ -26,6 +27,7 @@
 
   programs.fish = {
     shellAbbrs = {
+      astro = "astroterm --color --constellations --unicode";
       k = "kubectl";
       terraform = "tofu";
       tf = "tofu";
