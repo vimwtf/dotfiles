@@ -42,6 +42,9 @@
         # M = Alt
         "<M-k>" = ":move-2<CR>";
         "<M-j>" = ":move+<CR>";
+
+        # toggle display of non-printing characters
+        "<leader>w" = ":set list!<CR>";
       };
       visual = lib.mapAttrsToList (key: action: {
         mode = "v";
