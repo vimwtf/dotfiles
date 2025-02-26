@@ -13,11 +13,12 @@
       command = "wincmd L";
     }
 
-    # Markdown overrides
+    # Text file overrides
     {
       event = "FileType";
-      pattern = [ "markdown" ];
-      command = "setlocal spell spelllang=en wrap linebreak ts=2 sw=2 sts=2";
+      pattern = [ "markdown" "text" ];
+      command =
+        "setlocal spell spelllang=en wrap linebreak ts=2 sw=2 sts=2 nolist";
     }
 
     # Gitlab CI

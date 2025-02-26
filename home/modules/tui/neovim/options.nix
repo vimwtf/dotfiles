@@ -22,7 +22,7 @@
       incsearch =
         true; # incremental search: show match for partly typed search command
       laststatus = 3; # when to use a status line for the last window
-      list = false; # disable showing non-printing characters by default
+      list = true; # enable showing non-printing characters by default
       # how to display certain non-printing characters
       listchars = "eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·";
       modeline = true; # tags such as 'vim:ft=sh'
