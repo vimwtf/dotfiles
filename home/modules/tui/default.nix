@@ -16,6 +16,7 @@
     gping
     gnupg1
     httpie
+    lsof
     mtr
     nmap
     pass
