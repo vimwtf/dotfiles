@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     apg
+    bsd-finger
     cbonsai
     dig
     dos2unix
