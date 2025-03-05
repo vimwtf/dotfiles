@@ -131,6 +131,10 @@
           isWork = true;
           system = "x86_64-linux";
         };
+        "john@hezzy" = mkHomeConfiguration {
+          hostname = "hezzy";
+          system = "x86_64-linux";
+        };
       };
     };
 }
