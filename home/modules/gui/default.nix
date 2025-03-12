@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   # Common GUI apps
-  imports = [ ./firefox.nix ./ghostty.nix ];
+  imports = [ ./librewolf.nix ./ghostty.nix ];
 
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "VictorMono" ]; })
