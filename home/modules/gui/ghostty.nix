@@ -6,11 +6,10 @@
     auto-update = off
     command = ${pkgs.fish}/bin/fish
     font-family = VictorMono NFM
+    maximize = true
     shell-integration = fish
     theme = catppuccin-mocha
     title = " "
-    window-height = 60
-    window-width = 200
   '';
 }
 
