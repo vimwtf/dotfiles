@@ -135,6 +135,10 @@
           hostname = "hezzy";
           system = "x86_64-linux";
         };
+        "droid@pixian" = mkHomeConfiguration {
+          hostname = "pixian";
+          system = "aarch64-linux";
+        };
       };
     };
 }
