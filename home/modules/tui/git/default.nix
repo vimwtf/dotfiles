@@ -17,6 +17,7 @@
         gpg.format = "ssh";
         init.defaultBranch = "main";
         pull.rebase = false;
+        push.autoSetupRemote = true;
         user.signingKey = "~/.ssh/id_ed25519.pub";
       }
       (lib.mkIf isWork { credential.credentialStore = "gpg"; })
