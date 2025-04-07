@@ -2,7 +2,7 @@
   imports = [
     ../modules/tui
     ../lib/chromeos.nix
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
     inputs.sops-nix.homeManagerModules.sops
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
