@@ -8,6 +8,7 @@
     ./harpoon.nix
     ./lsp.nix
     ./md-preview.nix
+    ./mkdnflow.nix
     ./neo-tree.nix
     ./telescope.nix
     ./treesitter.nix
