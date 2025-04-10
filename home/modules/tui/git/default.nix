@@ -25,9 +25,16 @@
     includes = [{ path = "${config.sops.secrets.git-config.path}"; }];
   };
 
-  programs.fish = lib.mkIf isWork {
-    shellInit = ''
-      set -x GPG_TTY "$(tty)"
-    '';
-  };
+  programs.fish = lib.mkMerge [
+    {
+      shellAbbrs = {
+        cleanup-branches = "git branch | grep -v main | xargs git branch -d";
+      };
+    }
+    (lib.mkIf isWork {
+      shellInit = ''
+        set -x GPG_TTY "$(tty)"
+      '';
+    })
+  ];
 }
