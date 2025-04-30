@@ -47,6 +47,9 @@
       bind -n M-j previous-window   # alt+j
       bind -n M-k next-window       # alt+k
 
+      # make C-b C-z zoom instead of suspending session
+      bind C-z resize-pane -Z
+
       # shorter status update interval
       set-option -g status-interval 1
 
