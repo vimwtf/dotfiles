@@ -25,6 +25,7 @@
     opentofu
     pkgs.unstable.astroterm
     powershell
+    rclone
     sops
     ssh-to-age
     vault

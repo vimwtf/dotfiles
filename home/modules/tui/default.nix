@@ -19,7 +19,6 @@
     pass
     pigz
     python3
-    rsync
     unzip
     util-linux
     yq
