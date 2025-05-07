@@ -8,21 +8,16 @@
 
   home.packages = with pkgs; [
     apg
-    bsd-finger
     cbonsai
     dig
     dos2unix
-    fast-cli
     fortune
-    gping
     gnupg1
-    httpie
     lsof
     mtr
     nmap
     pass
     pigz
-    powershell
     python3
     rsync
     unzip

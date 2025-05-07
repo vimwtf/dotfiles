@@ -9,17 +9,22 @@
   home.packages = with pkgs; [
     android-tools
     awscli
+    bsd-finger
     cosign
     dive
     envsubst
+    fast-cli
     gh
     google-cloud-sdk
+    gping
     hadolint
+    httpie
     kubectl
     nil
     nixfmt-classic
     opentofu
     pkgs.unstable.astroterm
+    powershell
     sops
     ssh-to-age
     vault
