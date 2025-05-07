@@ -23,6 +23,7 @@
     sops
     ssh-to-age
     vault
+    ytt
   ];
 
   programs.fish = {
