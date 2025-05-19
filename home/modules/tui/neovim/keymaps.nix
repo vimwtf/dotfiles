@@ -45,6 +45,10 @@
 
         # toggle display of non-printing characters
         "<leader>w" = ":set list!<CR>";
+
+        # arrow keys for navigating soft-wrapped lines
+        "<Up>" = "gk";
+        "<Down>" = "gj";
       };
       visual = lib.mapAttrsToList (key: action: {
         mode = "v";
@@ -62,6 +66,10 @@
 
         # sort
         "<leader>s" = ":sort<CR>";
+
+        # arrow keys for navigating soft-wrapped lines
+        "<Up>" = "gk";
+        "<Down>" = "gj";
       };
       insert = lib.mapAttrsToList (key: action: {
         mode = "i";
