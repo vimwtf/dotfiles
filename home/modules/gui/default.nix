@@ -3,7 +3,7 @@
   imports = [ ./librewolf.nix ./ghostty.nix ];
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "VictorMono" ]; })
+    nerd-fonts.victor-mono
     qFlipper
     remmina
     tor-browser

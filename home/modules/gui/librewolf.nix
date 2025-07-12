@@ -34,4 +34,6 @@
     "x-scheme-handler/http" = [ "librewolf.desktop" ];
     "x-scheme-handler/https" = [ "librewolf.desktop" ];
   };
+
+  catppuccin.librewolf.profiles = { };
 }
