@@ -19,6 +19,7 @@
     gping
     hadolint
     httpie
+    kompose
     kubectl
     nil
     nixfmt-classic
