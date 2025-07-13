@@ -1,12 +1,18 @@
 { pkgs, ... }: {
 
-  catppuccin.tmux.extraConfig = ''
-    # catppuccin theme options
-    set -g @catppuccin_status_modules_left ""
-    set -g @catppuccin_status_modules_right "application cpu user host"
-    run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
-    run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
-  '';
+  catppuccin.tmux = {
+    extraConfig = ''
+      # catppuccin theme options
+      run-shell ${pkgs.tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
+      run-shell ${pkgs.tmuxPlugins.cpu}/share/tmux-plugins/cpu/cpu.tmux
+      set -g status-right-length 100
+      set -g status-left ""
+      set -g status-right "#{E:@catppuccin_status_application}"
+      set -agF status-right "#{E:@catppuccin_status_cpu}"
+      set -ag status-right "#{E:@catppuccin_status_user}"
+      set -ag status-right "#{E:@catppuccin_status_host}"
+    '';
+  };
 
   programs.tmux = {
     enable = true;
