@@ -9,4 +9,5 @@
     tor-browser
   ];
 
+  fonts.fontconfig.enable = true;
 }
