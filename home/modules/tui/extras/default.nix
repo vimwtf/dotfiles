@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     android-tools
+    astroterm
     awscli
     bsd-finger
     cosign
@@ -24,7 +25,6 @@
     nil
     nixfmt-classic
     opentofu
-    pkgs.unstable.astroterm
     powershell
     rclone
     sops

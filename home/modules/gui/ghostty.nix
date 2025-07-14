@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-  home.packages = with pkgs.unstable; [ (config.lib.nixGL.wrap ghostty) ];
+  home.packages = with pkgs; [ (config.lib.nixGL.wrap ghostty) ];
 
   xdg.configFile."ghostty/config".text = ''
     auto-update = off
