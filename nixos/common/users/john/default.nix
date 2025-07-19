@@ -7,6 +7,7 @@ in {
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "audio" "video" "wheel" ] ++ ifTheyExist [
+      "dialout"
       "docker"
       "libvirtd"
       "mysql"
