@@ -40,7 +40,7 @@
           };
           gitlab_ci_ls = {
             enable = true;
-            package = "${pkgs.gitlab-ci-ls}";
+            package = "${pkgs.stable.gitlab-ci-ls}";
           };
           gopls.enable = true;
           html.enable = true;
