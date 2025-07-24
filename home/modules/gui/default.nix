@@ -3,6 +3,7 @@
   imports = [ ./librewolf.nix ./ghostty.nix ];
 
   home.packages = with pkgs; [
+    deltachat-desktop
     nerd-fonts.victor-mono
     qFlipper
     remmina
