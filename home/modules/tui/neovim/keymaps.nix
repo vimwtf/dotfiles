@@ -77,6 +77,10 @@
       }) {
         # Save by Ctrl+s
         "<C-s>" = "<Esc>:w<CR>";
+
+        # arrow keys for navigating soft-wrapped lines
+        "<Up>" = "<Esc>gki";
+        "<Down>" = "<Esc>gji";
       };
     in config.lib.nixvim.keymaps.mkKeymaps { options.silent = true; }
     (normal ++ visual ++ insert);
