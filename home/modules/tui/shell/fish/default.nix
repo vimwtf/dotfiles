@@ -23,6 +23,11 @@
       enableTransience = true;
       settings = { nix_shell = { format = "via [$symbol]($style) "; }; };
     };
+
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 }
 
