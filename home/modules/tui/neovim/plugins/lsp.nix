@@ -32,7 +32,10 @@
           bashls.enable = true;
           cssls.enable = true;
           docker_compose_language_service.enable = true;
-          dockerls.enable = true;
+          dockerls = {
+            enable = true;
+            package = "${pkgs.dockerfile-language-server}";
+          };
           eslint.enable = true;
           fish_lsp = {
             enable = true;
