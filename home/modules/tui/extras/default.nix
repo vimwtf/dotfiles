@@ -22,6 +22,7 @@
     httpie
     kompose
     kubectl
+    lazydocker
     nil
     nixfmt-classic
     opentofu
