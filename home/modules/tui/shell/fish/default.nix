@@ -2,6 +2,11 @@
   imports = [ ./abbrs.nix ./functions.nix ./shell-init.nix ];
 
   programs = {
+    atuin = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+
     fish = {
       enable = true;
 
