@@ -28,7 +28,6 @@
         };
 
         servers = {
-          ansiblels.enable = true;
           bashls.enable = true;
           cssls.enable = true;
           docker_compose_language_service.enable = true;
