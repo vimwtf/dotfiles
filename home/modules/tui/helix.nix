@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ docker-language-server ];
 
   programs.helix = {
     enable = true;
