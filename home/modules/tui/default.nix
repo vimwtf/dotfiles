@@ -12,7 +12,7 @@
     ./helix.nix
     ./shell
     ./nix-index.nix
-    ./neovim
+    # ./neovim
     ./tmux.nix
   ];
 
