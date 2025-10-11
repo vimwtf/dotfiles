@@ -1,6 +1,13 @@
-{ pkgs, ... }: {
-  imports = [ ../global ../modules/tui/extras ];
+{ pkgs, ... }:
+{
+  imports = [
+    ../global
+    ../modules/tui/extras
+  ];
 
   # extra packages
-  home.packages = with pkgs; [ wsl-open wslu ];
+  home.packages = with pkgs; [
+    wsl-open
+    wslu
+  ];
 }

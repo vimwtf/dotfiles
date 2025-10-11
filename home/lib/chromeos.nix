@@ -1,6 +1,13 @@
-{ config, lib, inputs, ... }:
-let inherit (lib) mkEnableOption mkIf;
-in {
+{
+  config,
+  lib,
+  inputs,
+  ...
+}:
+let
+  inherit (lib) mkEnableOption mkIf;
+in
+{
   options.chromeos = {
     enable = mkEnableOption "ChromeOS-specific configuration";
   };
@@ -15,11 +22,10 @@ in {
     '';
 
     # make linux gui title bars not quite so bright
-    xdg.configFile."systemd/user/sommelier-x@0.service.d/override.conf".text =
-      ''
-        [Service]
-        Environment="SOMMELIER_FRAME_COLOR=#313244"
-      '';
+    xdg.configFile."systemd/user/sommelier-x@0.service.d/override.conf".text = ''
+      [Service]
+      Environment="SOMMELIER_FRAME_COLOR=#313244"
+    '';
 
     # activate NixGL wrapper for Crostini
     nixGL.packages = inputs.nixgl.packages;

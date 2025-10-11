@@ -10,4 +10,3 @@
   top = "btop";
   v = "nvim";
 }
-

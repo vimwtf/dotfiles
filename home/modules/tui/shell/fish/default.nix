@@ -1,5 +1,10 @@
-{ pkgs, ... }: {
-  imports = [ ./abbrs.nix ./functions.nix ./shell-init.nix ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./abbrs.nix
+    ./functions.nix
+    ./shell-init.nix
+  ];
 
   programs = {
     atuin = {
@@ -31,7 +36,11 @@
       enable = true;
       enableFishIntegration = true;
       enableTransience = true;
-      settings = { nix_shell = { format = "via [$symbol]($style) "; }; };
+      settings = {
+        nix_shell = {
+          format = "via [$symbol]($style) ";
+        };
+      };
     };
 
     zoxide = {
@@ -40,4 +49,3 @@
     };
   };
 }
-

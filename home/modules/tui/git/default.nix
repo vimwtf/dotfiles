@@ -1,7 +1,13 @@
-{ config, isWork, lib, pkgs, ... }: {
+{
+  config,
+  isWork,
+  lib,
+  pkgs,
+  ...
+}:
+{
 
-  sops.secrets.git-config.sopsFile =
-    if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
+  sops.secrets.git-config.sopsFile = if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = lib.mkIf isWork [ pkgs.git-credential-manager ];
 
@@ -22,7 +28,7 @@
       }
       (lib.mkIf isWork { credential.credentialStore = "gpg"; })
     ];
-    includes = [{ path = "${config.sops.secrets.git-config.path}"; }];
+    includes = [ { path = "${config.sops.secrets.git-config.path}"; } ];
   };
 
   programs.fish = lib.mkMerge [

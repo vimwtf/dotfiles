@@ -1,4 +1,6 @@
 {
   imports = [ ../global/tailscale.nix ];
-  services.tailscale = { useRoutingFeatures = "both"; };
+  services.tailscale = {
+    useRoutingFeatures = "both";
+  };
 }

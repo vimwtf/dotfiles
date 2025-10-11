@@ -1,10 +1,19 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   imports = [
     ../modules/tui
     ../lib/chromeos.nix
     inputs.catppuccin.homeModules.catppuccin
     inputs.sops-nix.homeManagerModules.sops
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+  ]
+  ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
@@ -17,7 +26,10 @@
   nix = {
     package = lib.mkDefault pkgs.nix;
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       warn-dirty = false;
     };
   };
@@ -26,16 +38,24 @@
     username = lib.mkDefault "john";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "24.11";
-    sessionVariables = { EDITOR = "nvim"; };
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 
-  programs = { home-manager.enable = true; };
+  programs = {
+    home-manager.enable = true;
+  };
 
   sops = {
     age.sshKeyPaths = [ "${config.home.homeDirectory}/.ssh/id_ed25519" ];
     secrets = {
-      tempest-station = { sopsFile = ./secrets.yaml; };
-      tempest-token = { sopsFile = ./secrets.yaml; };
+      tempest-station = {
+        sopsFile = ./secrets.yaml;
+      };
+      tempest-token = {
+        sopsFile = ./secrets.yaml;
+      };
     };
   };
 

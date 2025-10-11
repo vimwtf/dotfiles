@@ -1,31 +1,26 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.fish.functions = {
     # cht.sh integration
     cht = "curl cheat.sh/$argv";
 
     fish_greeting = "wx";
 
-    get-local-ip =
-      "ip addr show $(ip route | grep default | awk '{print $5}') | grep 'inet ' | awk '{print $2}' | cut -d/ -f1";
+    get-local-ip = "ip addr show $(ip route | grep default | awk '{print $5}') | grep 'inet ' | awk '{print $2}' | cut -d/ -f1";
 
     ssh = "TERM=xterm command ssh $argv";
 
-    switch-home =
-      "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
+    switch-home = "home-manager switch -b backup --flake ${config.home.homeDirectory}/.dotfiles#$USER@$(hostname -s)";
 
-    switch-nix =
-      "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.dotfiles";
+    switch-nix = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/.dotfiles";
 
-    upgrade-nix =
-      "nix-channel --update; nix-env --install --attr nixpkgs.nix nixpkgs.cacert";
+    upgrade-nix = "nix-channel --update; nix-env --install --attr nixpkgs.nix nixpkgs.cacert";
 
     # Trees
-    tt = ''
-      cbonsai -S -t 0.25 -c "&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮"'';
+    tt = ''cbonsai -S -t 0.25 -c "&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,&,🌸,🌺,💮"'';
 
     # tmux quickstart
-    tmm =
-      "tmux attach-session -t (hostname -s) || tmux new-session -s (hostname -s) -c $HOME";
+    tmm = "tmux attach-session -t (hostname -s) || tmux new-session -s (hostname -s) -c $HOME";
 
     wx = ''
       if test ! -f "${config.sops.secrets.tempest-station.path}"

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   catppuccin.tmux = {
     extraConfig = ''
@@ -107,4 +108,3 @@
     tmk = "tmux kill-session -t";
   };
 }
-

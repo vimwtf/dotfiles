@@ -1,4 +1,10 @@
-{ config, isWork, pkgs, ... }: {
+{
+  config,
+  isWork,
+  pkgs,
+  ...
+}:
+{
   # Extra CLI apps
 
   imports = [ ./go.nix ];

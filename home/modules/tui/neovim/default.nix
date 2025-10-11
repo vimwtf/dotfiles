@@ -1,4 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   # neovim config largely lifted from https://github.com/GaetanLepage/nix-config/tree/master/home/modules/tui/neovim
 
   imports = [
@@ -17,7 +18,10 @@
     performance = {
       combinePlugins = {
         enable = true;
-        standalonePlugins = [ "hmts.nvim" "nvim-treesitter" ];
+        standalonePlugins = [
+          "hmts.nvim"
+          "nvim-treesitter"
+        ];
       };
       byteCompileLua.enable = true;
     };
@@ -28,5 +32,8 @@
     luaLoader.enable = true;
   };
 
-  home.packages = with pkgs; [ fd ripgrep ];
+  home.packages = with pkgs; [
+    fd
+    ripgrep
+  ];
 }

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     ./barbar.nix
     ./better-escape.nix
@@ -42,4 +43,3 @@
     extraPlugins = with pkgs.vimPlugins; [ salt-vim ];
   };
 }
-

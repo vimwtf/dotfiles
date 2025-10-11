@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     withNodeJs = true;
     plugins = {
@@ -56,7 +57,9 @@
           terraformls.enable = true;
           yamlls = {
             enable = true;
-            settings = { customTags = [ "!reference sequence" ]; };
+            settings = {
+              customTags = [ "!reference sequence" ];
+            };
           };
         };
       };

@@ -1,10 +1,22 @@
-{ config, isWork, pkgs, ... }: {
+{
+  config,
+  isWork,
+  pkgs,
+  ...
+}:
+{
   # Core CLI apps
 
-  imports = [ ./git ./helix.nix ./shell ./nix-index.nix ./neovim ./tmux.nix ];
+  imports = [
+    ./git
+    ./helix.nix
+    ./shell
+    ./nix-index.nix
+    ./neovim
+    ./tmux.nix
+  ];
 
-  sops.secrets.ssh-config.sopsFile =
-    if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
+  sops.secrets.ssh-config.sopsFile = if isWork then ./secrets-work.yaml else ./secrets-personal.yaml;
 
   home.packages = with pkgs; [
     apg

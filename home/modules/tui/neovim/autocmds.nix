@@ -16,18 +16,24 @@
     # Text file overrides
     {
       event = "FileType";
-      pattern = [ "markdown" "text" ];
-      command =
-        "setlocal spell spelllang=en wrap linebreak ts=2 sw=2 sts=2 nolist";
+      pattern = [
+        "markdown"
+        "text"
+      ];
+      command = "setlocal spell spelllang=en wrap linebreak ts=2 sw=2 sts=2 nolist";
     }
 
     # Gitlab CI
     {
-      event = [ "BufRead" "BufNewFile" ];
+      event = [
+        "BufRead"
+        "BufNewFile"
+      ];
       pattern = "*.gitlab-ci*.{yml,yaml}";
-      callback = { __raw = "function() vim.bo.filetype = 'yaml.gitlab' end"; };
+      callback = {
+        __raw = "function() vim.bo.filetype = 'yaml.gitlab' end";
+      };
     }
 
   ];
 }
-

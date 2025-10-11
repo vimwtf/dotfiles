@@ -1,6 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Common GUI apps
-  imports = [ ./librewolf.nix ./ghostty.nix ];
+  imports = [
+    ./librewolf.nix
+    ./ghostty.nix
+  ];
 
   home.packages = with pkgs; [
     deltachat-desktop

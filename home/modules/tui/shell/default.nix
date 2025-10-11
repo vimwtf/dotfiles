@@ -1,7 +1,12 @@
 {
-  imports = [ ./eza.nix ./fish ];
+  imports = [
+    ./eza.nix
+    ./fish
+  ];
 
-  home = { shellAliases = import ./aliases.nix; };
+  home = {
+    shellAliases = import ./aliases.nix;
+  };
 
   programs = {
     direnv = {
@@ -11,6 +16,8 @@
 
     fzf.enable = true;
 
-    bat = { enable = true; };
+    bat = {
+      enable = true;
+    };
   };
 }

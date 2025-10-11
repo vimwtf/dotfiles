@@ -44,22 +44,38 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       lib = nixpkgs.lib // home-manager.lib;
-      systems = [ "x86_64-linux" "aarch64-linux" ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
       forEachSystem = f: lib.genAttrs systems (sys: f pkgsFor.${sys});
       pkgsFor = nixpkgs.legacyPackages;
 
-      getHostModule = hostname:
+      getHostModule =
+        hostname:
         let
           hostPath = ./home/hosts + "/${hostname}.nix";
           genericPath = ./home/hosts/generic.nix;
-        in if builtins.pathExists hostPath then hostPath else genericPath;
+        in
+        if builtins.pathExists hostPath then hostPath else genericPath;
 
       mkHomeConfiguration =
-        { system, hostname, isWork ? false, isChromebook ? false }:
+        {
+          system,
+          hostname,
+          isWork ? false,
+          isChromebook ? false,
+        }:
         lib.homeManagerConfiguration {
           modules = [
             (getHostModule hostname)
@@ -71,7 +87,8 @@
           pkgs = pkgsFor.${system};
           extraSpecialArgs = { inherit inputs outputs; };
         };
-    in {
+    in
+    {
       inherit lib;
       nixosModules = import ./modules/nixos;
       homeManagerModules = import ./modules/home-manager;
@@ -79,8 +96,9 @@
       overlays = import ./overlays { inherit inputs outputs; };
 
       packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
-      devShells = forEachSystem
-        (pkgs: { default = import ./shell.nix { inherit pkgs; }; });
+      devShells = forEachSystem (pkgs: {
+        default = import ./shell.nix { inherit pkgs; };
+      });
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
