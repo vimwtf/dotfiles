@@ -2,6 +2,7 @@
 {
 
   programs.helix = {
+    defaultEditor = true;
     enable = true;
     extraPackages = with pkgs; [
       bash-language-server
