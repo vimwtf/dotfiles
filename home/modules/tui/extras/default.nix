@@ -24,7 +24,7 @@
     kubectl
     lazydocker
     nil
-    nixfmt-classic
+    nixfmt
     opentofu
     powershell
     rclone
