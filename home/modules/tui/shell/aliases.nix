@@ -4,6 +4,7 @@
   g = "git";
   gg = "git graph";
   gs = "git status";
+  h = "hx";
   jqless = "jq -C | less -r";
   n = "nix";
   sshpass = "ssh -o PubkeyAuthentication=no";
