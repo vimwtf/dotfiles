@@ -7,16 +7,6 @@
   ];
 
   programs = {
-    atuin = {
-      enable = true;
-      enableFishIntegration = true;
-      settings = {
-        enter_accept = true;
-        inline_height = 20;
-        style = "compact";
-      };
-    };
-
     fish = {
       enable = true;
 
