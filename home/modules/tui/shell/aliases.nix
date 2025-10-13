@@ -9,4 +9,5 @@
   n = "nix";
   sshpass = "ssh -o PubkeyAuthentication=no";
   top = "btop";
+  v = "hx";
 }
