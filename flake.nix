@@ -126,10 +126,6 @@
           hostname = "pixnix";
           system = "x86_64-linux";
         };
-        "john@volly" = mkHomeConfiguration {
-          hostname = "volly";
-          system = "x86_64-linux";
-        };
         "john@immich" = mkHomeConfiguration {
           hostname = "immich";
           system = "x86_64-linux";
@@ -150,6 +146,14 @@
         "droid@pixian" = mkHomeConfiguration {
           hostname = "pixian";
           system = "aarch64-linux";
+        };
+        "john@files" = mkHomeConfiguration {
+          hostname = "files";
+          system = "x86_64-linux";
+        };
+        "john@salt" = mkHomeConfiguration {
+          hostname = "files";
+          system = "x86_64-linux";
         };
       };
     };
