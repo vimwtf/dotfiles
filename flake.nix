@@ -21,12 +21,6 @@
     # Hardware
     hardware.url = "github:nixos/nixos-hardware";
 
-    # nixvim
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # NixGL
     nixgl = {
       url = "github:nix-community/nixGL";
