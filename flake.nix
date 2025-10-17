@@ -120,10 +120,6 @@
           hostname = "pixnix";
           system = "x86_64-linux";
         };
-        "john@immich" = mkHomeConfiguration {
-          hostname = "immich";
-          system = "x86_64-linux";
-        };
         "john@doc" = mkHomeConfiguration {
           hostname = "doc";
           system = "x86_64-linux";
