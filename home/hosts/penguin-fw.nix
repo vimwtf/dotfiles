@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../global
@@ -7,5 +7,5 @@
   ];
 
   # extra packages
-  # home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [ ente-cli ];
 }
