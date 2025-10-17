@@ -146,7 +146,11 @@
           system = "x86_64-linux";
         };
         "john@salt" = mkHomeConfiguration {
-          hostname = "files";
+          hostname = "salt";
+          system = "x86_64-linux";
+        };
+        "john@ubudesk" = mkHomeConfiguration {
+          hostname = "ubudesk";
           system = "x86_64-linux";
         };
       };
