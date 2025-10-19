@@ -4,6 +4,7 @@
   imports = [
     ./librewolf.nix
     ./ghostty.nix
+    ./rio.nix
   ];
 
   home.packages = with pkgs; [
