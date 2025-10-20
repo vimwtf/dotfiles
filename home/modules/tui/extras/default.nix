@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     android-tools
+    angle-grinder
     astroterm
     awscli
     bsd-finger
