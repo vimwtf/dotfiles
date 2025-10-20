@@ -3,7 +3,6 @@
   # Common GUI apps
   imports = [
     ./librewolf.nix
-    # ./ghostty.nix
     ./rio.nix
   ];
 
