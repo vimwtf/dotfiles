@@ -20,7 +20,7 @@
       enable = lib.mkDefault true;
       settings = lib.mkMerge [
         {
-          aliases = {
+          alias = {
             graph = "log --decorate --oneline --graph";
             fast-forward = "merge --ff-only";
           };
