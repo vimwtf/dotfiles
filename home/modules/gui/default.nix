@@ -10,7 +10,6 @@
     deltachat-desktop
     nerd-fonts.victor-mono
     qFlipper
-    remmina
     tor-browser
   ];
 
