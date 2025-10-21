@@ -13,7 +13,6 @@
       fonts.family = "VictorMono Nerd Font Mono";
       shell.program = "${pkgs.fish}/bin/fish";
       window = {
-        decorations = "Buttonless";
         mode = "Maximized";
       };
     };
