@@ -4,7 +4,6 @@
   imports = [
     ./foot.nix
     ./librewolf.nix
-    ./rio.nix
   ];
 
   home.packages = with pkgs; [
