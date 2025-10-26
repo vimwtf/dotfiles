@@ -18,7 +18,7 @@
     +
       # Open command buffer in vim when alt+e is pressed
       ''
-        bind alt+e edit_command_buffer
+        bind \ee edit_command_buffer
       ''
     +
       # Use vim bindings and cursors
@@ -33,9 +33,9 @@
     +
       # Restore ctrl+f to accept suggestions
       ''
-        bind -M insert ctrl+f forward-char
-        bind -M default ctrl+f forward-char
-        bind -M visual ctrl+ff forward-char
+        bind -M insert \cf forward-char
+        bind -M default \cf forward-char
+        bind -M visual \cf forward-char
       ''
     +
       # Use terminal colors
