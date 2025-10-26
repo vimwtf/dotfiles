@@ -2,6 +2,7 @@
 {
   # Common GUI apps
   imports = [
+    ./foot.nix
     ./librewolf.nix
     ./rio.nix
   ];
