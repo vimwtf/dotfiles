@@ -21,11 +21,11 @@
     # Hardware
     hardware.url = "github:nixos/nixos-hardware";
 
-    # NixGL
-    nixgl = {
-      url = "github:nix-community/nixGL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # # NixGL
+    # nixgl = {
+    #   url = "github:nix-community/nixGL";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # Catppuccin theme
     catppuccin.url = "github:catppuccin/nix";
