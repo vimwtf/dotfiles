@@ -27,6 +27,8 @@
       enableFishIntegration = true;
       enableTransience = true;
       settings = {
+        battery.disabled = true;
+        netns.disabled = true;
         nix_shell = {
           format = "via [$symbol]($style) ";
         };
