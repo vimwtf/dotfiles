@@ -25,11 +25,8 @@
     fortune
     gnupg1
     lsof
-    mtr
     nmap
     pass
-    pigz
-    python3
     unzip
     util-linux
     yq

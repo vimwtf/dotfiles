@@ -30,10 +30,13 @@
     kompose
     kubectl
     lazydocker
+    mtr
     nil
     nixfmt
     opentofu
+    pigz
     powershell
+    python3
     rclone
     sops
     ssh-to-age
