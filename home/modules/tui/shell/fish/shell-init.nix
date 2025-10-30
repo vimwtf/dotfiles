@@ -1,10 +1,28 @@
 { config, ... }:
 {
   programs.fish.interactiveShellInit =
-    # Launch tmux
+    # tmux auto attaching logic:
+    # - skip if already muxed or in sway
+    # - auto attach in-ssh sessions
+    # - auto attach once locally
+    # - subsequent local terminals get their own session
     ''
-      if not set -q TMUX
-        tmux attach-session -t $(hostname -s) || tmux new-session -s $(hostname -s) -c $HOME
+      if test -z "$TMUX$SWAYSOCK"
+        set -g _host (hostname -s)
+        if test -n "$SSH_CLIENT$SSH_TTY"
+          tmux attach-session -t "$_host" || tmux new -s "$_host" -c "$HOME"
+        else
+          set -g _lock "$HOME/.local/share/first-tmux-$_host"
+          if test -f "$_lock"
+            tmux new
+          else
+            touch "$_lock"
+            function __cleanup_first_tmux --on-event fish_exit
+              rm -f "$_lock"
+            end
+            tmux attach-session -t "$_host" || tmux new-session -s "$_host" -c "$HOME"
+          end
+        end
       end
     ''
     +
