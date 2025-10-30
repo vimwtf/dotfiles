@@ -149,6 +149,11 @@
           hostname = "ubudesk";
           system = "x86_64-linux";
         };
+        "john@pocket" = mkHomeConfiguration {
+          hostname = "pocket";
+          system = "aarch64-linux";
+        };
+
       };
     };
 }
