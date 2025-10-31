@@ -2,14 +2,13 @@
 {
   imports = [
     ../global
+    ../modules/gui
   ];
 
   # extra packages
-  home.packages = with pkgs; [
-    nerd-fonts.victor-mono
-  ];
-
-  fonts.fontconfig.enable = true;
+  # home.packages = with pkgs; [
+  #   nerd-fonts.victor-mono
+  # ];
 
   programs.foot = {
     enable = true;
