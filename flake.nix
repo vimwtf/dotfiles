@@ -159,6 +159,10 @@
           hostname = "pocket";
           system = "aarch64-linux";
         };
+        "john@framenix" = mkHomeConfiguration {
+          hostname = "framenix";
+          system = "x86_64-linux";
+        };
 
       };
     };
