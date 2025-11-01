@@ -18,7 +18,6 @@
     astroterm
     awscli
     bsd-finger
-    cosign
     dive
     envsubst
     fast-cli
@@ -40,6 +39,7 @@
     rclone
     sops
     ssh-to-age
+    stable.cosign
     vault
     ytt
   ];
