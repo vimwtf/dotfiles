@@ -90,6 +90,41 @@
         "zen.view.compact.animate-sidebar" = false;
         "zen.welcome-screen.seen" = true;
       };
+
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "My Stuff";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "runtimeterror";
+                url = "https://runtimeterror.dev/";
+              }
+            ];
+          }
+        ];
+      };
+
+      pinsForce = true;
+      pins = {
+        "Phanpy" = {
+          id = "3bbe2ad9-2bbf-4269-b745-335d0718f78d";
+          url = "https://phanpy.social";
+          position = 101;
+          isEssential = true;
+        };
+      };
+
+      containersForce = true;
+      containers = {
+        Homelab = {
+          color = "red";
+          icon = "circle";
+          id = 2;
+        };
+      };
     };
   };
 
