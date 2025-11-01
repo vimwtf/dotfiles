@@ -2,7 +2,7 @@
 {
   # Common GUI apps
   imports = [
-    ./librewolf.nix
+    ./zen-browser.nix
   ];
 
   home.packages = with pkgs; [
