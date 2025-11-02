@@ -125,6 +125,27 @@
           id = 2;
         };
       };
+
+      search = {
+        force = true;
+        default = "Kagi";
+        engines = {
+          "Kagi" = {
+            urls = [
+              {
+                template = "https://kagi.com/search?q=test";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = [ "k" ];
+          };
+        };
+      };
     };
   };
 
