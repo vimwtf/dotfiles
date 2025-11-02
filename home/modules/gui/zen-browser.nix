@@ -109,10 +109,28 @@
 
       pinsForce = true;
       pins = {
+        "Fastmail" = {
+          id = "1bafdce5-3b5d-4055-87f7-fac2bf7d268c";
+          url = "https://app.fastmail.com/mail/Inbox/";
+          position = 101;
+          isEssential = true;
+        };
+        "Gmail" = {
+          id = "5fe9fa50-e2f7-4945-9a5d-c44951e16550";
+          url = "https://mail.google.com/mail/u/1/";
+          position = 102;
+          isEssential = true;
+        };
+        "FeedCity" = {
+          id = "e4b6359a-aff3-45df-b199-fb3b1e62fe8b";
+          url = "https://feed.city/";
+          position = 103;
+          isEssential = true;
+        };
         "Phanpy" = {
           id = "3bbe2ad9-2bbf-4269-b745-335d0718f78d";
           url = "https://phanpy.social";
-          position = 101;
+          position = 104;
           isEssential = true;
         };
       };
