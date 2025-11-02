@@ -133,7 +133,7 @@
           "Kagi" = {
             urls = [
               {
-                template = "https://kagi.com/search?q=test";
+                template = "https://kagi.com/search";
                 params = [
                   {
                     name = "q";
@@ -144,6 +144,45 @@
             ];
             definedAliases = [ "k" ];
           };
+          "Home Manager Options" = {
+            urls = [
+              {
+                template = "https://home-manager-options.extranix.com/";
+                params = [
+                  {
+                    name = "release";
+                    value = "master";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = [ "hmo" ];
+          };
+          "Nix Packages" = {
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "channel";
+                    value = "unstable";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            definedAliases = [ "pkg" ];
+          };
+          bing.metaData.hidden = true;
+          google.metaData.hidden = true;
+          perplexity.metaData.hidden = true;
         };
       };
     };
