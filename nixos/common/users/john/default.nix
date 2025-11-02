@@ -4,6 +4,7 @@ let
 in
 {
   users.users.john = {
+    description = "John Wq";
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [
@@ -25,6 +26,6 @@ in
     packages = [ pkgs.home-manager ];
   };
 
-  home-manager.users.john = import ../../../../home/hosts/${config.networking.hostName}.nix;
+  # home-manager.users.john = import ../../../../home/hosts/${config.networking.hostName}.nix;
 
 }

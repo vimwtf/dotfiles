@@ -26,7 +26,10 @@
 
   environment.enableAllTerminfo = true;
 
-  environment.systemPackages = with pkgs; [ wget ];
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+  ];
 
   hardware.enableRedistributableFirmware = true;
   networking.domain = "vim.wtf";

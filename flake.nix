@@ -102,9 +102,12 @@
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
-        # Pixelbook converted to NixOS
         pixnix = lib.nixosSystem {
           modules = [ ./nixos/pixnix ];
+          specialArgs = { inherit inputs outputs; };
+        };
+        framenix = lib.nixosSystem {
+          modules = [ ./nixos/framenix ];
           specialArgs = { inherit inputs outputs; };
         };
       };
