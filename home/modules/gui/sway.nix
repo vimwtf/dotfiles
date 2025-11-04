@@ -329,4 +329,25 @@ in
     </interface>
   '';
 
+  services.swayidle = {
+    enable = true;
+    events = [
+      {
+        event = "before-sleep";
+        command = "${pkgs.swaylock-fancy}/bin/swaylock-fancy";
+      }
+      {
+        event = "lock";
+        command = "lock";
+      }
+    ];
+    timeouts = [
+      {
+        timeout = 600;
+        command = "${pkgs.sway}/bin/swaymsg \"output * power off\"";
+        resumeCommand = "${pkgs.sway}/bin/swaymsg \"output * power on\"";
+      }
+    ];
+  };
+
 }
