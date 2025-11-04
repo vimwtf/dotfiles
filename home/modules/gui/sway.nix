@@ -76,7 +76,7 @@ in
 
           "${mod}+Shift+r" = "exec swaymsg reload";
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          "Ctrl+Alt+l" = "exec ${pkgs.swaylock-fancy}/bin/swaylock-fancy";
+          "Ctrl+Alt+l" = "exec ${pkgs.swaylock-fancy}/bin/swaylock-fancy -egp";
           "${mod}+Ctrl+q" = "exit";
         }
       ];
@@ -334,7 +334,7 @@ in
     events = [
       {
         event = "before-sleep";
-        command = "${pkgs.swaylock-fancy}/bin/swaylock-fancy";
+        command = "${pkgs.swaylock-fancy}/bin/swaylock-fancy -egp";
       }
       {
         event = "lock";
