@@ -278,6 +278,7 @@ in
             suspend = "systemctl suspend";
           };
         };
+        workspaces.sort-by-number = true;
       };
     };
   };
