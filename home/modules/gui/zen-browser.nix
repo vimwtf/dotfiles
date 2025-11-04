@@ -59,6 +59,10 @@
             id = "bitwarden-password-manager";
             pinned = true;
           };
+          "jid1-MnnxcxisBPnSXQ@jetpack" = mkExtensionEntry {
+            id = "privacy-badger17";
+            pinned = true;
+          };
         };
         Preferences = mkLockedAttrs {
           "browser.aboutConfig.showWarning" = false;
