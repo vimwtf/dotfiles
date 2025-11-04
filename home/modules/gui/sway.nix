@@ -273,8 +273,8 @@ in
           menu-actions = {
             hibernate = "systemctl hibernate";
             logout = "${pkgs.sway}/bin/swaymsg exit";
-            reboot = "reboot";
-            shutdown = "shutdown";
+            reboot = "systemctl reboot";
+            shutdown = "systemctl halt";
             suspend = "systemctl suspend";
           };
         };
