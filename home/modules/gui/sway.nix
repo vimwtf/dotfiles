@@ -272,7 +272,7 @@ in
           menu-file = "$HOME/.config/waybar/power_menu.xml";
           menu-actions = {
             hibernate = "systemctl hibernate";
-            logout = "swaymsg exit";
+            logout = "${pkgs.sway}/bin/swaymsg exit";
             reboot = "reboot";
             shutdown = "shutdown";
             suspend = "systemctl suspend";
