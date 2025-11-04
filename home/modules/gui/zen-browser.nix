@@ -68,9 +68,6 @@
           "browser.aboutConfig.showWarning" = false;
           "browser.tabs.warnOnClose" = false;
           "media.videocontrols.picture-in-picture.video-toggle.enabled" = true;
-          # Disable swipe gestures (Browser:BackOrBackDuplicate, Browser:ForwardOrForwardDuplicate)
-          "browser.gesture.swipe.left" = "";
-          "browser.gesture.swipe.right" = "";
           "browser.tabs.hoverPreview.enabled" = true;
           "browser.newtabpage.activity-stream.feeds.topsites" = false;
           "browser.topsites.contile.enabled" = false;
