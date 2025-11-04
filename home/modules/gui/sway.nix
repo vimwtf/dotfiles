@@ -287,9 +287,10 @@ in
 
   home.packages = with pkgs; [
     grim
-    slurp
-    wl-clipboard
     mako
+    slurp
+    swaylock-fancy
+    wl-clipboard
   ];
 
   xdg.configFile."waybar/power_menu.xml".text = ''
