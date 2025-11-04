@@ -274,7 +274,7 @@ in
             hibernate = "systemctl hibernate";
             logout = "${pkgs.sway}/bin/swaymsg exit";
             reboot = "systemctl reboot";
-            shutdown = "systemctl halt";
+            shutdown = "systemctl poweroff";
             suspend = "systemctl suspend";
           };
         };
