@@ -16,6 +16,7 @@
     ../common/optional/printing.nix
     ../common/optional/remote-desktop.nix
     ../common/optional/sshd.nix
+    ../common/optional/sway.nix
   ];
 
   boot = {
