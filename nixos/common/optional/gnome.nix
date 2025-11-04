@@ -2,6 +2,8 @@
   services = {
     xserver = {
       enable = true;
+      xkb.layout = "us";
+      xkb.variant = "";
     };
     displayManager = {
       gdm = {
@@ -11,7 +13,5 @@
     desktopManager = {
       gnome.enable = true;
     };
-    xkb.layout = "us";
-    xkb.variant = "";
   };
 }
