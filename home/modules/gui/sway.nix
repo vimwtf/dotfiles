@@ -74,6 +74,9 @@ in
           "${mod}+v" = "split v";
           "${mod}+w" = "layout tabbed";
 
+          "${mod}+Tab" = "workspace next";
+          "${mod}+Shift+Tab" = "workspace prev";
+
           "${mod}+Shift+r" = "exec swaymsg reload";
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           "Ctrl+Alt+l" = "exec ${pkgs.swaylock-fancy}/bin/swaylock-fancy -egp";
