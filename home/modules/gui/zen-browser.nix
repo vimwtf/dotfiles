@@ -137,6 +137,30 @@
           position = 104;
           isEssential = true;
         };
+        "gChat" = {
+          id = "cba7f610-8420-4516-ab45-89ef60963e29";
+          url = "https://mail.google.com/chat/u/1/#chat/home";
+          position = 105;
+          isEssential = true;
+        };
+        "Discord" = {
+          id = "fa39adb4-3c6f-4bef-9131-7768d89ac18e";
+          url = "https://discord.com/channels/@me";
+          position = 106;
+          isEssential = true;
+        };
+        "Slack" = {
+          id = "90c8aa98-ea44-4648-83b3-f2b4418f2b08";
+          url = "https://app.slack.com/client/";
+          position = 107;
+          isEssential = true;
+        };
+        "CounterSocial" = {
+          id = "ff0e5734-8c21-40c0-8468-6371e97e14cc";
+          url = "https://counter.social/web/getting-started";
+          position = 108;
+          isEssential = true;
+        };
       };
 
       containersForce = true;
