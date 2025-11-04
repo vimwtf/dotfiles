@@ -74,8 +74,10 @@ in
           "${mod}+v" = "split v";
           "${mod}+w" = "layout tabbed";
 
-          "${mod}+Tab" = "workspace next";
-          "${mod}+Shift+Tab" = "workspace prev";
+          "${mod}+bracketright" = "workspace next";
+          "${mod}+bracketleft" = "workspace prev";
+          "${mod}+Shift+bracketright" = "move container to workspace next";
+          "${mod}+Shift+bracketleft" = "move container to workspace prev";
 
           "${mod}+Shift+r" = "exec swaymsg reload";
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
