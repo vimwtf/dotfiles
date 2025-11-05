@@ -63,6 +63,10 @@
             id = "privacy-badger17";
             pinned = true;
           };
+          "privacy@privacy.com" = mkExtensionEntry {
+            id = "pay-by-privacy";
+            pinned = true;
+          };
         };
         Preferences = mkLockedAttrs {
           "browser.aboutConfig.showWarning" = false;
