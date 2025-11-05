@@ -15,21 +15,16 @@
   home.packages = with pkgs; [
     android-tools
     angle-grinder
-    astroterm
     awscli
     bsd-finger
     dive
     envsubst
-    fast-cli
     gh
     google-cloud-sdk
-    gping
-    hadolint
     httpie
     kompose
     kubectl
     lazydocker
-    mtr
     nil
     nixfmt
     opentofu
@@ -46,7 +41,6 @@
 
   programs.fish = {
     shellAbbrs = {
-      astro = "astroterm --color --constellations --unicode";
       k = "kubectl";
       terraform = "tofu";
       tf = "tofu";

@@ -22,7 +22,6 @@
     cbonsai
     dig
     dos2unix
-    fortune
     gnupg1
     lsof
     nmap
