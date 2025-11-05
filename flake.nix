@@ -74,13 +74,11 @@
           system,
           hostname,
           isWork ? false,
-          isChromebook ? false,
         }:
         lib.homeManagerConfiguration {
           modules = [
             (getHostModule hostname)
             {
-              chromeos.enable = isChromebook;
               _module.args = { inherit hostname isWork; };
             }
           ];
@@ -115,16 +113,6 @@
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        "john@penguin-duet" = mkHomeConfiguration {
-          hostname = "penguin-duet";
-          isChromebook = true;
-          system = "aarch64-linux";
-        };
-        "john@penguin-fw" = mkHomeConfiguration {
-          hostname = "penguin-fw";
-          isChromebook = true;
-          system = "x86_64-linux";
-        };
         "john@pixnix" = mkHomeConfiguration {
           hostname = "pixnix";
           system = "x86_64-linux";
@@ -141,10 +129,6 @@
         "john@hezzy" = mkHomeConfiguration {
           hostname = "hezzy";
           system = "x86_64-linux";
-        };
-        "droid@pixian" = mkHomeConfiguration {
-          hostname = "pixian";
-          system = "aarch64-linux";
         };
         "john@files" = mkHomeConfiguration {
           hostname = "files";

@@ -9,7 +9,6 @@
 {
   imports = [
     ../modules/tui
-    ../lib/chromeos.nix
     inputs.catppuccin.homeModules.catppuccin
     inputs.sops-nix.homeManagerModules.sops
   ]
