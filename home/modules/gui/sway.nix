@@ -81,7 +81,7 @@ in
 
           "${mod}+Shift+r" = "exec swaymsg reload";
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          "Ctrl+Alt+l" = "exec ${pkgs.swaylock-fancy}/bin/swaylock-fancy -egp";
+          "Ctrl+Alt+l" = "exec ${pkgs.swaylock}/bin/swaylock";
           "${mod}+Ctrl+q" = "exit";
         }
       ];
@@ -294,7 +294,7 @@ in
     grim
     mako
     slurp
-    swaylock-fancy
+    swaylock
     wl-clipboard
   ];
 
@@ -334,21 +334,35 @@ in
     </interface>
   '';
 
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      ignore-empty-password = true;
+      show-failed-attempts = true;
+    };
+  };
+
+  programs.swayimg.enable = true;
+
   services.swayidle = {
     enable = true;
     events = [
       {
         event = "before-sleep";
-        command = "${pkgs.swaylock-fancy}/bin/swaylock-fancy -egp";
-      }
-      {
-        event = "lock";
-        command = "lock";
+        command = "${pkgs.swaylock}/bin/swaylock";
       }
     ];
     timeouts = [
       {
+        timeout = 585;
+        command = "${pkgs.libnotify}/bin/notify-send 'Locking in 15 seconds...' -t 15000";
+      }
+      {
         timeout = 600;
+        command = "${pkgs.swaylock}/bin/swaylock";
+      }
+      {
+        timeout = 660;
         command = "${pkgs.sway}/bin/swaymsg \"output * power off\"";
         resumeCommand = "${pkgs.sway}/bin/swaymsg \"output * power on\"";
       }
