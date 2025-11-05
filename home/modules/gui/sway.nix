@@ -29,7 +29,7 @@ in
               in
               {
                 "${mod}+${ws}" = "workspace ${ws}";
-                "${mod}+Ctrl+${ws}" = "move container to workspace ${ws}";
+                "${mod}+Shift+${ws}" = "move container to workspace ${ws}";
               }
             )
             [
@@ -49,7 +49,7 @@ in
         (lib.attrsets.concatMapAttrs
           (key: direction: {
             "${mod}+${key}" = "focus ${direction}";
-            "${mod}+Ctrl+${key}" = "move ${direction}";
+            "${mod}+Shift+${key}" = "move ${direction}";
           })
           {
             h = "left";
