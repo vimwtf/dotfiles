@@ -115,6 +115,10 @@ in
           command = "systemctl --user restart swayr";
           always = true;
         }
+        {
+          command = "exec nm-applet --indicator";
+          always = true;
+        }
       ];
       terminal = "${pkgs.foot}/bin/foot";
       workspaceAutoBackAndForth = true;
