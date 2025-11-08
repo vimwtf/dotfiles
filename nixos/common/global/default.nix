@@ -27,6 +27,7 @@
   environment.enableAllTerminfo = true;
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
     vim
     wget
   ];
