@@ -22,34 +22,13 @@
         modules-right = [
           "pulseaudio"
           "network"
-          "cpu"
-          "memory"
-          "temperature"
           "backlight"
-          "keyboard-state"
-          "keyboard-state#num"
           "power-profiles-daemon"
           "battery"
           "clock"
           "tray"
           "custom/power"
         ];
-        keyboard-state = {
-          capslock = true;
-          format = "{icon}";
-          format-icons = {
-            locked = "󰪛";
-            unlocked = "󰬴";
-          };
-        };
-        "keyboard-state#num" = {
-          numlock = true;
-          format = "{icon}";
-          format-icons = {
-            locked = "󰎠";
-            unlocked = "󱧓";
-          };
-        };
         "sway/mode".format = "<span style=\"italic\">{}</span>";
         "sway/scratchpad" = {
           format = "{icon} {count}";
@@ -65,24 +44,6 @@
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
-        };
-        cpu = {
-          format = "{usage}% ";
-          tooltip = false;
-        };
-        memory.format = "{}% ";
-        temperature = {
-          thermal-zone = 2;
-          hwmon-path = "/sys/class/hwmon/hwmon0/temp1_input";
-          critical-threshold = 80;
-          format-critical = "{temperatureC}°C {icon}";
-          format = "{temperatureC}°C {icon}";
-          format-icons = [
-            ""
-            ""
-            ""
-            ""
-          ];
         };
         backlight = {
           device = "acpi_video1";
@@ -227,14 +188,8 @@
       #backlight,
       #clock,
       #power-profiles-daemon,
-      #keyboard-state,
       #battery,
       #pulseaudio,
-      #custom-lock,
-      #network,
-      #cpu,
-      #memory,
-      #temperature,
       #custom-power {
         background-color: @surface0;
         padding: 0.5rem 0.75rem;
@@ -246,9 +201,6 @@
         border-radius: 0;
       }
 
-      #cpu,
-      #memory,
-      #temperature,
       #backlight {
         padding: 0.5rem 0.5rem;
       }
@@ -262,14 +214,6 @@
       }
 
       #battery.warning:not(.charging) {
-        color: @red;
-      }
-
-      #keyboard-state {
-        padding: 0.5rem 0.5rem;
-      }
-
-      #keyboard-state label.locked {
         color: @red;
       }
 
