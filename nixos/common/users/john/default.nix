@@ -9,6 +9,7 @@ in
     shell = pkgs.fish;
     extraGroups = [
       "audio"
+      "input"
       "video"
       "wheel"
     ]
