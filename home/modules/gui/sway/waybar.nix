@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
 
-  catppuccin.waybar.enable = false;
+  catppuccin.waybar = {
+    enable = true;
+    mode = "createLink";
+  };
 
   programs.waybar = {
     enable = true;
@@ -17,28 +20,34 @@
           "sway/window"
         ];
         modules-right = [
-          # "idle_inhibitor"
           "pulseaudio"
           "network"
-          # "power-profiles-daemon"
           "cpu"
           "memory"
           "temperature"
-          # "backlight"
-          # "keyboard-state"
-          # "sway/language"
+          "backlight"
+          "keyboard-state"
+          "keyboard-state#num"
+          "power-profiles-daemon"
           "battery"
           "clock"
           "tray"
           "custom/power"
         ];
         keyboard-state = {
-          numlock = true;
           capslock = true;
-          format = "{name} {icon}";
+          format = "{icon}";
           format-icons = {
-            locked = "";
-            unlocked = "";
+            locked = "󰪛";
+            unlocked = "󰬴";
+          };
+        };
+        "keyboard-state#num" = {
+          numlock = true;
+          format = "{icon}";
+          format-icons = {
+            locked = "󰎠";
+            unlocked = "󱧓";
           };
         };
         "sway/mode".format = "<span style=\"italic\">{}</span>";
@@ -52,14 +61,7 @@
           tooltip = true;
           tooltip-format = "{app}: {title}";
         };
-        idle_inhibitor = {
-          format = "{icon}";
-          format-icons = {
-            activated = "";
-            deactivated = "";
-          };
-        };
-        tray.spacing = 10;
+        tray.spacing = 5;
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
@@ -68,7 +70,7 @@
           format = "{usage}% ";
           tooltip = false;
         };
-        memory.format = "{}% ";
+        memory.format = "{}% ";
         temperature = {
           thermal-zone = 2;
           hwmon-path = "/sys/class/hwmon/hwmon0/temp1_input";
@@ -76,9 +78,10 @@
           format-critical = "{temperatureC}°C {icon}";
           format = "{temperatureC}°C {icon}";
           format-icons = [
-            ""
+            ""
+            ""
             ""
-            ""
+            ""
           ];
         };
         backlight = {
@@ -104,7 +107,7 @@
           };
           format = "{capacity}% {icon}";
           format-full = "{capacity}% {icon}";
-          format-charging = "{capacity}% ";
+          format-charging = "{capacity}% ";
           format-plugged = "{capacity}% ";
           format-alt = "{time icon}";
           # format-good = "";
@@ -128,12 +131,19 @@
           };
         };
         network = {
-          format-wifi = "{essid} ({signalStrength}%) ";
-          format-ethernet = "{ipaddr}/{cidr} ";
-          tooltip-format = "{ifname} via {gwaddr} ";
-          format-linked = "{ifname} (No IP) ";
-          format-disconnected = "Disconnected ⚠";
+          format-wifi = "{essid} {icon}";
+          format-ethernet = "{ipaddr}/{cidr} 󰈀";
+          tooltip-format = "{ifname} via {gwaddr} 󰲝";
+          format-linked = "{ifname} (No IP) 󰱟";
+          format-disconnected = "";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
+          format-icons = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
         };
         pulseaudio = {
           format = "{volume}% {icon} {format_source}";
@@ -144,11 +154,7 @@
           format-source-muted = "";
           format-icons = {
             headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            portable = "";
-            car = "";
+            headset = "";
             default = [
               ""
               ""
@@ -173,6 +179,124 @@
         workspaces.sort-by-number = true;
       };
     };
+    style = ''
+      @import url('./catppuccin.css');
+
+      * {
+        font-family: FreeSans;
+        font-size: 13px;
+        min-height: 0;
+        padding-right: 2px;
+        padding-left: 2px;
+        padding-bottom: 0px;
+      }
+
+      #waybar {
+        background: transparent;
+        color: @text;
+      }
+
+      #workspaces {
+        border-radius: 5px;
+        margin: 5px;
+        background-color: @surface0;
+        margin-left: 2px;
+      }
+
+      #workspaces button {
+        color: @lavender;
+        border-radius: 5px;
+        padding: 0.4rem;
+      }
+
+      #workspaces button.focused {
+        color: @sky;
+      }
+
+      #workspaces button:hover {
+        color: @sapphire;
+        border-color: @sapphire;
+        border-radius: 5px;
+      }
+
+      button {
+        background: transparent;
+      }
+
+      #tray,
+      #backlight,
+      #clock,
+      #power-profiles-daemon,
+      #keyboard-state,
+      #battery,
+      #pulseaudio,
+      #custom-lock,
+      #network,
+      #cpu,
+      #memory,
+      #temperature,
+      #custom-power {
+        background-color: @surface0;
+        padding: 0.5rem 0.75rem;
+        margin: 2px 0;
+      }
+
+      #clock {
+        color: @blue;
+        border-radius: 0;
+      }
+
+      #cpu,
+      #memory,
+      #temperature,
+      #backlight {
+        padding: 0.5rem 0.5rem;
+      }
+
+      #battery {
+        color: @green;
+      }
+
+      #battery.charging {
+        color: @green;
+      }
+
+      #battery.warning:not(.charging) {
+        color: @red;
+      }
+
+      #keyboard-state {
+        padding: 0.5rem 0.5rem;
+      }
+
+      #keyboard-state label.locked {
+        color: @red;
+      }
+
+      #backlight {
+        color: @yellow;
+      }
+
+      #backlight,
+      #battery {
+        border-radius: 0;
+      }
+
+      #pulseaudio {
+        color: @maroon;
+        border-radius: 5px 0px 0px 5px;
+      }
+
+      #custom-power {
+        margin-right: 2px;
+        border-radius: 0px 5px 5px 0px;
+        color: @red;
+      }
+
+      #workspaces button.urgent {
+        color: @red;
+      }
+    '';
   };
 
   xdg.configFile."waybar/power_menu.xml".text = ''
