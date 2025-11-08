@@ -47,7 +47,7 @@
         };
         backlight = {
           device = "acpi_video1";
-          format = "{percent}% {icon}";
+          format = "{icon}";
           format-icons = [
             ""
             ""
@@ -59,6 +59,8 @@
             ""
             ""
           ];
+          scroll-step = 0.5;
+          tooltip-format = "Brightness: {percent}%";
         };
         battery = {
           states = {
