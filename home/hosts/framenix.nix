@@ -4,7 +4,6 @@
     ../global
     ../modules/tui/extras
     ../modules/gui
-    ../modules/gui/rio.nix
     ../modules/gui/sway
     ../modules/gui/chrome.nix
   ];
