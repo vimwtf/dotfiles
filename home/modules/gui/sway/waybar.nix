@@ -187,6 +187,7 @@
       #tray,
       #backlight,
       #clock,
+      #network,
       #power-profiles-daemon,
       #battery,
       #pulseaudio,
@@ -199,10 +200,6 @@
       #clock {
         color: @blue;
         border-radius: 0;
-      }
-
-      #backlight {
-        padding: 0.5rem 0.5rem;
       }
 
       #battery {
