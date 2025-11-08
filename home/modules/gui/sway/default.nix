@@ -68,7 +68,7 @@ in
 
         {
           "${mod}+Return" = "exec --no-startup-id ${pkgs.foot}/bin/foot";
-          "${mod}+space" = "exec --no-startup-id wofi --allow-images --show drun,run";
+          "${mod}+space" = "exec --no-startup-id ${pkgs.wofi}/bin/wofi --allow-images --show drun,run";
           "Alt+Tab" = "exec swayr switch-window";
 
           "${mod}+x" = "kill";
