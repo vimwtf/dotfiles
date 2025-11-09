@@ -16,7 +16,6 @@ in
   home.packages = with pkgs; [
     grim
     mako
-    pavucontrol
     slurp
     wl-clipboard
   ];

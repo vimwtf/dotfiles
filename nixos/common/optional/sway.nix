@@ -14,10 +14,17 @@
   };
 
   environment.systemPackages = with pkgs; [
+    blueman
+    brightnessctl
     grim
     mako
+    networkmanagerapplet
+    papirus-icon-theme
+    pasystray
+    pavucontrol
     slurp
     sway
+    swaylock
     wl-clipboard
   ];
 

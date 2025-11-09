@@ -27,9 +27,6 @@
   environment.enableAllTerminfo = true;
 
   environment.systemPackages = with pkgs; [
-    brightnessctl
-    papirus-icon-theme
-    networkmanagerapplet
     vim
     wget
   ];
