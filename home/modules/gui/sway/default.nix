@@ -86,7 +86,7 @@ in
 
           "${mod}+Shift+r" = "exec swaymsg reload";
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          "Ctrl+Alt+l" = "exec ${pkgs.swaylock}/bin/swaylock";
+          "Ctrl+Alt+l" = "exec swaylock";
           "${mod}+Ctrl+q" = "exit";
         }
       ];
