@@ -74,12 +74,13 @@
           system,
           hostname,
           isWork ? false,
+          isNixOs ? false,
         }:
         lib.homeManagerConfiguration {
           modules = [
             (getHostModule hostname)
             {
-              _module.args = { inherit hostname isWork; };
+              _module.args = { inherit hostname isWork isNixOs; };
             }
           ];
           pkgs = pkgsFor.${system};
@@ -116,6 +117,7 @@
         "john@pixnix" = mkHomeConfiguration {
           hostname = "pixnix";
           system = "x86_64-linux";
+          isNixOs = true;
         };
         "john@doc" = mkHomeConfiguration {
           hostname = "doc";
@@ -149,6 +151,7 @@
         "john@framenix" = mkHomeConfiguration {
           hostname = "framenix";
           system = "x86_64-linux";
+          isNixOs = true;
         };
 
       };
