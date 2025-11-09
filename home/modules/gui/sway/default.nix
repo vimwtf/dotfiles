@@ -18,7 +18,6 @@ in
     mako
     pavucontrol
     slurp
-    swaylock
     wl-clipboard
   ];
 
