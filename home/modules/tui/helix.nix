@@ -15,8 +15,8 @@
       nil
       nixd
       nixpkgs-fmt
+      opentofu-ls
       shellcheck
-      terraform-ls
       typescript-language-server
       vscode-langservers-extracted
       yaml-language-server
