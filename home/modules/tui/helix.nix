@@ -15,7 +15,7 @@
       nil
       nixd
       nixpkgs-fmt
-      opentofu-ls
+      tofu-ls
       shellcheck
       typescript-language-server
       vscode-langservers-extracted
