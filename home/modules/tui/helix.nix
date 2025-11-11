@@ -22,6 +22,10 @@
       yaml-language-server
     ];
     languages = {
+      language-server.tofu-ls = {
+        command = "${pkgs.tofu-ls}/bin/tofu-ls";
+        args = [ "serve" ];
+      };
       language = [
         {
           name = "nix";
@@ -34,6 +38,27 @@
           soft-wrap = {
             enable = true;
           };
+        }
+        {
+          name = "hcl";
+          language-id = "opentofu";
+          scope = "source.hcl";
+          file-types = [
+            "tf"
+            "tofu"
+            "tfvars"
+          ];
+          auto-format = true;
+          comment-token = "#";
+          block-comment-tokens = {
+            start = "/*";
+            end = "*/";
+          };
+          indent = {
+            tab-width = 2;
+            unit = "  ";
+          };
+          language-servers = [ "tofu-ls" ];
         }
       ];
     };
