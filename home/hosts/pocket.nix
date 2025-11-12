@@ -4,6 +4,7 @@
     ../global
     ../modules/gui
     ../modules/gui/sway
+    ../modules/tui/extras
   ];
 
   wayland.windowManager.sway.config.startup = [
