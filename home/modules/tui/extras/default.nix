@@ -22,6 +22,7 @@
     gh
     google-cloud-sdk
     httpie
+    k0sctl
     kompose
     kubectl
     lazydocker
