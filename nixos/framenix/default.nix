@@ -10,13 +10,13 @@
     ../common/users/john
 
     ../common/optional/docker.nix
-    # ../common/optional/gnome.nix
     ../common/optional/libvirtd.nix
     ../common/optional/pipewire.nix
     ../common/optional/printing.nix
     ../common/optional/remote-desktop.nix
     ../common/optional/sshd.nix
     ../common/optional/sway.nix
+    ../common/optional/thunar.nix
   ];
 
   boot = {
