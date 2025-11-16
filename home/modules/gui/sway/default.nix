@@ -98,6 +98,10 @@ in
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
           "Ctrl+Alt+l" = "exec swaylock";
           "${mod}+Ctrl+q" = "exit";
+
+          "${mod}+p" =
+            "exec ${pkgs.cliphist}/bin/cliphist list | ${pkgs.wofi}/bin/wofi -S dmenu  | cliphist decode | wl-copy";
+
         }
       ];
 
@@ -127,11 +131,19 @@ in
           command = "exec nm-applet --indicator";
           always = true;
         }
+        {
+          command = "exec wl-paste --watch cliphist store";
+          always = true;
+        }
       ];
       terminal = "${pkgs.foot}/bin/foot";
       workspaceAutoBackAndForth = true;
     };
     systemd.enable = true;
     wrapperFeatures.gtk = true;
+  };
+
+  services.cliphist = {
+    enable = true;
   };
 }
