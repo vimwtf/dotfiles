@@ -1,6 +1,7 @@
 { pkgs, lib, ... }:
 let
   mod = "Mod4";
+  menu = "--no-startup-id ${pkgs.wofi}/bin/wofi --allow-images --show drun,run";
 in
 {
   imports = [
@@ -73,10 +74,12 @@ in
 
         {
           "${mod}+Return" = "exec --no-startup-id ${pkgs.foot}/bin/foot";
-          "${mod}+space" = "exec --no-startup-id ${pkgs.wofi}/bin/wofi --allow-images --show drun,run";
+          "${mod}+space" = "exec ${menu}";
+          "${mod}+Tab" = "exec ${menu}";
           "Alt+Tab" = "exec swayr switch-window";
 
           "${mod}+x" = "kill";
+          "--border button3" = "kill";
 
           "${mod}+a" = "focus parent";
           "${mod}+e" = "layout toggle split";
