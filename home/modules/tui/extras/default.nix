@@ -18,6 +18,7 @@
     awscli
     bsd-finger
     dive
+    docker-slim
     envsubst
     gh
     google-cloud-sdk
