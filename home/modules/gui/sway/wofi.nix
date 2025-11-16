@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       allow_markup = true;
-      width = 300;
+      width = "50%";
     };
     style = ''
       @define-color	rosewater  #f5e0dc;
