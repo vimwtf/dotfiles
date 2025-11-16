@@ -40,17 +40,20 @@
     ytt
   ];
 
-  programs.fish = {
-    shellAbbrs = {
-      k = "kubectl";
-      terraform = "tofu";
-      tf = "tofu";
-      tfyolo = "tofu apply -auto-approve";
+  programs = {
+    yazi.enable = true;
+    fish = {
+      shellAbbrs = {
+        k = "kubectl";
+        terraform = "tofu";
+        tf = "tofu";
+        tfyolo = "tofu apply -auto-approve";
+      };
+
+      shellInit = ''
+        set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
+      '';
+
     };
-
-    shellInit = ''
-      set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
-    '';
-
   };
 }
