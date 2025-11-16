@@ -17,6 +17,7 @@
     angle-grinder
     awscli
     bsd-finger
+    copacetic
     dive
     docker-slim
     envsubst
