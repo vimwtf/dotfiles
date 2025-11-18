@@ -134,7 +134,7 @@
         };
         "Phanpy" = {
           id = "3bbe2ad9-2bbf-4269-b745-335d0718f78d";
-          url = "https://phanpy.social";
+          url = "https://phanpy.vim.wtf";
           position = 104;
           isEssential = true;
         };
