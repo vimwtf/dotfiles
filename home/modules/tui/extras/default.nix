@@ -38,6 +38,7 @@
     sops
     ssh-to-age
     stable.cosign
+    trivy
     vault
     ytt
   ];
