@@ -175,7 +175,7 @@
 
       search = {
         force = true;
-        default = "Kagi";
+        default = "SearXNG";
         engines = {
           "Kagi" = {
             urls = [
@@ -226,6 +226,19 @@
               }
             ];
             definedAliases = [ "pkg" ];
+          };
+          "SearXNG" = {
+            urls = [
+              {
+                template = "https://grep.vim.wtf/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
           };
           bing.metaData.hidden = true;
           google.metaData.hidden = true;
