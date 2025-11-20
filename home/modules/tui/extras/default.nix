@@ -30,6 +30,7 @@
     lazydocker
     nil
     nixfmt
+    openbao
     opentofu
     pigz
     powershell
@@ -39,9 +40,12 @@
     ssh-to-age
     stable.cosign
     trivy
-    vault
     ytt
   ];
+
+  home.shellAliases = {
+    vault = "bao";
+  };
 
   programs = {
     yazi.enable = true;
@@ -56,7 +60,6 @@
       shellInit = ''
         set -x VAULT_ADDR "$(cat ${config.sops.secrets.vault-address.path})"
       '';
-
     };
   };
 }
