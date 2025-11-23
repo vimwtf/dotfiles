@@ -14,6 +14,8 @@
     }
   ];
 
+  targets.genericLinux.gpu.enable = false;
+
   # extra packages
   # home.packages = with pkgs; [
   #   nerd-fonts.victor-mono
