@@ -74,16 +74,17 @@ in
 
         {
           "${mod}+Return" = "exec --no-startup-id ${pkgs.foot}/bin/foot";
-          "${mod}+space" = "exec ${menu}";
-          "${mod}+Tab" = "exec ${menu}";
+          "${mod}+d" = "exec ${menu}";
           "Alt+Tab" = "exec swayr switch-window";
 
-          "${mod}+x" = "kill";
+          "${mod}+Escape" = "kill";
           "--border button3" = "kill";
 
           "${mod}+a" = "focus parent";
           "${mod}+e" = "layout toggle split";
           "${mod}+f" = "fullscreen toggle";
+          "${mod}+space" = "floating toggle";
+          "${mod}+Shift+space" = "focus mode_toggle";
           "${mod}+g" = "split h";
           "${mod}+s" = "layout stacking";
           "${mod}+v" = "split v";
@@ -102,11 +103,16 @@ in
           "${mod}+p" =
             "exec ${pkgs.cliphist}/bin/cliphist list | ${pkgs.wofi}/bin/wofi -S dmenu  | cliphist decode | wl-copy";
 
+          "${mod}+Shift+minus" = "move scratchpad";
+          "${mod}+minus" = "scratchpad show";
         }
       ];
 
       bars = [ ];
       defaultWorkspace = "workspace 1";
+      floating = {
+        modifier = mod;
+      };
       focus.followMouse = true;
       input."type:touchpad" = {
         dwt = "enabled";
