@@ -67,6 +67,9 @@
             id = "pay-by-privacy";
             pinned = true;
           };
+          "consent-o-matic" = mkExtensionEntry {
+            id = "gdpr@cavi.au.dk";
+          };
         };
         Preferences = mkLockedAttrs {
           "browser.aboutConfig.showWarning" = false;
