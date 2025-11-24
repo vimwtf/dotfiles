@@ -2,6 +2,7 @@
 let
   mod = "Mod4";
   menu = "--no-startup-id ${pkgs.wofi}/bin/wofi --allow-images --show drun,run";
+  term = "--no-startup-id ${pkgs.foot}/bin/foot";
 in
 {
   imports = [
@@ -73,13 +74,19 @@ in
         )
 
         {
-          "${mod}+Return" = "exec --no-startup-id ${pkgs.foot}/bin/foot";
+          # launcher / killer
+          "${mod}+Return" = "exec ${term}";
           "${mod}+d" = "exec ${menu}";
           "Alt+Tab" = "exec swayr switch-window";
-
           "${mod}+Escape" = "kill";
           "--border button3" = "kill";
 
+          # session
+          "${mod}+Shift+r" = "exec swaymsg reload";
+          "Ctrl+Alt+l" = "exec swaylock";
+          "${mod}+Ctrl+q" = "exit";
+
+          # pane management
           "${mod}+a" = "focus parent";
           "${mod}+e" = "layout toggle split";
           "${mod}+f" = "fullscreen toggle";
@@ -90,19 +97,21 @@ in
           "${mod}+v" = "split v";
           "${mod}+w" = "layout tabbed";
 
+          # workspaces
           "${mod}+bracketright" = "workspace next";
           "${mod}+bracketleft" = "workspace prev";
           "${mod}+Shift+bracketright" = "move container to workspace next";
           "${mod}+Shift+bracketleft" = "move container to workspace prev";
 
-          "${mod}+Shift+r" = "exec swaymsg reload";
+          # screenshot
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          "Ctrl+Alt+l" = "exec swaylock";
           "${mod}+Ctrl+q" = "exit";
 
+          # clipboard
           "${mod}+p" =
             "exec ${pkgs.cliphist}/bin/cliphist list | ${pkgs.wofi}/bin/wofi -S dmenu  | cliphist decode | wl-copy";
 
+          # scratchpad
           "${mod}+Shift+minus" = "move scratchpad";
           "${mod}+minus" = "scratchpad show";
         }
