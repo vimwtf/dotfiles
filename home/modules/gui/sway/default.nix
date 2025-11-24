@@ -105,7 +105,6 @@ in
 
           # screenshot
           "--release Print" = "exec --no-startup-id ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-          "${mod}+Ctrl+q" = "exit";
 
           # clipboard
           "${mod}+p" =
