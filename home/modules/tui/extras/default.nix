@@ -48,6 +48,9 @@
   };
 
   programs = {
+    chawan = {
+      enable = true;
+    };
     yazi.enable = true;
     fish = {
       shellAbbrs = {
