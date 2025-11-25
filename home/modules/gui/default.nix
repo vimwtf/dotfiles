@@ -2,6 +2,7 @@
 {
   # Common GUI apps
   imports = [
+    ./qutebrowser.nix
     ./zen-browser.nix
   ];
 
