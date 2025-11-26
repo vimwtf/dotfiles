@@ -130,13 +130,18 @@ in
           "${mod}+minus" = "scratchpad show";
 
           # brightness
+          "${mod}+F1" = "exec brightnessctl set 10%-";
           "XF86MonBrightnessDown" = "exec brightnessctl set 10%-";
+          "${mod}+F2" = "exec brightnessctl set +10%";
           "XF86MonBrightnessUp" = "exec brightnessctl set +10%";
 
           # volume
           "XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer --decrease 5";
+          "${mod}+F3" = "exec ${pkgs.pamixer}/bin/pamixer --decrease 5";
           "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer --increase 5";
+          "${mod}+F4" = "exec ${pkgs.pamixer}/bin/pamixer --increase 5";
           "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer --toggle-mute";
+          "${mod}+F5" = "exec ${pkgs.pamixer}/bin/pamixer --toggle-mute";
         }
       ];
 
