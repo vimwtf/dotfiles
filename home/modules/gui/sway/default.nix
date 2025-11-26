@@ -3,6 +3,10 @@ let
   mod = "Mod4";
   menu = "--no-startup-id ${pkgs.wofi}/bin/wofi --allow-images --show drun,run";
   term = "--no-startup-id ${pkgs.foot}/bin/foot";
+  left = "h";
+  down = "j";
+  up = "k";
+  right = "l";
 in
 {
   imports = [
@@ -25,6 +29,7 @@ in
   home.packages = with pkgs; [
     grim
     mako
+    pamixer
     slurp
     wl-clipboard
   ];
@@ -60,19 +65,6 @@ in
             ]
         ))
 
-        (lib.attrsets.concatMapAttrs
-          (key: direction: {
-            "${mod}+${key}" = "focus ${direction}";
-            "${mod}+Shift+${key}" = "move ${direction}";
-          })
-          {
-            h = "left";
-            j = "down";
-            k = "up";
-            l = "right";
-          }
-        )
-
         {
           # launcher / killer
           "${mod}+Return" = "exec ${term}";
@@ -86,6 +78,9 @@ in
           "Ctrl+Alt+l" = "exec swaylock";
           "${mod}+Ctrl+q" = "exit";
 
+          # modes
+          "${mod}+r" = "mode resize";
+
           # pane management
           "${mod}+a" = "focus parent";
           "${mod}+e" = "layout toggle split";
@@ -96,6 +91,26 @@ in
           "${mod}+s" = "layout stacking";
           "${mod}+v" = "split v";
           "${mod}+w" = "layout tabbed";
+
+          # focus
+          "${mod}+${left}" = "focus left";
+          "${mod}+${down}" = "focus down";
+          "${mod}+${up}" = "focus up";
+          "${mod}+${right}" = "focus right";
+          "${mod}+Left" = "focus left";
+          "${mod}+Down" = "focus down";
+          "${mod}+Up" = "focus up";
+          "${mod}+Right" = "focus right";
+
+          # movement
+          "${mod}+Shift+${left}" = "move left";
+          "${mod}+Shift+${down}" = "move down";
+          "${mod}+Shift+${up}" = "move up";
+          "${mod}+Shift+${right}" = "move right";
+          "${mod}+Shift+Left" = "move left";
+          "${mod}+Shift+Down" = "move down";
+          "${mod}+Shift+Up" = "move up";
+          "${mod}+Shift+Right" = "move right";
 
           # workspaces
           "${mod}+bracketright" = "workspace next";
@@ -113,6 +128,15 @@ in
           # scratchpad
           "${mod}+Shift+minus" = "move scratchpad";
           "${mod}+minus" = "scratchpad show";
+
+          # brightness
+          "XF86MonBrightnessDown" = "exec brightnessctl set 10%-";
+          "XF86MonBrightnessUp" = "exec brightnessctl set +10%";
+
+          # volume
+          "XF86AudioLowerVolume" = "exec ${pkgs.pamixer}/bin/pamixer --decrease 5";
+          "XF86AudioRaiseVolume" = "exec ${pkgs.pamixer}/bin/pamixer --increase 5";
+          "XF86AudioMute" = "exec ${pkgs.pamixer}/bin/pamixer --toggle-mute";
         }
       ];
 
@@ -126,6 +150,20 @@ in
         dwt = "enabled";
         tap = "enabled";
         natural_scroll = "enabled";
+      };
+      modes = {
+        resize = {
+          Return = "mode default";
+          Escape = "mode default";
+          "${left}" = "resize shrink width 10px";
+          "${down}" = "resize grow height 10px";
+          "${up}" = "resize shrink height 10px";
+          "${right}" = "resize grow width 10px";
+          Left = "resize shrink width 10px";
+          Down = "resize grow height 10px";
+          Up = "resize shrink height 10px";
+          Right = "resize grow width 10px";
+        };
       };
       output."*".scale = "1.5";
       startup = [
