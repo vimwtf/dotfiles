@@ -7,12 +7,10 @@
     in
     {
       enable = true;
-      events = [
-        {
-          event = "before-sleep";
-          command = lock;
-        }
-      ];
+      events = {
+        "before-sleep" = "lock";
+        "lock" = "lock";
+      };
       timeouts = [
         {
           timeout = 585;
