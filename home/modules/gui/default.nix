@@ -7,6 +7,7 @@
   ];
 
   home.packages = with pkgs; [
+    annotator
     deltachat-desktop
     nerd-fonts.victor-mono
   ];
