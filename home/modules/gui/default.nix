@@ -13,4 +13,7 @@
   ];
 
   fonts.fontconfig.enable = true;
+
+  xdg.enable = true;
+  xdg.mime.enable = true;
 }
