@@ -153,7 +153,10 @@
           system = "x86_64-linux";
           isNixOs = true;
         };
-
+	"john@bluefin" = mkHomeConfiguration {
+	  hostname = "bluefin";
+	  system = "x86_64-linux";
+	};
       };
     };
 }
