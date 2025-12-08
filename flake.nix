@@ -157,6 +157,10 @@
 	  hostname = "bluefin";
 	  system = "x86_64-linux";
 	};
+	"john@blueframe" = mkHomeConfiguration {
+	  hostname = "bluefin";
+	  system = "x86_64-linux";
+	};
       };
     };
 }
