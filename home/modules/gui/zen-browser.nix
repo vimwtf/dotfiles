@@ -165,6 +165,12 @@
           position = 108;
           isEssential = true;
         };
+        "Silverbullet" = {
+          id = "ec393d49-98d2-4c25-913a-625c1c2775f5";
+          url = "https://sb.vim.wtf";
+          position = 109;
+          isEssential = true;
+        };
       };
 
       containersForce = true;
